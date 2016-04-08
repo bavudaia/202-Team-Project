@@ -1,5 +1,12 @@
-#Journal Entry
+#Journal Entry - Week 1 - 4-April-2016
 
 The core XP value chosen in our project is Communication.
+Initially each team member came up with an unique idea namely,
+Balamurugan Avudaiappan came with the idea of a super mario game which was a good project idea.
+However, we found that this idea was not feasible because of the complexity and huge number of use cases involved.  
+Venkatesh Ramanujam came up with the idea of Poker game muliplayer which seemed too complex. We were overwhelmed with this idea, however considering time constraints we are currently facing with, we had move on with another idea as the complexity of this idea is too high and we would not be able to complete it on time.
+Shreyams Jain came up with the idea of another popular card game called as Rummy. Among the ideas brainstormed so far, we found this to the best fit. However, in later stages we found a better idea that could suit the requirements better than this.
+Sivakumar Sivaraman came up with an idea for developing a game involving a Disney character and storyline. This idea posed very little scope of fulfilling requirements such as implementation of required design patterns also was too fancy.
+Koushik Ram KT came up with the idea of developing a Blackjack card game. We found this idea best among those discussed. This idea provided huge scope for implementing the necessary design patterns. We also chose this idea because the complexity was very much manageable. Another reason, we could finish with the timeline constraint and could implement all the functionalities we had in our minds. The use cases were neither too sophisticated nor too simple, providing the perfect match for the team project. 
 
-The project mainly concentrates on the core values of communication.
+
