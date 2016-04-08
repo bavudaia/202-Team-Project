@@ -1,0 +1,11 @@
+Proxy Design Pattern : 
+
+To allow access for a player to enter the game
+
+Chain Of Responsibility:
+Management of turns.
+
+Observer:
+
+Notification when turn changes, round ends, game ends etc.
+All notification management can be done using this pattern.
