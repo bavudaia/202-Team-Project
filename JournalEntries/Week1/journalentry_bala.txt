@@ -1,8 +1,25 @@
 I have chosen to add the value of Courage to the project team
 Courage:
 04/04/2016 : Project Title decision phase:
-Each person in the team was assigned one activity 
+Each person in the team was assigned one activity in the first meeting
+In the meeting, I encouraged the team to do research in a 
+rigorous manner to get a fine project title.
 
 04/05/2016 and 04/06/2016 :
+First day we met with 4 members with project titles. All titles were
+good and each member were not articulating their titles well. I encouraged the team
+to make changes with their project titles. As I have a good experience 
+in OOP I analyzed each and every one idea and gave suggestions to 
+improve on each idea , so that in the next meeting we can have 
+good contenders.This widened their though processes, helping them
+to come up with a good idea next meeting. In the next meeting 
+the project title black jack proposed by Koushik was selected. 
 
 04/07/2016 and 04/08/2016 : 
+
+In these meeting we had to identify Object oriented patterns, Use cases
+and assign design patterns to each of them. I have asked every one 
+to not get stuck in a problem and be persistent. If one solution 
+does not seem good they have to get rid of it and think freshly.
+
+Hence I believe I have instilled some courage in the team.
