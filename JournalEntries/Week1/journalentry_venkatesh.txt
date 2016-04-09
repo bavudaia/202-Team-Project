@@ -16,20 +16,12 @@ Feedback is XP is critical for learning and adapting to changes. As such Feedbac
 Feed back Journal
 by Venkatesh Ramanujam Rangarajan Student Id: 010737831
 
-4/4/2016 - This was the day we met and discussed about the project. Since there was no real time customer the requirements came from within the team
-about the possible software that we can develop. Ideas about simulating website , phone applications were pitched in by two of the team mates. But the overall feedback was that 
-simulating  the application will have broad scope and we as a team may not be able to complete it in time. The next idea (or requirement) that was pitched in was 
-about developing a card game for our 202 project. As every one in the team felt positive about the idea we decided to stick to developing a card game. 
-The idea to develop the card game in Greenfoot also received a positive feedback. 
+4/4/2016 - This was the day we met and discussed about the project. Since there was no real time customer the requirements came from within the team about the possible software that we can develop. Ideas about simulating website , phone applications were pitched in by two of the team mates. But the overall feedback was that  simulating  the application will have broad scope and we as a team may not be able to complete it in time. The next idea (or requirement) that was pitched in was about developing a card game for our 202 project. As every one in the team felt positive about the idea we decided to stick to developing a card game. The idea to develop the card game in Greenfoot also received a positive feedback. 
 
-4/5/2016 to 4/6/2016 - The discussion continued about what the card game that needs to be developed. Several games such as poker, 5 cards, President was suggested to take up as requirement.
-But the overall feedback was negative for these requirements. The team felt postive vibe when the idea to develop black jack was suggested. 
-So we as a team decided to develop black jack game. 
+4/5/2016 to 4/6/2016 - The discussion continued about what the card game that needs to be developed. Several games such as poker, 5 cards, President was suggested to take up as requirement. But the overall feedback was negative for these requirement. The team felt postive vibe when the idea to develop black jack was suggested.So we as a team decided to develop black jack game. 
 
-4/7/2016 to 4/8/2016 - During this phase, discussion about the design patterns that can be used to implement a specific requirement were discussed. Several ideas were sugeested by 
-the induidual team members and critical feed back were given related to the topic "will the particular pattern will be a best fit", "Implementation of the pattern" were given. 
+4/7/2016 to 4/8/2016 - During this phase, discussion about the design patterns that can be used to implement a specific requirement were discussed. Several ideas were sugeested by the induidual team members and critical feed back were given related to the topic "will the particular pattern will be a best fit", "Implementation of the pattern" were given. 
 
 Overall summary for XP Value Feedback:
 
-We have followed the value XP feed back in handling the requirements that were pitched in.Since we are in the earlier phase, feedback about the system through 
-unit and acceptance tests was not followed in this phase. But in the next phase we plan to develop test cases to have feedback about the sytem.  
+We have followed the value XP feed back in handling the requirements that were pitched in.Since we are in the earlier phase, feedback about the system through unit and acceptance tests was not followed in this phase. But in the next phase we plan to develop test cases to have feedback about the sytem.  
