@@ -1,0 +1,18 @@
+Communication-
+4/4/2016- 
+We first gathered as a team and we decided to meet face to face at
+least three times a week. We decided to work together on everything from requirements 
+to code. We decided to create the best solution to the problem that we have. 
+
+4/5/2016 to 4/7/2016-We were discussing the various aspects of the projects and the 
+possible things that can be done. We mainly concentrated on developing a card game. 
+We analyzed various card games such as Poker, Black Jack, Hearts, Uno etc. 
+We mainly analyzed the pros and cons in implementing each of the games and also 
+considered the ease of implementation. Apart from that, we also considered the 
+design patterns that could be implemented.
+
+4/8/2016-We finally decided to go with Black Jack. 
+We also decided the Design pattern for each of the team member. 
+Everyone was assigned with at least one design pattern, which they have to concentrate. 
+We also decided to work as a team and not to just complete the design pattern, 
+but also collaborate and help each other. 
