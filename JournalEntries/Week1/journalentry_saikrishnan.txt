@@ -1,0 +1,9 @@
+Journal Entry – First week
+
+XP Core Value – Eliminate Waste
+
+04/05/2016, 04/06/2016 and 04/07/2016
+On the first and second day of the project meeting, the entire team met and a lots of topics and strategies were discussed for the solving the project. We had initially decided on extensive schedule of meetings and code reviews. I had to refine them so that they don’t make the overall process inefficient and create too much overhead and hinder our work unnecessarily. For instance, one member had suggested we meet five times a week in person or using skype, and also maintain slides depicting our discussion. I felt that five meetings a week was overkill, instead we can meet thrice a week since most of us would work on our project for longer durations of time instead of working regularly in shorter durations. This would make sure that all meetings would go on with all team members reporting their work. Another change I suggested was to use Excel sheets for maintaining the discussion points instead of using PowerPoint since they intention of using a reporting tool was to store information in clear and concise manner without using too much of team members time. While both Excel and PowerPoint accomplished the task of reporting information in a clear and concise manner, Excel trumped PowerPoint in ease of usability, since its easier to log information in Excel than in PowerPoint. 
+
+04/08/2016 and 04/09/2016
+On discussions of design pattern meetings, a lot of complicated combination of design patterns were suggested by some team members, so I had to intervene and simplify to make sure that the team members didn’t look too much into the future , rather focused on making implementing basic design patterns for the intial stages of the project. 
