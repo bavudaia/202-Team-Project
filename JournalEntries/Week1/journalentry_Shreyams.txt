@@ -1,0 +1,41 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\})}{\leveltext\leveltemplateid1\'02\'00);}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\partightenfactor0
+
+\f0\fs22 \cf0 \expnd0\expndtw0\kerning0
+Journal Entry : Week #1\
+\
+I have planned to instill the XP value \'91Simplicity\'92 for our project team and try to keep the work done in the project as simple as possible.\
+\
+First and foremost I requested all my team members to go through the XP value simplicity and get a basic understanding of the practices. In our next meeting I explained the team about the values of \'91Simplicity\'92 and its importance. One important thing I informed my team members to do is to keep the one word in their mind while working on this project i.e TUBE which makes this project at all times Testable, Understandable, Browsable, and Explainable.\
+\
+In the next couple of meetings we decided to sit together and came up with the design patterns that can be used for the project and also the use cases.Simplicity being the aim, I have explained the value of sitting together for doing decisions as one person\'92s simple can be complex for another person.\
+\
+Based on this, few things we decided to do in the coming week :\
+\
+\pard\tx20\tx380\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li360\fi-360\partightenfactor0
+\ls1\ilvl0
+\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	1)	}
+\fs22 \expnd0\expndtw0\kerning0
+Write pseudo test cases for the first iteration.\
+\ls1\ilvl0
+\fs24 \kerning1\expnd0\expndtw0 {\listtext	2)	}
+\fs22 \expnd0\expndtw0\kerning0
+To keep the code understandable , for a new person to easily understand the project.\
+\ls1\ilvl0
+\fs24 \kerning1\expnd0\expndtw0 {\listtext	3)	}
+\fs22 \expnd0\expndtw0\kerning0
+To write code once and only once and avoid redundancy by using minimal number of classes and methods.\
+\ls1\ilvl0
+\fs24 \kerning1\expnd0\expndtw0 {\listtext	4)	}
+\fs22 \expnd0\expndtw0\kerning0
+Using the design patterns right from the beginning as it keeps the project simple.\
+\ls1\ilvl0
+\fs24 \kerning1\expnd0\expndtw0 {\listtext	5)	}
+\fs22 \expnd0\expndtw0\kerning0
+Avoid writing code which is not necessary.}
