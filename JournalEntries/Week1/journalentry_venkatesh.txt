@@ -27,7 +27,7 @@ But the overall feedback was negative for these requirements. The team felt post
 So we as a team decided to develop black jack game. 
 
 4/7/2016 to 4/8/2016 - During this phase, discussion about the design patterns that can be used to implement a specific requirement were discussed. Several ideas were sugeested by 
-the induidual team members and critical feed back were given related to the topic "will the particular pattern will be abest fit", "Implementation of the pattern" were given. 
+the induidual team members and critical feed back were given related to the topic "will the particular pattern will be a best fit", "Implementation of the pattern" were given. 
 
 Overall summary for XP Value Feedback:
 
