@@ -23,5 +23,8 @@ public class StandCommand implements Command
         player.stand();
     }
 
-  
+      public void setPlayer(Player p)
+    {
+        player = p;
+    }
 }

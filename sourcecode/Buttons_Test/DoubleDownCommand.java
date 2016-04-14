@@ -15,6 +15,11 @@ public class DoubleDownCommand implements Command
     public DoubleDownCommand()
     {
     }
+    
+    public DoubleDownCommand(Player p)
+    {
+        player = p;
+    }
 
     /**
      * An example of a method - replace this comment with your own
@@ -25,6 +30,10 @@ public class DoubleDownCommand implements Command
     
     public void execute(){
      player.doubleDown();
+    }
+    
+    public void setPlayer(Player p){
+      player = p;
     }
 
 }

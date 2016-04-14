@@ -14,7 +14,14 @@ public class SurrenderCommand implements Command
     public SurrenderCommand()
     {
     }
+    public SurrenderCommand(Player p){
+      player = p;
+    }
     public void execute(){
         player.surrender();
+    }
+        public void setPlayer(Player p)
+    {
+        player = p;
     }
 }

@@ -8,4 +8,6 @@ comment2.params=player
 comment2.target=HitCommand(Player)
 comment3.params=
 comment3.target=void\ execute()
-numComments=4
+comment4.params=p
+comment4.target=void\ setPlayer(Player)
+numComments=5

@@ -14,7 +14,9 @@ public class Hit extends Button
      */
     public Hit()
     {
-        
+        GreenfootImage hitImage = new GreenfootImage("hit.png");
+        hitImage.scale(Constants.button_height,Constants.button_width);
+        setImage(hitImage);
     }
     public void act() 
     {

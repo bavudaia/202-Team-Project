@@ -7,4 +7,5 @@
 public interface Command  
 {
     void execute();
+    void setPlayer(Player p);
 }

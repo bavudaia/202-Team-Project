@@ -16,16 +16,30 @@ public class Player
     {
     }
     public void hit(){
+        //to be 
         System.out.println("hit");
+        //to be replaced with hit logic
     }
     public void surrender(){
+                //to be 
+
     System.out.println("surrender");
+            //to be replaced with surrender logic
     }
     
     
-    public void stand(){}
+    public void stand(){
+            //to be 
+        System.out.println("stand");
+        //to be replaced with stand logic
+    }
     
-    public void doubleDown(){}
+    public void doubleDown(){
+    
+            //to be 
+        System.out.println("doubledown");
+        //to be replaced with doubledown logic
+    }
     /**
      * An example of a method - replace this comment with your own
      * 

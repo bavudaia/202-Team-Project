@@ -22,4 +22,8 @@ public class HitCommand implements Command
     public void execute(){
         player.hit();
     }
+    public void setPlayer(Player p)
+    {
+        player = p;
+    }
 }
