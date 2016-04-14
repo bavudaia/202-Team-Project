@@ -1,4 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.awt.Color;
+import java.awt.Font;
 
 /**
  * Write a description of class MyWorld here.
@@ -17,5 +19,8 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        addObject(new TextBox(200, 40, "Login Name"), 535, 140);
+        addObject(new TextBox(200, 40, "Password"), 535, 140);
+ 
     }
 }
