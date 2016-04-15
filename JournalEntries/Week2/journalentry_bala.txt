@@ -1,0 +1,15 @@
+Week 2
+My role in this team is to follow the XP value of courage and instill the same value in the team.
+
+04-11-2016
+We had to face many problems while we met at this phase where we had to start coding each design pattern. I asked every team member to code for today and not procrastinate as this might bring sown team efficiency.
+
+04-12-2016,04-13-2016
+The team progressed well with coding as we did pair programming. We did not get bogged down in design and showed a good progression in the two workflows namely the login screen work flow and button hit workflow as planned. 
+
+04-14-2016,04-15-2016
+In the meetings corresponding to these we found that there were many sections of program that did not perform. I encouraged everybody in the team to remove everything if they find it inappropriate and start fresh code.
+We observed that at the end of the week we can good up with better solution. Had we not removed and though freshly we wouldn't have got such a quality of code.
+
+04-16-2016
+Now the agenda remains , that all other design patterns : strategy, Chain of Responsibility, Factory needs to done for the next week and due diligence should be done to make sure while integration every thing goes smoothly. We concluded that we will follow the same procedure as this weeks' iteratively.
