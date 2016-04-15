@@ -1,24 +1,36 @@
-/**
+import greenfoot.*;
+import java.util.List;
+/*t
  * Write a description of class Player here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Player  
+public class Player extends Actor  
 {
     // instance variables - replace the example below with your own
     private int x;
-
+    private List<String> cards;
+    private int score;
     /**
      * Constructor for objects of class Player
      */
     public Player()
     {
     }
+    
+    
     public void hit(){
         //to be 
         System.out.println("hit");
         //to be replaced with hit logic
+    }
+    
+    public List<String> getCards(){
+      return cards;
+    }
+    public void setCards(List<String> cards){
+     this.cards = cards;
     }
     public void surrender(){
                 //to be 
@@ -39,6 +51,13 @@ public class Player
             //to be 
         System.out.println("doubledown");
         //to be replaced with doubledown logic
+    }
+    public int getScore(){
+        return score;
+    }
+    
+    public void setScore(int score){
+        this.score = score;
     }
     /**
      * An example of a method - replace this comment with your own
