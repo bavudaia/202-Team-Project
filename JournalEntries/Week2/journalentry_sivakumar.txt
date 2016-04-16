@@ -1,1 +1,11 @@
 Week 2
+
+XP value that I have chosen is Respect. Below summary provides my version with regards to this XP value.
+04-11-2016
+Our team has already good knowledge about the design patterns. After the demo of starbucks in the class everyone were excited to do pattern and had their own ideas. When sat down together we had to respect every individual and we had to listen to their ideas and contribute our own suggestions to improve that even more. So a frame work of feedback and brainstorming nurtered the spirits of the team members to work on the project even more.
+
+04-12-2016, 04-13-2016
+At this junction, we thought it would be best to split up into 2 members and work on login screen work flow and button like a pair programming. We carefully planned this pair based on mutual admiration and respect people had for each other. Thus working in this model bolstered our success rate.
+
+04-14-2016, 04-15-2016
+Now came the real test for me to sustain the respect value in the team. We had to omit few code because of some inherent bugs in them. The team member should not be offended and things had to be handled a bit diplomatic here. We had to refuse their code with due respect and reverence and also have to make them understand the need for good quality coding and practices.
