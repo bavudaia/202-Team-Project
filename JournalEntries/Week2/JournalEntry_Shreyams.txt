@@ -1,0 +1,14 @@
+Journal Entry : Week#2
+
+Simplicity : -
+
+04-11-2015:-
+The team members chose their individual patterns and now it was time to drill down each and every pattern and see if it was feasible. All the team members came up with the scenarios where the design patterns could be implemented and all team members interchanged their notes on scenarios and cross checked if the design pattern was feasible and if it wouldn't add more complexity. By doing this we were able to make sure the design patterns to be implemented are going to adhere to the XP value simplicity.
+
+04-12-2016, 04-13-2016:-
+
+I informed the team members to get involved in pair programming which would enable two different perspectives on one coding scenario and help in reducing complexity and eliminating waste. I also made the team members to start coding with the basic steps rather than going to the main logic of the game. For ex : to start with the login the and complete it first, then work on finishing each button hit.
+
+04-14-2016, 04-15-2016 :
+
+Initially the team were having trouble their code not working correctly and also integrating the code with other team members. So i suggested to try to keep the code simple, asked the team to recheck the code and to remove unnecessary content and do code integration right from the beginning with each simple step. This increased simplicity in each step and the team was also more involved and interacted with each other more often.
