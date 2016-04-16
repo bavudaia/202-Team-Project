@@ -12,6 +12,8 @@ public class Player extends Actor
     private int x;
     private List<String> cards;
     private int score;
+    private int assets;
+    private int betting_amount;
     /**
      * Constructor for objects of class Player
      */
@@ -19,6 +21,18 @@ public class Player extends Actor
     {
     }
     
+    public int getAssets() {
+		return assets;
+	}
+	public void setAssets(int assets) {
+		this.assets = assets;
+	}
+	public int getBetting_amount() {
+		return betting_amount;
+	}
+	public void setBetting_amount(int betting_amount) {
+		this.betting_amount = betting_amount;
+	} 
     
     public void hit(){
         //to be 
@@ -59,15 +73,5 @@ public class Player extends Actor
     public void setScore(int score){
         this.score = score;
     }
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+
 }
