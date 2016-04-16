@@ -1,0 +1,14 @@
+Week 2
+I advice the XP value of feed back in the team and make sure the same value is followed by my team mates.
+
+04-11-2016
+We decided the role of each member of the team in the previous week. Each member told the implementation design. Others who were listening gave feed back to the implementation technique that was suggested.
+
+04-12-2016,04-13-2016
+We decided to make unit tests for the implementation that we are going to make so that we get feed back from the system while implementation. Test cases were discussed among us.
+
+
+04-14-2016,04-15-2016
+
+
+04-16-2016
