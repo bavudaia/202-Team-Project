@@ -1,18 +1,19 @@
 Week 2
-I advice the XP value of feed back in the team and make sure the same value is followed by my team mates.
+I advice my team to follow the XP value "feedback".   
+Feedback can be from the customer( in this case #team 8), or from unit tests or acceptance tests.
 
 04-11-2016
-We decided the role of each member of the team in the previous week. Each member told the descussed the design of their implementation. Others listened to the design gave feed back 
+We decided the role of each member of the team in the previous week. Each member eloborated the design of their implementation. Others listened to the design and gave feed back 
 to the implementation technique that was suggested. The changes were noted down by the person.
 
 04-12-2016,04-13-2016
-We decided to make unit tests for the implementation that we are going to make so that we get feed back from the system while implementation.
-Test cases were discussed among us for each implementation.We then worked in pair inorder to come up with the login screen and button click work flow.  
+We decided to make unit tests for the implementation that we are going to make so that we get feed back from the system during implementation.
+Test cases were discussed among us for each implementation.We then worked in pairs inorder to come up with the login screen and button click work flow.  
 
 04-14-2016,04-15-2016
-The code written by the team was discussed and team members gave feed back for each snippet on how they can be improved. 
-Also few more test cases that could be included for a specific use case were suggested.
+The code written by the team was discussed and team members gave feed back for each snippet, on how they can be improved. 
+Also few more unit tests that could be included for a specific use case were suggested.
 
 04-16-2016
-We had final review of the test cases that should be included for the feed back from the system. We also had several implementations that didn't have test cases.
+We had a final review of the test cases that should be included for the feed back from the system. We also had several implementations that didnot have unit tests.
 I suggested the team to develop unit test cases  for them so that the feed back from the system is complete.
