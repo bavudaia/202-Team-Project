@@ -3,12 +3,14 @@ Waffle Board : https://waffle.io/bavudaia/202-Team-Project
 Github : https://github.com/bavudaia/202-Team-Project
 Owner : Balamurugan Avudaiappan (010818717)
 
+
+
 ------------------------------------------------------------------------------------------------------------------------------------
 
 Individual Submission:
 
 Balamurugan Avudaiappan (010818717):
-
+Github Id : bavudaia
 Design Pattern: Chain of responsibility
 
 XP Core Value : Courage
@@ -35,6 +37,7 @@ Week 2
 Individual Submission:
 
 Koushik Ram KT (010730070):
+Github Id : koushikramkt
 
 Design Pattern: Observer
 
@@ -43,25 +46,36 @@ XP Core Value : Communication
 Journal Entry :
 My role is to maintain good Communication in the team, which is also the core XP value that I took.
 
+
+
 04-11-2016
 We decided to start the coding for design patterns. We assigned each team member with a design pattern during the previous week and our goal 
 for this week
 was to kick start the coding. I made sure that there was proper communication between all the team members, so that we all were in the same page.
+
+
 
 04-12-2016,04-13-2016
 We started coding as a team and we decided to go with Pair programming as the team size is 6 and we didn't want all 6 to work on a 
 different piece of code. This greatly
 enhanced the team spirit and we divided ourselves in to a team of 2. 2*3=6.
 
+
+
 04-14-2016,04-15-2016
+
 We mainly concentrated on quality of code. We also decided to review the code among sub-groups in order to improve the coding standards and also 
 decrease potentail problems
 due to miscommunication. 
 
+
+
 04-16-2016
+
 We decided to follow the same strategy in the upcoming weeks as well.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Saikrishnan Baskaran (010720489)
+Github Id: saikrish91
 
 Design Pattern : Strategy
 
@@ -79,7 +93,7 @@ I found that the Thursday meeting did not yield enough information for the time 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Sivakumar Sivaraman (010374468)
-
+Github Id: sivakumar26
 Design Pattern : Command
 
 XP Core Value – Respect
@@ -98,7 +112,7 @@ At this junction, we thought it would be best to split up into 2 members and wor
 Now came the real test for me to sustain the respect value in the team. We had to omit few code because of some inherent bugs in them. The team member should not be offended and things had to be handled a bit diplomatic here. We had to refuse their code with due respect and reverence and also have to make them understand the need for good quality coding and practices.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 Venkatesh Ramanujam Rangarajan(010737831)
-
+Github Id : venki1092
 Design Pattern: Proxy
 
 XP core value : Feedback
@@ -126,7 +140,7 @@ Journal Entry : Week#2
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
 Shreyams Jain (010736427)
-
+Github Id : ShreyamsJain
 Design Pattern : Composite
 
 XP Core Value – Simplicity
