@@ -6,4 +6,16 @@
  */
 public class Medium  implements Strategy
 {
+    Dealer dealer;
+    Bot bot ;
+    public void execute(){
+        
+        if(bot.getScore()<=12){
+            bot.hit();
+        }
+        else {
+            bot.stand();
+        }       
+        
+    }
   }
