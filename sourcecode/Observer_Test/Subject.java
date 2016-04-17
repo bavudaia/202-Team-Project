@@ -7,7 +7,7 @@
 public interface Subject  
 {
    void notifyObserver();
-   void addObserver();
-   void removeObserver();
+   void addObserver(Observer o);
+   void removeObserver(Observer o);
    
 }

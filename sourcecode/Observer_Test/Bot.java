@@ -12,9 +12,12 @@ public class Bot extends Player implements Observer
      * Act - do whatever the Bot wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    Subject dealer;
     public void update()
     {
-        System.out.println("Card value updated");
+        int dealerScore=dealer.getScore();
+        System.out.println(dealerScore);
+        
     }
     public void act() 
     {
