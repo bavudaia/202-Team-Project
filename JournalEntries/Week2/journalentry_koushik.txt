@@ -1,0 +1,31 @@
+Week 2
+
+My role is to maintain good Communication in the team, which is also the core XP value that I took.
+
+
+
+04-11-2016
+We decided to start the coding for design patterns. We assigned each team member with a design pattern during the previous week and our goal 
+for this week
+was to kick start the coding. I made sure that there was proper communication between all the team members, so that we all were in the same page.
+
+
+
+04-12-2016,04-13-2016
+We started coding as a team and we decided to go with Pair programming as the team size is 6 and we didn't want all 6 to work on a 
+different piece of code. This greatly
+enhanced the team spirit and we divided ourselves in to a team of 2. 2*3=6.
+
+
+
+04-14-2016,04-15-2016
+
+We mainly concentrated on quality of code. We also decided to review the code among sub-groups in order to improve the coding standards and also 
+decrease potentail problems
+due to miscommunication. 
+
+
+
+04-16-2016
+
+We decided to follow the same strategy in the upcoming weeks as well.

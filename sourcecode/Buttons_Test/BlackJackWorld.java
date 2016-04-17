@@ -24,7 +24,11 @@ public class BlackJackWorld extends World
     User user;
     List<Card> cards;
     private static Map<Integer,String> cardMap = new HashMap<>();
-    
+    Ten ten;
+    Twenty twenty;
+    Fifty fifty;
+    Hundred hundred;
+    Clear clear;
     static {
         cardMap.put(0,"ace_of_spades.png");
 cardMap.put(1,"2_of_spades.png");
@@ -99,5 +103,16 @@ cardMap.put(51,"king_of_hearts.png");
         bot3 = new Bot();
         dealer = new Dealer();
         user = new User();
+        // betting buttons
+        ten = new Ten();
+         addObject(ten,300,600);
+        twenty = new Twenty();
+         addObject(twenty,400,600);
+        fifty = new Fifty();
+         addObject(fifty,500,600);
+        hundred = new Hundred();
+         addObject(hundred,600,600);
+        clear = new Clear();
+         addObject(clear,700,600);
     }
 }

@@ -1,0 +1,8 @@
+Week 2
+My role in this team is to follow the XP value of Eliminate Waste and instill the same value in the team.
+
+04/11/2016, 04/12/2016 and 04/13/2016
+On the first week of starting the coding, we faced issues with clarity on how to implement the Design patterns. There were instances of team members looking to implement grandiose plans for the design pattern implementation. I identified these tasks as being too fancy and hence asked them to curbed and/or reduced in complexity. Ex. a team member implementing Command pattern had thought of a very complex work flow with plenty of unnecessary abstractions. I intervened and made sure the abstractions were kept to minimal level, low enough to implement OOPS principles efficiently and not unnecessarily complicate things. 
+
+04/14/2016 and 04/15/2016
+I found that the Thursday meeting did not yield enough information for the time spent on meeting. So , I offered for the thursday meeting to be moved to Friday instead. Since Friday is closer to the end of the week the team members would find it easier to plan ahead for the meeting and would also be able to present more complete tasks instead of just talking about tasks that are going to be done by the end of the week.
