@@ -1,0 +1,156 @@
+Waffle Board : https://waffle.io/bavudaia/202-Team-Project
+
+Github : https://github.com/bavudaia/202-Team-Project
+Owner : Balamurugan Avudaiappan (010818717)
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Individual Submission:
+
+Balamurugan Avudaiappan (010818717):
+
+Design Pattern: Chain of responsibility
+
+XP Core Value : Courage
+
+Journal Entry :
+
+I have chosen to add the value of Courage to the project team
+Courage:
+04/04/2016 : Project Title decision phase:
+Each person in the team was assigned one activity in the first meeting
+In the meeting, I encouraged the team to do research in a 
+rigorous manner to get a fine project title.
+
+04/05/2016 and 04/06/2016 :
+First day we met with 4 members with project titles. All titles were
+good and each member were not articulating their titles well. I encouraged the team
+to make changes with their project titles. As I have a good experience 
+in OOP I analyzed each and every one idea and gave suggestions to 
+improve on each idea , so that in the next meeting we can have 
+good contenders.This widened their though processes, helping them
+to come up with a good idea next meeting. In the next meeting 
+the project title black jack proposed by Koushik was selected.
+
+04/07/2016 and 04/08/2016 :
+
+In these meeting we had to identify Object oriented patterns, Use cases
+and assign design patterns to each of them. I have asked every one 
+to not get stuck in a problem and be persistent. If one solution 
+does not seem good they have to get rid of it and think freshly.
+
+Hence I believe I have instilled some courage in the team.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Individual Submission:
+
+Koushik Ram KT (010730070):
+
+Design Pattern: Observer
+
+XP Core Value : Communication
+
+Journal Entry :
+
+Communication-
+4/4/2016- 
+We first gathered as a team and we decided to meet face to face at
+least three times a week. We decided to work together on everything from requirements 
+to code. We decided to create the best solution to the problem that we have.
+
+4/5/2016 to 4/7/2016-We were discussing the various aspects of the projects and the 
+possible things that can be done. We mainly concentrated on developing a card game. 
+We analyzed various card games such as Poker, Black Jack, Hearts, Uno etc. 
+We mainly analyzed the pros and cons in implementing each of the games and also 
+considered the ease of implementation. Apart from that, we also considered the 
+design patterns that could be implemented.
+
+4/8/2016-We finally decided to go with Black Jack. 
+We also decided the Design pattern for each of the team member. 
+Everyone was assigned with at least one design pattern, which they have to concentrate. 
+We also decided to work as a team and not to just complete the design pattern, 
+but also collaborate and help each other.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Saikrishnan Baskaran (010720489)
+
+Design Pattern : Strategy
+
+XP Core Value – Eliminate Waste
+
+Journal Entry:
+
+04/05/2016, 04/06/2016 and 04/07/2016
+On the first and second day of the project meeting, the entire team met and a lots of topics and strategies were discussed for the solving the project. We had initially decided on extensive schedule of meetings and code reviews. I had to refine them so that they don’t make the overall process inefficient and create too much overhead and hinder our work unnecessarily. For instance, one member had suggested we meet five times a week in person or using skype, and also maintain slides depicting our discussion. I felt that five meetings a week was overkill, instead we can meet thrice a week since most of us would work on our project for longer durations of time instead of working regularly in shorter durations. This would make sure that all meetings would go on with all team members reporting their work. Another change I suggested was to use Excel sheets for maintaining the discussion points instead of using PowerPoint since they intention of using a reporting tool was to store information in clear and concise manner without using too much of team members time. While both Excel and PowerPoint accomplished the task of reporting information in a clear and concise manner, Excel trumped PowerPoint in ease of usability, since its easier to log information in Excel than in PowerPoint.
+
+04/08/2016 and 04/09/2016
+On discussions of design pattern meetings, a lot of complicated combination of design patterns were suggested by some team members, so I had to intervene and simplify to make sure that the team members didn’t look too much into the future , rather focused on making implementing basic design patterns for the intial stages of the project. 
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Shreyams Jain (010736427)
+
+Design Pattern : Composite
+
+XP Core Value – Simplicity
+
+Journal Entry:
+
+I have planned to instill the XP value ‘Simplicity’ for our project team and try to keep the work done in the project as simple as possible.
+
+First and foremost I requested all my team members to go through the XP value simplicity and get a basic understanding of the practices. In our next meeting I explained the team about the values of ‘Simplicity’ and its importance. One important thing I informed my team members to do is to keep the one word in their mind while working on this project i.e TUBE which makes this project at all times Testable, Understandable, Browsable, and Explainable.
+
+In the next couple of meetings we decided to sit together and came up with the design patterns that can be used for the project and also the use cases.Simplicity being the aim, I have explained the value of sitting together for doing decisions as one person’s simple can be complex for another person.
+
+Based on this, few things we decided to do in the coming week :
+
+1) Write pseudo test cases for the first iteration.
+2) To keep the code understandable , for a new person to easily understand the project.
+3) To write code once and only once and avoid redundancy by using minimal number of classes and methods.
+4) Using the design patterns right from the beginning as it keeps the project simple.
+5) Avoid writing code which is not necessary.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Sivakumar Sivaraman (010374468)
+
+Design Pattern : Command
+
+XP Core Value – Respect
+
+Journal Entry:
+
+Respect-
+
+4/4/2016- We had initial discussion starting with introduction about each other and their past experiences that were relevant to the project. The seeds of trust and respect were planted through these rounds of discussion. At the end of the meeting everyone were excited and highly motivated towards winning the project competition.
+
+4/5/2016 to 4/7/2016 - The team members came up proactively with ideas for the project topic. A consensus was reached where everyone voted to work on card game. Individually we picked a particular card game and we analysed about it. We then came together to discuss pros and cons of the each game. Everyone complemented each other by adding some interesting points relevant to the current topic.
+
+4/8/2016 - The high energy levels and passion shown by the individuals helped us to arrive at black jack as the project objective. We respected each other’s decision for the design pattern in which they were interested in. We promoted the values of team work and cooperation within the team so that we can integrate the respective design patterns from each team member.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Venkatesh Ramanujam Rangarajan(010737831)
+
+Design Pattern: Proxy
+
+XP core value : Feedback
+
+4/4/2016 - This was the day we met and discussed about the project. Since there was no real time customer the requirements came from within the team about the possible software that we can develop. Ideas about simulating website , phone applications were pitched in by two of the team mates. But the overall feedback was that simulating the application will have broad scope and we as a team may not be able to complete it in time. The next idea (or requirement) that was pitched in was about developing a card game for our 202 project. As every one in the team felt positive about the idea we decided to stick to developing a card game. 
+The idea to develop the card game in Greenfoot also received a positive feedback.
+
+4/5/2016 to 4/6/2016 - The discussion continued about what the card game that needs to be developed. Several games such as poker, 5 cards, President was suggested to take up as requirement.
+But the overall feedback was negative for these requirements. The team felt positive vibe when the idea to develop black jack was suggested. 
+So we as a team decided to develop black jack game.
+
+4/7/2016 to 4/8/2016 - During this phase, discussion about the design patterns that can be used to implement a specific requirement were discussed. Several ideas were suggested by 
+the individual team members and critical feed back were given related to the topic "will the particular pattern will be a best fit", "Implementation of the pattern" were given.
+
+Overall summary for XP Value Feedback:
+
+We have followed the value XP feed back in handling the requirements that were pitched in.Since we are in the earlier phase, feedback about the system through 
+unit and acceptance tests was not followed in this phase. But in the next phase we plan to develop test cases to have feedback about the system.

@@ -1,0 +1,145 @@
+Waffle Board : https://waffle.io/bavudaia/202-Team-Project
+
+Github : https://github.com/bavudaia/202-Team-Project
+Owner : Balamurugan Avudaiappan (010818717)
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Individual Submission:
+
+Balamurugan Avudaiappan (010818717):
+
+Design Pattern: Chain of responsibility
+
+XP Core Value : Courage
+
+Journal Entry :
+Week 2
+My role in this team is to follow the XP value of courage and instill the same value in the team.
+
+04-11-2016
+We had to face many problems while we met at this phase where we had to start coding each design pattern. I asked every team member to code for today and not procrastinate as this might bring sown team efficiency.
+
+04-12-2016,04-13-2016
+The team progressed well with coding as we did pair programming. We did not get bogged down in design and showed a good progression in the two workflows namely the login screen work flow and button hit workflow as planned. 
+
+04-14-2016,04-15-2016
+In the meetings corresponding to these we found that there were many sections of program that did not perform. I encouraged everybody in the team to remove everything if they find it inappropriate and start fresh code.
+We observed that at the end of the week we can good up with better solution. Had we not removed and though freshly we wouldn't have got such a quality of code.
+
+04-16-2016
+Now the agenda remains , that all other design patterns : strategy, Chain of Responsibility, Factory needs to done for the next week and due diligence should be done to make sure while integration every thing goes smoothly. We concluded that we will follow the same procedure as this weeks' iteratively.
+Week 2
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Individual Submission:
+
+Koushik Ram KT (010730070):
+
+Design Pattern: Observer
+
+XP Core Value : Communication
+
+Journal Entry :
+My role is to maintain good Communication in the team, which is also the core XP value that I took.
+
+04-11-2016
+We decided to start the coding for design patterns. We assigned each team member with a design pattern during the previous week and our goal 
+for this week
+was to kick start the coding. I made sure that there was proper communication between all the team members, so that we all were in the same page.
+
+04-12-2016,04-13-2016
+We started coding as a team and we decided to go with Pair programming as the team size is 6 and we didn't want all 6 to work on a 
+different piece of code. This greatly
+enhanced the team spirit and we divided ourselves in to a team of 2. 2*3=6.
+
+04-14-2016,04-15-2016
+We mainly concentrated on quality of code. We also decided to review the code among sub-groups in order to improve the coding standards and also 
+decrease potentail problems
+due to miscommunication. 
+
+04-16-2016
+We decided to follow the same strategy in the upcoming weeks as well.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Saikrishnan Baskaran (010720489)
+
+Design Pattern : Strategy
+
+XP Core Value – Eliminate Waste
+
+Journal Entry:
+Week 2
+My role in this team is to follow the XP value of Eliminate Waste and instill the same value in the team.
+
+04/11/2016, 04/12/2016 and 04/13/2016
+On the first week of starting the coding, we faced issues with clarity on how to implement the Design patterns. There were instances of team members looking to implement grandiose plans for the design pattern implementation. I identified these tasks as being too fancy and hence asked them to curbed and/or reduced in complexity. Ex. a team member implementing Command pattern had thought of a very complex work flow with plenty of unnecessary abstractions. I intervened and made sure the abstractions were kept to minimal level, low enough to implement OOPS principles efficiently and not unnecessarily complicate things. 
+
+04/14/2016 and 04/15/2016
+I found that the Thursday meeting did not yield enough information for the time spent on meeting. So , I offered for the thursday meeting to be moved to Friday instead. Since Friday is closer to the end of the week the team members would find it easier to plan ahead for the meeting and would also be able to present more complete tasks instead of just talking about tasks that are going to be done by the end of the week.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sivakumar Sivaraman (010374468)
+
+Design Pattern : Command
+
+XP Core Value – Respect
+
+Journal Entry:
+Week 2
+
+XP value that I have chosen is Respect. Below summary provides my version with regards to this XP value.
+04-11-2016
+Our team has already good knowledge about the design patterns. After the demo of starbucks in the class everyone were excited to do pattern and had their own ideas. When sat down together we had to respect every individual and we had to listen to their ideas and contribute our own suggestions to improve that even more. So a frame work of feedback and brainstorming nurtered the spirits of the team members to work on the project even more.
+
+04-12-2016, 04-13-2016
+At this junction, we thought it would be best to split up into 2 members and work on login screen work flow and button like a pair programming. We carefully planned this pair based on mutual admiration and respect people had for each other. Thus working in this model bolstered our success rate.
+
+04-14-2016, 04-15-2016
+Now came the real test for me to sustain the respect value in the team. We had to omit few code because of some inherent bugs in them. The team member should not be offended and things had to be handled a bit diplomatic here. We had to refuse their code with due respect and reverence and also have to make them understand the need for good quality coding and practices.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Venkatesh Ramanujam Rangarajan(010737831)
+
+Design Pattern: Proxy
+
+XP core value : Feedback
+Week 2
+I advice my team to follow the XP value "feedback".   
+Feedback can be from the customer( in this case #team 8), or from unit tests or acceptance tests.
+
+04-11-2016
+We decided the role of each member of the team in the previous week. Each member eloborated the design of their implementation. Others listened to the design and gave feed back 
+to the implementation technique that was suggested. The changes were noted down by the person.
+
+04-12-2016,04-13-2016
+We decided to make unit tests for the implementation that we are going to make so that we get feed back from the system during implementation.
+Test cases were discussed among us for each implementation.We then worked in pairs inorder to come up with the login screen and button click work flow.  
+
+04-14-2016,04-15-2016
+The code written by the team was discussed and team members gave feed back for each snippet, on how they can be improved. 
+Also few more unit tests that could be included for a specific use case were suggested.
+
+04-16-2016
+We had a final review of the test cases that should be included for the feed back from the system. We also had several implementations that didnot have unit tests.
+I suggested the team to develop unit test cases  for them so that the feed back from the system is complete.
+Journal Entry : Week#2
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Shreyams Jain (010736427)
+
+Design Pattern : Composite
+
+XP Core Value – Simplicity
+
+Journal Entry:
+
+04-11-2015:-
+The team members chose their individual patterns and now it was time to drill down each and every pattern and see if it was feasible. All the team members came up with the scenarios where the design patterns could be implemented and all team members interchanged their notes on scenarios and cross checked if the design pattern was feasible and if it wouldn't add more complexity. By doing this we were able to make sure the design patterns to be implemented are going to adhere to the XP value simplicity.
+
+04-12-2016, 04-13-2016:-
+
+I informed the team members to get involved in pair programming which would enable two different perspectives on one coding scenario and help in reducing complexity and eliminating waste. I also made the team members to start coding with the basic steps rather than going to the main logic of the game. For ex : to start with the login the and complete it first, then work on finishing each button hit.
+
+04-14-2016, 04-15-2016 :
+
+Initially the team were having trouble their code not working correctly and also integrating the code with other team members. So i suggested to try to keep the code simple, asked the team to recheck the code and to remove unnecessary content and do code integration right from the beginning with each simple step. This increased simplicity in each step and the team was also more involved and interacted with each other more often.
