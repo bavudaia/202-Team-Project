@@ -22,6 +22,7 @@ public class TextBox extends Actor
     
     private Color bgColor = Color.white;
     private Color textColor = Color.black;
+    private Boolean isPassword=false;
 
     public TextBox() {
         this(250, 50, false, true, Color.white, Color.black, "");
@@ -43,8 +44,9 @@ public class TextBox extends Actor
         this(width, height, false, enabled, Color.white, Color.black, "");
     }
     
-    public TextBox(int width, int height, String text) throws IllegalArgumentException {
+    public TextBox(int width, int height, String text,Boolean password) throws IllegalArgumentException {
         this(width, height, false, true, Color.white, Color.black, text);
+        isPassword = password;
     }
     
     public TextBox(int width, int height, boolean displayKeyNames, String text) throws IllegalArgumentException {
@@ -108,10 +110,12 @@ public class TextBox extends Actor
                 cursorActive = !cursorActive;
             }
             input = Greenfoot.getKey();
+			
             if (enabled) {
                 if (displayKeyNames) {
                     if (input != null && input != "") {
-                        text = input;
+                        System.out.println(input);
+						text = input;
                     }
                 }
                 else {
@@ -158,12 +162,17 @@ public class TextBox extends Actor
                         }
                     }
                     else if (input != null && input.length() == 1) {
+                        String sTemp = "";
+                        /*if(isPassword == true)
+                            sTemp = "*";
+                        else*/
+                            sTemp = input;  
                         if (cursorPosition == text.length()) {
-                            text += input;
+                            text += sTemp;
                         }
                         else {
                             temp = text.substring(0, cursorPosition);
-                            temp += input;
+                            temp += sTemp;
                             temp += text.substring(cursorPosition, text.length() - 1);
                             text = temp;
                             temp = "";
@@ -185,8 +194,17 @@ public class TextBox extends Actor
     }
     
     private void displayText() {
-        GreenfootImage textImage = new GreenfootImage(text, textFontSize, textColor, new Color(0, 0, 0, 0));
-        GreenfootImage textBeforeCursor = new GreenfootImage(text.substring(0, cursorPosition), textFontSize, textColor, new Color(0, 0, 0, 0));
+        String sTemp = "";
+        if(isPassword)
+        {
+            int i = 0;
+            for(i = 0; i < text.length();i++)
+                sTemp = sTemp + "*";
+        }
+        else
+            sTemp = text;
+        GreenfootImage textImage = new GreenfootImage(sTemp, textFontSize, textColor, new Color(0, 0, 0, 0));
+        GreenfootImage textBeforeCursor = new GreenfootImage(sTemp.substring(0, cursorPosition), textFontSize, textColor, new Color(0, 0, 0, 0));
         resetImage();
         getImage().drawImage(textImage, (textImage.getWidth() > getImage().getWidth() - 10 ? -(textImage.getWidth() - getImage().getWidth()) - 10 : 5), (getImage().getHeight() / 2 - textImage.getHeight() / 2));
         getImage().setColor(textColor);
