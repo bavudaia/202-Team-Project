@@ -1,5 +1,6 @@
 import greenfoot.*;
-import java.util.List;
+import java.util.*;
+
 /*t
  * Write a description of class Player here.
  * 
@@ -10,29 +11,36 @@ public class Player extends Actor
 {
     // instance variables - replace the example below with your own
     private int x;
-    private List<String> cards;
+    protected List<String> cards;
     private int score;
     private int assets;
     private int betting_amount;
+    protected GameController gc;
     /**
      * Constructor for objects of class Player
      */
     public Player()
     {
     }
-    
+    public GameController getGameController()
+    {
+        return gc;
+    }
+    public void setGameController(GameController gc){
+        this.gc = gc;
+    }
     public int getAssets() {
-		return assets;
-	}
-	public void setAssets(int assets) {
-		this.assets = assets;
-	}
-	public int getBetting_amount() {
-		return betting_amount;
-	}
-	public void setBetting_amount(int betting_amount) {
-		this.betting_amount = betting_amount;
-	} 
+        return assets;
+    }
+    public void setAssets(int assets) {
+        this.assets = assets;
+    }
+    public int getBetting_amount() {
+        return betting_amount;
+    }
+    public void setBetting_amount(int betting_amount) {
+        this.betting_amount = betting_amount;
+    } 
     
     public void hit(){
         //to be 
@@ -72,6 +80,18 @@ public class Player extends Actor
     
     public void setScore(int score){
         this.score = score;
+    }
+    
+    public void getFirstCards()
+    {
+        for(int i=0;i<2;i++)
+        {
+            int cardsLeft = gc.getCardSize();
+            Random r = new Random();
+            int n = r.nextInt(cardsLeft);
+            this.cards.add(gc.getCard(n));
+            gc.remove(i);
+        }   
     }
 
 }
