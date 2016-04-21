@@ -23,6 +23,7 @@ public class MyWorld extends World
         addObject(new Label(200, 40, "Password",false), 200, 240);
         addObject(new TextBox(200, 40, "",false), 400, 140);
         addObject(new TextBox(200, 40, "",true), 400, 240);
+        addObject(new Button(), 330, 290);
  
     }
 }
