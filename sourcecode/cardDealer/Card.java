@@ -1,26 +1,35 @@
 public class Card {
 
-	private int number;
-	private int suit;
+	private Boolean isTrue;
+	private Boolean gameIsOn;
+	private int num;
+	private int back;
 	private Boolean face;
-	public String src;
-	public String getSrc() {
-		return src;
+	public String resource;
+	private String player;
+	public Boolean getStatus() {
+		return gameIsOn;
+	}
+	public void setStatus(String gameIsOn) {
+		this.gameIsOn= gameIsOn;
+	}
+	public String getResource() {
+		return resource;
 	}
 	public void setSrc(String src) {
 		this.src= src;
 	}
-	public int getNumber() {
-		return number;
+	public int getnum() {
+		return num;
 	}
-	public void setNumber(int number) {
-		this.number = number;
+	public void setnum(int num) {
+		this.num = num;
 	}
-	public int getSuit() {
-		return suit;
+	public int getback() {
+		return back;
 	}
-	public void setSuit(int suit) {
-		this.suit = suit;
+	public void setback(int back) {
+		this.back = back;
 	}
 	public Boolean getFace() {
 		return face;
@@ -28,10 +37,16 @@ public class Card {
 	public void setFace(Boolean face) {
 		this.face = face;
 	}
+	public String getPlayer() {
+		return player;
+	}
+	public void setPlayer(String player) {
+		this.player = player;
+	}
 	public Card() {
 		super();
-		setNumber(0);
-		setSuit(0);
+		setnum(0);
+		setback(0);
 		setFace(true);
 	}
 	public void flip(){
