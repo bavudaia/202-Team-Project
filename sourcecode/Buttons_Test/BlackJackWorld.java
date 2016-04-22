@@ -34,7 +34,7 @@ public class BlackJackWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 768, 1); 
-        getBackground().drawImage(new GreenfootImage("blackjackmenu.png"), 0, 0);
+        getBackground().drawImage(new GreenfootImage("blackjackmenu.jpg"), 0, 0);
         hitButton = new Hit();
         addObject(hitButton,300,500);
         standButton = new Stand();
