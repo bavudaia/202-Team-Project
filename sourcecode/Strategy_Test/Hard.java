@@ -6,6 +6,17 @@
  */
 public class Hard  implements Strategy
 {
-    // instance variables - replace the example below with your own
- 
+    Bot bot ;
+    public void execute(){        
+        if(bot.getScore()<=10){
+            bot.doubleDown();
+        }
+        else if(bot.getScore()>10&&bot.getScore()<16){
+            bot.hit();
+        }
+        else {
+            bot.stand();
+        }
+        
+    }
 }
