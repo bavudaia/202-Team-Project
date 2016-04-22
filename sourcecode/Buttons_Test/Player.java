@@ -124,11 +124,14 @@ public class Player extends Actor
     public void addBet(int betValue)
     {
         this.betting_amount+=betValue;
+        this.assets-=betValue;
     }
     
     public void clearBet()
     {
+        this.assets += this.betting_amount;
         this.betting_amount=0;
+        
     }
 
 }
