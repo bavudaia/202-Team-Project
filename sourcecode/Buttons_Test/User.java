@@ -17,8 +17,8 @@ public class User extends Player
         // Add your action code here.
         
     }
-    public void addBet() 
+    public void deal()
     {
-    
+        
     }
 }

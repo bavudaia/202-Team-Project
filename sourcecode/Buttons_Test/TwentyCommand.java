@@ -6,6 +6,14 @@
  */
 public class TwentyCommand  implements BettingButtonCommand 
 {
-       public void execute(){}
-   public void setUser(User user){}
+   User u;
+   public void execute()
+   {
+       State s = u.getCurrentState();
+       s.bet(20);
+   }
+   public void setUser(User user)
+   {
+       u=user;
+   }
 }

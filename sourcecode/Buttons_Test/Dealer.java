@@ -7,12 +7,17 @@ import java.util.Random;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Dealer extends Player
+public class Dealer extends Player implements Observer
 {
     /**
      * Act - do whatever the Dealer wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    @Override
+    public void update()
+    {
+        
+    }
     public void act() 
     {
         // Add your action code here.
@@ -28,5 +33,14 @@ public class Dealer extends Player
             this.cards.add(gc.getCard(n));
             gc.remove(i);
         }   
+    }
+     public void addBet(int betValue)
+    {
+        //do nothing
+    }
+    
+    public void clearBet()
+    {
+        //do nothing
     }
 }

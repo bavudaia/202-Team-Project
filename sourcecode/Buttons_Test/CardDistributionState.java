@@ -7,5 +7,10 @@
 public class CardDistributionState  implements State
 {
     // instance variables - replace the example below with your own
+    
+    public void bet(int betVal){}
+   public void setBlackJackWorld(Player p){}
+    public void done(){}
+    public void clear(){}
   
 }

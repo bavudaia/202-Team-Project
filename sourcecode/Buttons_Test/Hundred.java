@@ -23,6 +23,7 @@ public class Hundred extends BettingButton
       {
           // get player from chain of responsibility
             BettingButtonCommand b = new HundredCommand();
+            // b.setUser();//to be implemented later.
             b.execute();
         }
     }    

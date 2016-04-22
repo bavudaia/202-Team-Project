@@ -8,6 +8,14 @@ import greenfoot.*;
 
 public class ClearCommand implements BettingButtonCommand  
 {
-   public void execute(){}
-   public void setUser(User user){}
+   User u;
+   public void execute()
+   {
+              State s = u.getCurrentState();
+       s.clear();
+   }
+   public void setUser(User user)
+   {
+       u=user;
+   }
 }

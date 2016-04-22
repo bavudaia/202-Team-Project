@@ -6,6 +6,7 @@
  */
 public interface BettingButtonCommand  
 {
+   
    void execute();
    void setUser(User user);
 }

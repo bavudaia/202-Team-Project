@@ -1,16 +1,15 @@
 /**
- * Write a description of class Ten here.
+ * Write a description of class DealCommand here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TenCommand  implements BettingButtonCommand
+public class DealCommand implements BettingButtonCommand 
 {
    User u;
    public void execute()
    {
-       State s = u.getCurrentState();
-       s.bet(10);
+      u.deal();
    }
    public void setUser(User user)
    {

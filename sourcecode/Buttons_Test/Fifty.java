@@ -23,6 +23,7 @@ public class Fifty extends BettingButton
       {
           // get player from chain of responsibility
             BettingButtonCommand b = new FiftyCommand();
+            // b.setUser();//to be implemented later.
             b.execute();
         }
     }    

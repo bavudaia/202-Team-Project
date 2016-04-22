@@ -6,6 +6,14 @@
  */
 public class HundredCommand  implements BettingButtonCommand
 {
-      public void execute(){}
-   public void setUser(User user){}
+   User u;
+   public void execute()
+   {
+              State s = u.getCurrentState();
+       s.bet(100);
+   }
+   public void setUser(User user)
+   {
+       u=user;
+   }
 }
