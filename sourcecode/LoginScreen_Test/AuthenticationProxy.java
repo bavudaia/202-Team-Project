@@ -18,7 +18,7 @@ public class AuthenticationProxy implements Login
     public boolean authenticateLogin(String Username, String Password)
     {
         // need to connect with cloud DB here
-        if(Username.equals("TeamCMPE20218") && Password.equals("TestString"))
+        if(Username.equals("admin") && Password.equals("admin"))
         {
             return true;
         }
