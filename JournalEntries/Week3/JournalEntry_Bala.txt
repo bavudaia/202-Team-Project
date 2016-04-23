@@ -1,0 +1,9 @@
+The core XP value I have chosen to instill for the BlackJack Single player game project is Courage.
+04/18 , 04/19
+We worked hard on coding and testing the same. I encouraged every team member to concentrate on their modules and not get intimidated by integration tasks initially. Everybody were on schedule, but the main task was there were more requirements getting added up for which we needed to code. In this juncture, I suggested to worry less about this and made everyone work on their current task.
+
+04/20
+I suggested the idea of pair programming, which worked very well as all of knew the requirements to code and constant input was given to improve functionality. Certain parts of code needed to be removed. Many team members were reluctant to remove code. This looked like a potential barrier to me. I encouraged every member to remove code and rework.
+
+04/21,04/22,04/23
+We are currently working on all new patterns discovered, reworking code to implement them. In this phase work gets tedious, so we are putting in hours. We are together , in all aspects which gives us more courage that this project will be a success.
