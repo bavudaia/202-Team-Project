@@ -6,5 +6,6 @@
  */
 public interface BettingStrategy  
 {
-
+    
+   public int getBettingAmount();
 }

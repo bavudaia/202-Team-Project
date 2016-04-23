@@ -12,11 +12,14 @@ public class Bot extends Player implements Observer
      * Act - do whatever the Bot wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private BettingStrategy bs;
     public void act() 
     {
         // Add your action code here.
     }    
-    
+    public void setBettingStrategy(BettingStrategy bs){
+       this.bs=bs;
+    }
     @Override
     public void update()
     {
@@ -24,6 +27,7 @@ public class Bot extends Player implements Observer
     }
     public void noftifyUserDeal()
     {
-        
+        int betAmt = bs.getBettingAmount();
+        setBetting_amount(betAmt);
     }
 }

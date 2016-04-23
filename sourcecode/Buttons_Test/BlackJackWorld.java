@@ -98,8 +98,8 @@ scoreMap.put(51,10);
     {
         //for(Bot b : bots){
             bot1.noftifyUserDeal();
-            bot1.noftifyUserDeal();
-            
+            bot2.noftifyUserDeal();
+            bot3.noftifyUserDeal();
         //}
     }
     public State getCardDistributionState()

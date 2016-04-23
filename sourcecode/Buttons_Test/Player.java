@@ -58,7 +58,6 @@ public class Player extends Actor
     }
     public void surrender(){
                 //to be 
-
     System.out.println("surrender");
             //to be replaced with surrender logic
     }
