@@ -7,10 +7,27 @@
 public class CardDistributionState  implements State
 {
     // instance variables - replace the example below with your own
-    
-    public void bet(int betVal){}
-   public void setBlackJackWorld(BlackJackWorld p){}
-    public void done(){}
-    public void clear(){}
+    BlackJackWorld bjw;
+   public void bet(int betVal){}
+   public void setBlackJackWorld(BlackJackWorld p)
+   {
+       bjw=p;
+   }
+   public void done(){}
+   public void clear(){}
+   public void distribute()
+   {
+       User u=bjw.getUser();
+       Bot b1=bjw.getBot1();
+       Bot b2=bjw.getBot2();
+       Bot b3=bjw.getBot3();
+       Dealer d=bjw.getDealer();
+       u.getFirstCards();
+       b1.getFirstCards();
+       b2.getFirstCards();
+       b3.getFirstCards();
+       d.getFirstCards();
+       
+   }
   
 }

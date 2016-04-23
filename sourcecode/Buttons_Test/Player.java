@@ -12,6 +12,7 @@ public class Player extends Actor
     // instance variables - replace the example below with your own
     private int x;
     protected List<String> cards;
+    protected List<Integer> indexes;
     private int score;
     private int assets;
     private int betting_amount;
@@ -90,9 +91,23 @@ public class Player extends Actor
             int cardsLeft = gc.getCardSize();
             Random r = new Random();
             int n = r.nextInt(cardsLeft);
-            this.cards.add(gc.getCard(n));
-            gc.remove(i);
+            this.cards.add(gc.getCard(n));            
+            this.indexes.add(n);
+            gc.remove(n);
+            
         }
+        setScore(getScoreFromCards());
+       
+    }
+    
+    public int getScoreFromCards()
+    {
+        int score = 0;
+        for(int cardIndex : indexes)
+        {
+            score += BlackJackWorld.scoreMap.get(cardIndex);
+        }
+        return score;
     }
     
     public void addBet(int betValue)

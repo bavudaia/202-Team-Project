@@ -14,6 +14,17 @@ public class Dealer extends Player implements Observer
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     @Override
+    public void getFirstCards()
+    {
+         for(int i=0;i<1;i++)
+        {
+            int cardsLeft = gc.getCardSize();
+            Random r = new Random();
+            int n = r.nextInt(cardsLeft);
+            this.cards.add(gc.getCard(n));
+            gc.remove(n);
+        }
+    }
     public void update()
     {
         

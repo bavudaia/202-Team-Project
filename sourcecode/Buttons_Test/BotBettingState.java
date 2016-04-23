@@ -6,11 +6,13 @@
  */
 public class BotBettingState  implements State 
 {
-    
-        public void bet(int betVal){}
-        
-   public void setBlackJackWorld(BlackJackWorld p){}
-    
+   BlackJackWorld bjw;
+   public void bet(int betVal){}        
+   public void setBlackJackWorld(BlackJackWorld p){}    
    public void clear(){}
-   public  void done(){}
+   public  void done(){
+    bjw.setCurrentState(bjw.getCardDistributionState());
+    State s=bjw.getCardDistributionState();
+    s.distribute();
+    }
 }
