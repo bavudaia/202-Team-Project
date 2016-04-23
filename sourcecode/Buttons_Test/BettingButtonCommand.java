@@ -8,5 +8,5 @@ public interface BettingButtonCommand
 {
    
    void execute();
-   void setUser(User user);
+   void setBlackJackWorld(BlackJackWorld user);
 }

@@ -9,7 +9,7 @@ public class BotBettingState  implements State
     
         public void bet(int betVal){}
         
-   public void setBlackJackWorld(Player p){}
+   public void setBlackJackWorld(BlackJackWorld p){}
     
    public void clear(){}
    public  void done(){}

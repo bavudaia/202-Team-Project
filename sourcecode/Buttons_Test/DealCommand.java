@@ -6,12 +6,13 @@
  */
 public class DealCommand implements BettingButtonCommand 
 {
-   User u;
+   BlackJackWorld u;
    public void execute()
    {
-      u.deal();
+      State s = u.getCurrentState();
+      s.done();
    }
-   public void setUser(User user)
+   public void setBlackJackWorld(BlackJackWorld user)
    {
        u=user;
    }

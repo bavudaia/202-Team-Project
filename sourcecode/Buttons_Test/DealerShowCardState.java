@@ -8,7 +8,7 @@ public class DealerShowCardState  implements State
 
 {
       public void bet(int betVal){}
-   public void setBlackJackWorld(Player p){}
+   public void setBlackJackWorld(BlackJackWorld p){}
     public void done(){}
     public void clear(){}
 }

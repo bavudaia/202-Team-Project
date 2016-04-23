@@ -6,15 +6,15 @@ import greenfoot.*;
  * @version (a version number or a date)
  */
 
-public class ClearCommand implements BettingButtonCommand  
+public class ClearCommand implements BettingButtonCommand
 {
-   User u;
+   BlackJackWorld u;
    public void execute()
    {
-              State s = u.getCurrentState();
+       State s = u.getCurrentState();
        s.clear();
    }
-   public void setUser(User user)
+   public void setBlackJackWorld(BlackJackWorld user)
    {
        u=user;
    }

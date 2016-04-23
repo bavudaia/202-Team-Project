@@ -29,7 +29,39 @@ public class BlackJackWorld extends World
     Fifty fifty;
     Hundred hundred;
     Clear clear;
-  
+        private State currentState;
+    private State bettingState;
+    private State botBettingState;
+    
+    public User getUser()
+    {
+        return user;
+    }
+       public void setCurrentState(State s)
+    {
+        this.currentState = s;
+    }
+    public State getCurrentState()
+    {
+        return currentState;
+    }
+        public void setBettingState(State s)
+    {
+        this.bettingState = s;
+    }
+    public State getBettingState()
+    {
+        return bettingState;
+    }
+        public void setBotBettingState(State s)
+    {
+        this.botBettingState = s;
+    }
+    public State getBotBettingState()
+    {
+        return botBettingState;
+    }
+
     public BlackJackWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.

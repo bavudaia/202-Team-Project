@@ -6,13 +6,13 @@
  */
 public class FiftyCommand implements BettingButtonCommand
 {
-    User u;
+    BlackJackWorld u;
    public void execute()
    {
               State s = u.getCurrentState();
        s.bet(50);
    }
-   public void setUser(User user)
+   public void setBlackJackWorld(BlackJackWorld user)
    {
        u=user;
    }

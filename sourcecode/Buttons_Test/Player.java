@@ -16,38 +16,12 @@ public class Player extends Actor
     private int assets;
     private int betting_amount;
     protected GameController gc;
-    private State currentState;
-    private State bettingState;
-    private State botBettingState;
+
     /**
      * Constructor for objects of class Player
      */
     public Player()
     {
-    }
-    public void setCurrentState(State s)
-    {
-        this.currentState = s;
-    }
-    public State getCurrentState()
-    {
-        return currentState;
-    }
-        public void setBettingState(State s)
-    {
-        this.bettingState = s;
-    }
-    public State getBettingState()
-    {
-        return bettingState;
-    }
-        public void setBotBettingState(State s)
-    {
-        this.botBettingState = s;
-    }
-    public State getBotBettingState()
-    {
-        return botBettingState;
     }
     public GameController getGameController()
     {

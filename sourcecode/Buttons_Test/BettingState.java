@@ -6,25 +6,26 @@
  */
 public class BettingState  implements State
 {
-    Player p;
+    BlackJackWorld bjw;
     @Override    
     public void bet(int betValue)
     {
-       p.addBet(betValue); 
+        User user = bjw.getUser();
+        user.addBet(betValue); 
     }
     @Override
-    public void setBlackJackWorld(Player p)
+    public void setBlackJackWorld(BlackJackWorld bjw)
     {   
-        this.p=p;
+        this.bjw=bjw;
     }
     
     @Override
     public void done()
     {
-        p.setCurrentState(p.getBotBettingState());
+        bjw.setCurrentState(bjw.getBotBettingState());
     }
     @Override
     public void clear(){
-        p.clearBet();
+        bjw.getUser().clearBet();
     }
 }
