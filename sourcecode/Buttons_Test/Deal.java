@@ -13,14 +13,16 @@ public class Deal extends BettingButton
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     Player p;
+    
     //User u;
     public void act() 
     {
         // Add your action code here.
         if(Greenfoot.mouseClicked(this))
         {
-            State s = p.getCurrentState();
-            s.done();
+            BettingButtonCommand dealCommand=new DealCommand();
+            dealCommand.execute();
+          
         }
     }    
 }

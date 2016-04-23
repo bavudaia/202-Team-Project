@@ -4,5 +4,5 @@ comment0.text=\r\n\ Write\ a\ description\ of\ class\ Ten\ here.\r\n\ \r\n\ @aut
 comment1.params=
 comment1.target=void\ execute()
 comment2.params=user
-comment2.target=void\ setUser(User)
+comment2.target=void\ setBlackJackWorld(BlackJackWorld)
 numComments=3
