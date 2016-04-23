@@ -20,6 +20,7 @@ public class BlackJackWorld extends World
     Bot bot1;
     Bot bot2;
     Bot bot3;
+    //private ArrayList<Bot> bots = new ArrayList<Bot>(); 
     Dealer dealer;
     User user;
     GameController gc;
@@ -29,7 +30,7 @@ public class BlackJackWorld extends World
     Fifty fifty;
     Hundred hundred;
     Clear clear;
-        private State currentState;
+    private State currentState;
     private State bettingState;
     private State botBettingState;
     private State cardDistributionState;
@@ -93,7 +94,14 @@ scoreMap.put(51,10);
 
     }
     
-    
+    public void notifyDeal()
+    {
+        //for(Bot b : bots){
+            bot1.noftifyUserDeal();
+            bot1.noftifyUserDeal();
+            
+        //}
+    }
     public State getCardDistributionState()
     {
         return cardDistributionState;
@@ -165,150 +173,150 @@ scoreMap.put(51,10);
          addObject(clear,700,600);
     }
         public Hit getHitButton() {
-		return hitButton;
-	}
+        return hitButton;
+    }
 
 
-	public void setHitButton(Hit hitButton) {
-		this.hitButton = hitButton;
-	}
+    public void setHitButton(Hit hitButton) {
+        this.hitButton = hitButton;
+    }
 
 
-	public Stand getStandButton() {
-		return standButton;
-	}
+    public Stand getStandButton() {
+        return standButton;
+    }
 
 
-	public void setStandButton(Stand standButton) {
-		this.standButton = standButton;
-	}
+    public void setStandButton(Stand standButton) {
+        this.standButton = standButton;
+    }
 
 
-	public Surrender getSurrenderButton() {
-		return surrenderButton;
-	}
+    public Surrender getSurrenderButton() {
+        return surrenderButton;
+    }
 
 
-	public void setSurrenderButton(Surrender surrenderButton) {
-		this.surrenderButton = surrenderButton;
-	}
+    public void setSurrenderButton(Surrender surrenderButton) {
+        this.surrenderButton = surrenderButton;
+    }
 
 
-	public DoubleDown getDoubleDownButton() {
-		return doubleDownButton;
-	}
+    public DoubleDown getDoubleDownButton() {
+        return doubleDownButton;
+    }
 
 
-	public void setDoubleDownButton(DoubleDown doubleDownButton) {
-		this.doubleDownButton = doubleDownButton;
-	}
+    public void setDoubleDownButton(DoubleDown doubleDownButton) {
+        this.doubleDownButton = doubleDownButton;
+    }
 
 
-	public Bot getBot1() {
-		return bot1;
-	}
+    public Bot getBot1() {
+        return bot1;
+    }
 
 
-	public void setBot1(Bot bot1) {
-		this.bot1 = bot1;
-	}
+    public void setBot1(Bot bot1) {
+        this.bot1 = bot1;
+    }
 
 
-	public Bot getBot2() {
-		return bot2;
-	}
+    public Bot getBot2() {
+        return bot2;
+    }
 
 
-	public void setBot2(Bot bot2) {
-		this.bot2 = bot2;
-	}
+    public void setBot2(Bot bot2) {
+        this.bot2 = bot2;
+    }
 
 
-	public Bot getBot3() {
-		return bot3;
-	}
+    public Bot getBot3() {
+        return bot3;
+    }
 
 
-	public void setBot3(Bot bot3) {
-		this.bot3 = bot3;
-	}
+    public void setBot3(Bot bot3) {
+        this.bot3 = bot3;
+    }
 
 
-	public Dealer getDealer() {
-		return dealer;
-	}
+    public Dealer getDealer() {
+        return dealer;
+    }
 
 
-	public void setDealer(Dealer dealer) {
-		this.dealer = dealer;
-	}
+    public void setDealer(Dealer dealer) {
+        this.dealer = dealer;
+    }
 
 
 
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+    public void setUser(User user) {
+        this.user = user;
+    }
 
 
-	public GameController getGc() {
-		return gc;
-	}
+    public GameController getGc() {
+        return gc;
+    }
 
 
-	public void setGc(GameController gc) {
-		this.gc = gc;
-	}
+    public void setGc(GameController gc) {
+        this.gc = gc;
+    }
 
 
-	public Ten getTen() {
-		return ten;
-	}
+    public Ten getTen() {
+        return ten;
+    }
 
 
-	public void setTen(Ten ten) {
-		this.ten = ten;
-	}
+    public void setTen(Ten ten) {
+        this.ten = ten;
+    }
 
 
-	public Twenty getTwenty() {
-		return twenty;
-	}
+    public Twenty getTwenty() {
+        return twenty;
+    }
 
 
-	public void setTwenty(Twenty twenty) {
-		this.twenty = twenty;
-	}
+    public void setTwenty(Twenty twenty) {
+        this.twenty = twenty;
+    }
 
 
-	public Fifty getFifty() {
-		return fifty;
-	}
+    public Fifty getFifty() {
+        return fifty;
+    }
 
 
-	public void setFifty(Fifty fifty) {
-		this.fifty = fifty;
-	}
+    public void setFifty(Fifty fifty) {
+        this.fifty = fifty;
+    }
 
 
-	public Hundred getHundred() {
-		return hundred;
-	}
+    public Hundred getHundred() {
+        return hundred;
+    }
 
 
-	public void setHundred(Hundred hundred) {
-		this.hundred = hundred;
-	}
+    public void setHundred(Hundred hundred) {
+        this.hundred = hundred;
+    }
 
 
-	public Clear getClear() {
-		return clear;
-	}
+    public Clear getClear() {
+        return clear;
+    }
 
 
-	public void setClear(Clear clear) {
-		this.clear = clear;
-	}
+    public void setClear(Clear clear) {
+        this.clear = clear;
+    }
 
 
 

@@ -23,6 +23,7 @@ public class BettingState  implements State
     public void done()
     {
         bjw.setCurrentState(bjw.getBotBettingState());
+        
         //Observer Pattern Call should be made here to notify the BOTS to bet
     }
     @Override

@@ -22,4 +22,8 @@ public class Bot extends Player implements Observer
     {
         
     }
+    public void noftifyUserDeal()
+    {
+        
+    }
 }
