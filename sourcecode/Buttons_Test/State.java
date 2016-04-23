@@ -12,5 +12,6 @@ public interface State
    public void setBlackJackWorld(BlackJackWorld p);
     public void done();
     public void clear();
+    public void distribute();
    
 }

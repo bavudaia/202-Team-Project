@@ -33,18 +33,7 @@ public class Dealer extends Player implements Observer
     {
         // Add your action code here.
     }    
-    @Override
-        public void getFirstCards()
-    {
-            for(int i=0;i<1;i++)
-        {
-            int cardsLeft = gc.getCardSize();
-            Random r = new Random();
-            int n = r.nextInt(cardsLeft);
-            this.cards.add(gc.getCard(n));
-            gc.remove(i);
-        }   
-    }
+   
      public void addBet(int betValue)
     {
         //do nothing

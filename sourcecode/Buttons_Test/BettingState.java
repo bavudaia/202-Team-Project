@@ -29,4 +29,8 @@ public class BettingState  implements State
     public void clear(){
         bjw.getUser().clearBet();
     }
+    @Override
+    public void distribute()
+    {
+    }
 }

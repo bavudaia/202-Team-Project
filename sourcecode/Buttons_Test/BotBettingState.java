@@ -15,4 +15,8 @@ public class BotBettingState  implements State
     State s=bjw.getCardDistributionState();
     s.distribute();
     }
+    @Override
+    public void distribute()
+    {
+    }
 }

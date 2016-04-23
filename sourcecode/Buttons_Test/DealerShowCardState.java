@@ -11,4 +11,8 @@ public class DealerShowCardState  implements State
    public void setBlackJackWorld(BlackJackWorld p){}
     public void done(){}
     public void clear(){}
+    @Override
+    public void distribute()
+    {
+    }
 }
