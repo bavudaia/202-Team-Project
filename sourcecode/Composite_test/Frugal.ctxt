@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Frugal
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Frugal\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Frugal()
+comment2.params=
+comment2.target=int\ getBettingAmount()
+comment2.text=public\ setBot(Bot\ b)\r\n\ \ \ {\r\n\ \ \ \ \ \ \ bot\ \=\ b;\r\n}
+comment3.params=a\ b
+comment3.target=int\ min(int,\ int)
+numComments=4
