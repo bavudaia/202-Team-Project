@@ -1,0 +1,9 @@
+Week 3
+My role in this team is to follow the XP value of Eliminate Waste and instill the same value in the team.
+
+04/18/2016 and 04/19/2016
+We worked on our individual implementations of design patterns and their integration for the first two days. During the integration we faced many issues including redundancy of functionalities. For instance, both mine and Bala’s module had implemented similar functionality for change of states between the players, bots and dealers. So after integration, it brought unnecessary complexity in the system and there was a need to eliminate some of the redundant modules in the function and also simplify them. This was needed in order to move forward with the rest of implementation.
+04/20/2016 and 04/21/2016
+We worked together as a team on state pattern, wherein we categorized the entire game into three states, namely – players turn, bots turn and card distribution. There were lots of outlandish ideas for state categorization before we arrived on the aforementioned three states. I played a part in simplification of the states since implementation of too many states would lead to unnecessarily complex flow of objects, which would both hinder the performance of the game as well as would prevent us from completing our project before project due date.
+04/22/2016
+We integrated the command pattern with the state pattern, wherein we merged the functionality of state retrieval from the world class with the individual button clicks. 
