@@ -1,0 +1,9 @@
+Week 3
+My role in this team is to follow the XP value of Respect and instil the same value in the team.
+
+04/18/2016 and 04/19/2016
+During this period of time we were working separately on individual modules to implement corresponding design patterns. We respected each other’s’ time and effort. We streamlined the project work with proper follow up meetings to ensure proper communication for inter dependent modules. People were on time and respected each other. 
+04/20/2016 and 04/21/2016
+We worked on state patterns together. Every one of us pitched in with interesting ideas. In order to keep them motivated and involved in the discussion. I carefully noted down each ideas from the team members and found redundancies in them. We removed them to reduce the complexity in implementation.  
+04/22/2016
+We integrated the command pattern with the state pattern, wherein we merged the functionality of state retrieval from the world class with the individual button clicks.
