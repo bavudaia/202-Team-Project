@@ -1,0 +1,20 @@
+
+Week 3
+I make sure that we as a team follow the XP principle Feed back.
+Feedback can be from customer, system(via unit test), and through acceptance tests.
+
+04/18/2016 and 04/19/2016
+
+During this phase we worked together on the integration part of the completed modules. After integration we tested the combined functionality of the codules to 
+get the feed back from the system. In addition to it we also showed demo of the functionality to other team mates to get their feed back.
+
+04/20/2016 and 04/21/2016
+During this phase we worked on the implementation of the state pattern to determine the state of the game. Ideas were thrown in the middle
+by each person and others gave feedback on the implementation. Finally we decided it would be best if we implement states such as players turn, bot turn and 
+card distribution state. We also decided on the unit test that would be needed for the state pattern which is necessary to get the feed back from the system.
+
+04/22/2016
+This day invloved with more integration of the command pattern with the state pattern which resulted in change of state on button click. After integration we did test 
+to get feed back from the system to ensure the required functionality is achieved. Also induvidual team members shared their feed back after integration on things like
+the appearance on the UI, customization issues etc which were noted down. 
+  
