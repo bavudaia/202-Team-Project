@@ -1,0 +1,11 @@
+Journal Entry Week#3
+
+Simplicity
+
+04-18-2016 and 04-19-2016
+
+The initial 2 days the team split responsibilities and we were involved in intensive coding. I made sure everyone is commenting their code at regular basis to make sure it was easily understandable. At the end of the second day we tried to get feedback from one another on each other’s code. We also tried to integrate the code and failed at the end of it. But since we followed the simple rule of commenting , the team was easily able to detect anomalies and fix the integration. If the team wouldn’t have commented their code, it would have been really difficult to integrate everyone’s part of code. This policy of simplicity helped us in quick recovery.
+
+04-20-2016 , 04-21-2016, 04-22-2016
+
+The next three days we were involved in implementing the core logic and also worked together implementing the state design pattern. We started by writing down the pseudo code and the basic requirements first. Then we implemented the first iteration of the code, removed all the unnecessary stuff from our code and repeated the same process. By this we were able to enforce the XP value simplicity which helped us keeping all of our steps in implementing state pattern simple and easy to mitigate failures.
