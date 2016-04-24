@@ -1,0 +1,21 @@
+Week 3
+My main aim is to facilitate proper communication in the team. I made sure that everyone communicates with every other person and there is no gap in communication.
+
+04/18/2016 and 04/19/2016
+We mainly concentrated on Integration of the Design patterns for the first two days.
+The main issue that we faced was during integration. We found out that some of the functions were redunandat. We decided to remove the redunancy in 
+the code by removing them.
+
+We also decided to implement State pattern, which will cover the major functional area of the game. 
+We also decided to simplify everything. We were increasing the complexity unknowingly abd we decided not to do that in future.
+ This was needed in order to move forward with the rest of implementation.
+ 
+04/20/2016 and 04/21/2016
+We divided the entire game into various states and transition between various states was the key module that we worked on.
+ We identified three key states and started workeing on it. Myself and Bala did pair programming and implemented State pattern.
+I along with Bala, dud pait programming and helped each other. We both implemented two states and handed over the other state to Venkat and Siva.
+We also ensured that everone was in the same page and we would complete the project before project due date.
+
+04/22/2016
+We integrated the command pattern with the state pattern, 
+Herre we merged every functionality with theie coressponding buttons.
