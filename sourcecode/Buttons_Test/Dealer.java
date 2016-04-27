@@ -23,6 +23,7 @@ public class Dealer extends Player implements Observer
             int n = r.nextInt(cardsLeft);
             this.cards.add(gc.getCard(n));
             gc.remove(n);
+            setNextX(getNextX()+50);
         }
     }
     public void update()

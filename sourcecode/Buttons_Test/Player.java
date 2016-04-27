@@ -17,12 +17,29 @@ public class Player extends Actor
     private int assets;
     private int betting_amount;
     protected GameController gc;
-
+    private int nextX, nextY;
     /**
      * Constructor for objects of class Player
      */
     public Player()
     {
+    
+    }
+    public  int getNextY()
+    {
+        return nextY;
+    }
+    public void setNextY(int y)
+    {
+        nextY = y;
+    }
+    public int getNextX()
+    {
+        return nextX;
+    }
+    public void setNextX(int x)
+    {
+        nextX = x;
     }
     public GameController getGameController()
     {
@@ -93,7 +110,7 @@ public class Player extends Actor
             this.cards.add(gc.getCard(n));            
             this.indexes.add(n);
             gc.remove(n);
-            
+            this.nextX+=50;
         }
         setScore(getScoreFromCards());
        
