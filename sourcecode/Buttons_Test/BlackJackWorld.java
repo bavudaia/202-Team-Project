@@ -171,6 +171,8 @@ scoreMap.put(51,10);
          addObject(hundred,600,600);
         clear = new Clear();
          addObject(clear,700,600);
+         //to be removed 
+         //bot1.getFirstCards();
     }
         public Hit getHitButton() {
         return hitButton;

@@ -107,9 +107,11 @@ public class Player extends Actor
             int cardsLeft = gc.getCardSize();
             Random r = new Random();
             int n = r.nextInt(cardsLeft);
-            this.cards.add(gc.getCard(n));            
+            String cardImage = gc.getCard(n);
+            this.cards.add(cardImage);            
             this.indexes.add(n);
             gc.remove(n);
+            getWorld().getBackground().drawImage(new GreenfootImage(cardImage),nextX, nextY);
             this.nextX+=50;
         }
         setScore(getScoreFromCards());
