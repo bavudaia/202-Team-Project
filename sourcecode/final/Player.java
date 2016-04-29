@@ -167,9 +167,9 @@ public class Player extends Actor
     public int getScoreFromCards()
     {
         int score = 0;
-        for(int cardIndex : indexes)
+        for(String card : cards)
         {
-            score += BlackJackWorld.scoreMap.get(cardIndex);
+            score += BlackJackWorld.scoreMap.get(card);
         }
         return score;
     }
