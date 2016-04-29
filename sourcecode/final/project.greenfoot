@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Apr 28 20:49:41 PDT 2016
+#Thu Apr 28 21:16:38 PDT 2016
 target49.type=ClassTarget
 target24.type=ClassTarget
 target16.name=HundredCommand
@@ -630,7 +630,7 @@ target26.name=User
 target27.x=70
 target34.typeParameters=
 dependency58.to=TenCommand
-editor.swing.0.width=701
+editor.swing.0.width=700
 target29.height=50
 dependency6.from=Hit
 target11.width=80
@@ -653,9 +653,9 @@ target46.type=InterfaceTarget
 target18.showInterface=false
 target38.name=Normal
 target21.type=ClassTarget
-mainWindow.y=0
+mainWindow.y=-8
 target13.name=Bot
-mainWindow.x=-15
+mainWindow.x=-8
 target16.y=790
 target16.x=10
 dependency28.from=DoubleDown

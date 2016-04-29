@@ -15,6 +15,8 @@ public interface Constants
         public static int betY = 400;
         public static int x = 300;
         public static int y = 400;
+        public static int scoreX = betX;
+        public static int scoreY = betY-100;
     }
     static class Bot1
     {
@@ -22,6 +24,8 @@ public interface Constants
         public static int betY = 100;
         public static int x = 0;
         public static int y = 200;
+                public static int scoreX = betX-100;
+        public static int scoreY = betY;
         
     }
         static class Bot2
@@ -30,20 +34,24 @@ public interface Constants
         public static int betY = 400;
         public static int x = 600;
         public static int y = 400;
-        
+        public static int scoreX = betX ;
+        public static int scoreY = betY-100;
     }
         static class Bot3
     {
         public static int betX = 500;
         public static int betY = 100;
-                public static int x = 600;
+        public static int x = 600;
         public static int y = 100;
-        
+        public static int scoreX = betX-100;
+        public static int scoreY = betY;
     }
     
     static class Dealer
     {
                         public static int x = 600;
         public static int y = 300;
+                public static int scoreX = x-50 ;
+        public static int scoreY = y;
     }
 }

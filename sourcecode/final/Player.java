@@ -18,9 +18,9 @@ public class Player extends Actor
     private int assets;
     private int betting_amount;
     //protected GameController gc;
-    private int nextX, nextY;
+    protected int nextX, nextY;
     protected int betX, betY;
-    
+    protected int scoreX, scoreY;
     /**
      * Constructor for objects of class Player
      */

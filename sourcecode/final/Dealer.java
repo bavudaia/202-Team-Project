@@ -33,6 +33,7 @@ public class Dealer extends Player implements Observer
             int n = r.nextInt(cardsLeft);
             String cardImage = gc.getCard(n);
              System.out.println(cardImage);
+             System.out.println("X = " + nextX +" Y = " +nextY);
             this.cards.add(cardImage);
             gc.remove(n);
             setNextX(getNextX()+50);
