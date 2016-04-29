@@ -8,4 +8,6 @@ comment2.target=int\ getBettingAmount()
 comment2.text=public\ setBot(Bot\ b)\r\n\ \ \ {\r\n\ \ \ \ \ \ \ bot\ \=\ b;\r\n}
 comment3.params=a\ b
 comment3.target=int\ min(int,\ int)
-numComments=4
+comment4.params=b
+comment4.target=void\ setBot(Bot)
+numComments=5

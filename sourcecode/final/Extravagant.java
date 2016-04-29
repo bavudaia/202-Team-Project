@@ -19,5 +19,10 @@ public class Extravagant  implements BettingStrategy
     public int min(int a,int b){
      return a<b?a:b;
     }
+    
+    public void setBot(Bot b)
+    {
+        bot = b;
+    }
 
 }

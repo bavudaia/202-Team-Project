@@ -210,7 +210,21 @@ scoreMap.put(51,10);
          bot3.setBetX(Constants.Bot3.betX);
          bot3.setBetY(Constants.Bot3.betY);
          //to be removed 
-         //bot1.getFirstCards();
+         //bot1.getFirstCards();;
+         /* setting the betting strategy*/
+         BettingStrategy e = new Extravagant();
+          BettingStrategy n = new Normal();
+           BettingStrategy f = new Frugal();
+           
+           e.setBot(bot1);
+           n.setBot(bot2);
+           f.setBot(bot3);
+         /*Easy*/
+         bot1.setBettingStrategy(e);
+         /* med*/
+         bot2.setBettingStrategy(n);
+         /* Hard */
+         bot3.setBettingStrategy(f);
     }
         public Hit getHitButton() {
         return hitButton;

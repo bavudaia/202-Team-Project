@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=void\ update()
 comment4.params=
 comment4.target=void\ notifyUserDeal()
-numComments=5
+comment5.params=amt
+comment5.target=void\ setBotBetting_amount(int)
+numComments=6

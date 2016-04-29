@@ -19,7 +19,7 @@ public class Player extends Actor
     private int betting_amount;
     protected GameController gc;
     private int nextX, nextY;
-    private int betX, betY;
+    protected int betX, betY;
     /**
      * Constructor for objects of class Player
      */
@@ -162,12 +162,5 @@ public class Player extends Actor
         GreenfootImage gfi =      w.getBackground();
          gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
     }
-    public void setBotBetting_amount(int amt)
-    {
-        setBetting_amount(amt);   
-          World w = getWorld();
-        GreenfootImage gfi =      w.getBackground();
-         gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
- 
-    }
+
 }

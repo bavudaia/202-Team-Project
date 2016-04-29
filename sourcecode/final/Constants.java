@@ -22,8 +22,8 @@ public interface Constants
     }
         static class Bot2
     {
-        public static int betX = 500 ;
-        public static int betY = 500;
+        public static int betX = 500;
+        public static int betY = 400;
         
     }
         static class Bot3

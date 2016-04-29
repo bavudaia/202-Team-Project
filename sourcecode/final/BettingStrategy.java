@@ -8,4 +8,5 @@ public interface BettingStrategy
 {
     
    public int getBettingAmount();
+   public void setBot(Bot b);
 }

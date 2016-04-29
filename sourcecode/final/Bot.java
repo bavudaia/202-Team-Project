@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.*;
 /**
  * Write a description of class Bot here.
  * 
@@ -29,5 +29,13 @@ public class Bot extends Player implements Observer
     {
         int betAmt = bs.getBettingAmount();
         setBotBetting_amount(betAmt);
+    }
+        public void setBotBetting_amount(int amt)
+    {
+        setBetting_amount(amt);   
+          World w = getWorld();
+        GreenfootImage gfi =      w.getBackground();
+         gfi.drawImage(new GreenfootImage(Integer.toString(getBetting_amount()), 20, Color.RED, Color.WHITE),betX, betY);
+ 
     }
 }
