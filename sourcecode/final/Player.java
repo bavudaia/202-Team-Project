@@ -147,14 +147,9 @@ public class Player extends Actor
         this.assets-=betValue;
         
         World w = getWorld();
-        if(w==null)
-        System.out.println("nyull");
-        else
-      
-        System.out.println(w.toString());
               GreenfootImage gfi =      w.getBackground();
-       gfi.drawImage(new GreenfootImage(Integer.toString(score), 100, Color.RED, Color.WHITE),betX, betY);
-  System.out.println(score);
+       gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
+        System.out.println(score);
     }
     
     public void clearBet()
@@ -162,6 +157,9 @@ public class Player extends Actor
         this.assets += this.betting_amount;
         this.betting_amount=0;
         
+        World w = getWorld();
+        GreenfootImage gfi =      w.getBackground();
+         gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
     }
 
 }

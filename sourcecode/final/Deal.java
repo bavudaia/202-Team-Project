@@ -13,7 +13,12 @@ public class Deal extends BettingButton
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     Player p;
-    
+    public Deal()
+    {
+            GreenfootImage ddImage = new GreenfootImage("deal.png");
+        ddImage.scale(Constants.button_height,Constants.button_width);
+        setImage(ddImage);
+    }
     //User u;
     public void act() 
     {

@@ -30,6 +30,7 @@ public class BlackJackWorld extends World
     Fifty fifty;
     Hundred hundred;
     Clear clear;
+    Deal deal;
     /* States */
     private State currentState;
     private State bettingState;
@@ -174,6 +175,14 @@ scoreMap.put(51,10);
           addObject(bot1,0,0);
            addObject(bot2,0,0); addObject(bot3,0,0);
            addObject(dealer,0,0);
+           
+           /* set assets of players */
+           
+           bot1.setAssets(1000);
+           bot2.setAssets(1000);
+           bot3.setAssets(1000);
+           user.setAssets(1000);
+           
         gc = new GameController();
         // betting buttons
         ten = new Ten();
@@ -186,8 +195,10 @@ scoreMap.put(51,10);
          addObject(hundred,600,600);
         clear = new Clear();
          addObject(clear,700,600);
+         deal = new Deal();
+         addObject(deal, 800,600);
          user.setBetX(300);
-         user.setBetY(200);
+         user.setBetY(400);
          
          /* initial state is betting state */
          currentState = bettingState;

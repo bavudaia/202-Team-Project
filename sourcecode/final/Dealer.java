@@ -13,6 +13,14 @@ public class Dealer extends Player implements Observer
      * Act - do whatever the Dealer wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    public Dealer()
+    {
+        
+            GreenfootImage ddImage = new GreenfootImage("50.png");
+        ddImage.scale(Constants.button_height,Constants.button_width);
+        setImage(ddImage);
+    }
     @Override
     public void getFirstCards()
     {
