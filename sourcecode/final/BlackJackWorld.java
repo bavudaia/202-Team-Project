@@ -147,16 +147,16 @@ scoreMap.put(51,10);
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 768, 1); 
-        getBackground().drawImage(new GreenfootImage("blackjackmenu.png"), 0, 0);
+        getBackground().drawImage(new GreenfootImage("black.png"), 0, 0);
         
         /* State initia;lizayion */
         
              bettingState = new BettingState();
              bettingState.setBlackJackWorld(this);
-   botBettingState = new BotBettingState();
-   botBettingState.setBlackJackWorld(this);
-    cardDistributionState = new CardDistributionState();
-    cardDistributionState.setBlackJackWorld(this);
+               botBettingState = new BotBettingState();
+               botBettingState.setBlackJackWorld(this);
+                cardDistributionState = new CardDistributionState();
+                cardDistributionState.setBlackJackWorld(this);
     
         hitButton = new Hit();
         addObject(hitButton,300,500);
@@ -210,6 +210,9 @@ scoreMap.put(51,10);
          bot2.setBetY(Constants.Bot2.betY);        
          bot3.setBetX(Constants.Bot3.betX);
          bot3.setBetY(Constants.Bot3.betY);
+         
+         dealer.setNextX(Constants.Dealer.x);
+         dealer.setNextY(Constants.Dealer.y);
          //to be removed 
          //bot1.getFirstCards();;
          /* setting the betting strategy*/

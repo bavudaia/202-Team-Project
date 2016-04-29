@@ -20,6 +20,7 @@ public class Player extends Actor
     //protected GameController gc;
     private int nextX, nextY;
     protected int betX, betY;
+    
     /**
      * Constructor for objects of class Player
      */
@@ -126,11 +127,11 @@ public class Player extends Actor
             Random r = new Random();
             int n = r.nextInt(cardsLeft);
             String cardImage = gc.getCard(n);
+            System.out.println(cardImage);
+            System.out.println("X = " + nextX +" Y = " +nextY);
             this.cards.add(cardImage);            
             this.indexes.add(n);
-            gc.remove(n);
-
-            
+            gc.remove(n);            
             GreenfootImage gi = new GreenfootImage(cardImage);
             getWorld().getBackground().drawImage(gi,nextX, nextY);
             this.nextX+=50;

@@ -26,11 +26,14 @@ public class Dealer extends Player implements Observer
     {
          for(int i=0;i<1;i++)
         {
+            
             GameController gc = getGameController();
             int cardsLeft = gc.getCardSize();
             Random r = new Random();
             int n = r.nextInt(cardsLeft);
-            this.cards.add(gc.getCard(n));
+            String cardImage = gc.getCard(n);
+             System.out.println(cardImage);
+            this.cards.add(cardImage);
             gc.remove(n);
             setNextX(getNextX()+50);
         }
