@@ -26,6 +26,7 @@ public class Deal extends BettingButton
         if(Greenfoot.mouseClicked(this))
         {
             BettingButtonCommand dealCommand=new DealCommand();
+            dealCommand.setBlackJackWorld((BlackJackWorld)getWorld());
             dealCommand.execute();
           
         }

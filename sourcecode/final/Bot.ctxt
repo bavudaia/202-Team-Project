@@ -8,5 +8,5 @@ comment2.target=void\ setBettingStrategy(BettingStrategy)
 comment3.params=
 comment3.target=void\ update()
 comment4.params=
-comment4.target=void\ noftifyUserDeal()
+comment4.target=void\ notifyUserDeal()
 numComments=5

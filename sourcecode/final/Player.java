@@ -26,6 +26,7 @@ public class Player extends Actor
     public Player(){
         
     }
+    
     public  int getNextY()
     {
         return nextY;
@@ -161,5 +162,12 @@ public class Player extends Actor
         GreenfootImage gfi =      w.getBackground();
          gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
     }
-
+    public void setBotBetting_amount(int amt)
+    {
+        setBetting_amount(amt);   
+          World w = getWorld();
+        GreenfootImage gfi =      w.getBackground();
+         gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
+ 
+    }
 }

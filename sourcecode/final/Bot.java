@@ -25,9 +25,9 @@ public class Bot extends Player implements Observer
     {
         
     }
-    public void noftifyUserDeal()
+    public void notifyUserDeal()
     {
         int betAmt = bs.getBettingAmount();
-        setBetting_amount(betAmt);
+        setBotBetting_amount(betAmt);
     }
 }

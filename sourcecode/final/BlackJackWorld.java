@@ -99,9 +99,9 @@ scoreMap.put(51,10);
     public void notifyDeal()
     {
         //for(Bot b : bots){
-            bot1.noftifyUserDeal();
-            bot2.noftifyUserDeal();
-            bot3.noftifyUserDeal();
+            bot1.notifyUserDeal();
+            bot2.notifyUserDeal();
+            bot3.notifyUserDeal();
         //}
     }
     public State getCardDistributionState()
@@ -171,10 +171,10 @@ scoreMap.put(51,10);
         bot3 = new Bot();
         dealer = new Dealer();
         user = new User();
-         addObject(user,0,0);
-          addObject(bot1,0,0);
-           addObject(bot2,0,0); addObject(bot3,0,0);
-           addObject(dealer,0,0);
+         addObject(user,-100,-100);
+          addObject(bot1,-100,-100);
+           addObject(bot2,-100,-100); addObject(bot3,-100,-100);
+           addObject(dealer,-100,-100);
            
            /* set assets of players */
            
@@ -197,18 +197,18 @@ scoreMap.put(51,10);
          addObject(clear,700,600);
          deal = new Deal();
          addObject(deal, 800,600);
-         user.setBetX(300);
-         user.setBetY(400);
+         user.setBetX(Constants.User.betX);
+         user.setBetY(Constants.User.betY);
          
          /* initial state is betting state */
          currentState = bettingState;
          
-        // bot1.setBetX(100);
-        // bot1.setBetY(200);
-        // bot2.setBetX(300);
-        // bot2.setBetY(200);
-        // bot3.setBetX(300);
-        // bot3.setBetY(200);
+         bot1.setBetX(Constants.Bot1.betX);
+         bot1.setBetY(Constants.Bot1.betY);
+         bot2.setBetX(Constants.Bot2.betX);
+         bot2.setBetY(Constants.Bot2.betY);        
+         bot3.setBetX(Constants.Bot3.betX);
+         bot3.setBetY(Constants.Bot3.betY);
          //to be removed 
          //bot1.getFirstCards();
     }
