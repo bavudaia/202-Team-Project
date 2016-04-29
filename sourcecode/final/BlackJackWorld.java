@@ -41,7 +41,7 @@ public class BlackJackWorld extends World
     static
     {
         scoreMap = new HashMap<>();
-        scoreMap.put(0,1);
+ scoreMap.put(0,1);
 scoreMap.put(1,2);
 scoreMap.put(2,3);
 scoreMap.put(3,4);
@@ -241,6 +241,19 @@ scoreMap.put(51,10);
 
        bot3.setNextX(Constants.Bot3.x);
        bot3.setNextY(Constants.Bot3.y);
+       
+       user.setScoreX(Constants.User.scoreX);
+       user.setScoreY(Constants.User.scoreY);
+
+       bot1.setScoreX(Constants.Bot1.scoreX);
+       bot1.setScoreY(Constants.Bot1.scoreY);
+
+       bot2.setScoreX(Constants.Bot2.scoreX);
+       bot2.setScoreY(Constants.Bot2.scoreY);
+
+       bot3.setScoreX(Constants.Bot3.scoreX);
+       bot3.setScoreY(Constants.Bot3.scoreY);
+
     }
         public Hit getHitButton() {
         return hitButton;

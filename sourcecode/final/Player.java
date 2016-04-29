@@ -14,7 +14,7 @@ public class Player extends Actor
     private int x;
     protected List<String> cards;
     protected List<Integer> indexes;
-    private int score;
+    protected int score;
     private int assets;
     private int betting_amount;
     //protected GameController gc;
@@ -28,12 +28,33 @@ public class Player extends Actor
         cards = new ArrayList<String>();
         indexes = new ArrayList<Integer>();
     }
-    
-    public  int getNextY()
+      public int getNextY()
     {
         return nextY;
     }
- 
+    public void setScoreY(int y)
+    {
+        scoreY = y;
+    }
+      public int getNextX()
+    {
+        return nextX;
+    }
+    public void setScoreX(int x)
+    {
+        scoreX = x;
+    }
+    
+    public int getScoreX()
+    {
+        return scoreX;
+    }
+
+    public int getScoreY()
+    {
+        return scoreY;
+    }
+
     public void setBetY(int y)
     {
         betY = y;
@@ -47,10 +68,7 @@ public class Player extends Actor
     {
         nextY = y;
     }
-    public int getNextX()
-    {
-        return nextX;
-    }
+ 
     public void setNextX(int x)
     {
         nextX = x;
@@ -127,8 +145,8 @@ public class Player extends Actor
             Random r = new Random();
             int n = r.nextInt(cardsLeft);
             String cardImage = gc.getCard(n);
-            System.out.println(cardImage);
-            System.out.println("X = " + nextX +" Y = " +nextY);
+           // System.out.println(cardImage);
+           // System.out.println("X = " + nextX +" Y = " +nextY);
             this.cards.add(cardImage);            
             this.indexes.add(n);
             gc.remove(n);            
@@ -136,9 +154,13 @@ public class Player extends Actor
             getWorld().getBackground().drawImage(gi,nextX, nextY);
             this.nextX+=50;
         }
-        //int score=getScoreFromCards();
-        //getWorld().getBackground().drawImage(new GreenfootImage(Integer.toString(score), 20, null, null),nextX, nextY+30);
-        setScore(getScoreFromCards());
+        score= getScoreFromCards();
+        GreenfootImage black =      getWorld().getBackground();
+         /* Overlapping existing image of integer betting amount */
+        black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX, scoreY);
+        GreenfootImage gfi =      getWorld().getBackground();
+        gfi.drawImage(new GreenfootImage("Score" + Integer.toString(score), 20, Color.RED, Color.WHITE),scoreX, scoreY);
+        System.out.println(score); 
        
     }
     

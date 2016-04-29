@@ -49,8 +49,8 @@ public interface Constants
     
     static class Dealer
     {
-                        public static int x = 600;
-        public static int y = 300;
+                        public static int x = 300;
+        public static int y = 100;
                 public static int scoreX = x-50 ;
         public static int scoreY = y;
     }

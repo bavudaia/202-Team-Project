@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.Random;
-
+import java.awt.*;
 /**
  * Write a description of class Dealer here.
  * 
@@ -32,12 +32,24 @@ public class Dealer extends Player implements Observer
             Random r = new Random();
             int n = r.nextInt(cardsLeft);
             String cardImage = gc.getCard(n);
-             System.out.println(cardImage);
-             System.out.println("X = " + nextX +" Y = " +nextY);
+             //System.out.println(cardImage);
+            //System.out.println("X = " + nextX +" Y = " +nextY);
             this.cards.add(cardImage);
             gc.remove(n);
-            setNextX(getNextX()+50);
+            GreenfootImage gi = new GreenfootImage(cardImage);
+            getWorld().getBackground().drawImage(gi,nextX, nextY);
+            this.nextX+=50;
+            
         }
+        
+        score= getScoreFromCards();
+        GreenfootImage black =      getWorld().getBackground();
+         /* Overlapping existing image of integer betting amount */
+        black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX, scoreY);
+        GreenfootImage gfi =      getWorld().getBackground();
+        gfi.drawImage(new GreenfootImage("Score" + Integer.toString(score), 20, Color.RED, Color.WHITE),scoreX, scoreY);
+        System.out.println("scoreX :" + scoreX + "scoreY :"+ scoreY);
+        System.out.println(score); 
     }
     public void update()
     {
