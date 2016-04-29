@@ -17,14 +17,15 @@ public class Player extends Actor
     private int score;
     private int assets;
     private int betting_amount;
-    protected GameController gc;
+    //protected GameController gc;
     private int nextX, nextY;
     protected int betX, betY;
     /**
      * Constructor for objects of class Player
      */
     public Player(){
-        
+        cards = new ArrayList<String>();
+        indexes = new ArrayList<Integer>();
     }
     
     public  int getNextY()
@@ -53,13 +54,16 @@ public class Player extends Actor
     {
         nextX = x;
     }
+    
     public GameController getGameController()
     {
-        return gc;
+        return ((BlackJackWorld)getWorld()).getGc();
     }
+    /*
     public void setGameController(GameController gc){
         this.gc = gc;
     }
+    */
     public int getAssets() {
         return assets;
     }
@@ -114,8 +118,10 @@ public class Player extends Actor
     
     public void getFirstCards()
     {
+        GameController gc = getGameController();
         for(int i=0;i<2;i++)
         {
+            
             int cardsLeft = gc.getCardSize();
             Random r = new Random();
             int n = r.nextInt(cardsLeft);
@@ -123,7 +129,10 @@ public class Player extends Actor
             this.cards.add(cardImage);            
             this.indexes.add(n);
             gc.remove(n);
-            getWorld().getBackground().drawImage(new GreenfootImage(cardImage),nextX, nextY);
+
+            
+            GreenfootImage gi = new GreenfootImage(cardImage);
+            getWorld().getBackground().drawImage(gi,nextX, nextY);
             this.nextX+=50;
         }
         //int score=getScoreFromCards();
@@ -148,6 +157,10 @@ public class Player extends Actor
         this.assets-=betValue;
         
         World w = getWorld();
+        
+         GreenfootImage black =      w.getBackground();
+         /* Overlapping existing image of integer betting amount */
+         black.drawImage(new GreenfootImage(Integer.toString(100000), 20, null,null),betX, betY);
               GreenfootImage gfi =      w.getBackground();
        gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
         System.out.println(score);
@@ -159,8 +172,12 @@ public class Player extends Actor
         this.betting_amount=0;
         
         World w = getWorld();
-        GreenfootImage gfi =      w.getBackground();
-         gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
+       /* GreenfootImage gfi =      w.getBackground();
+         gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);*/
+         GreenfootImage black =      w.getBackground();
+         /* Overlapping existing image of integer betting amount */
+         black.drawImage(new GreenfootImage(Integer.toString(100000), 20, Color.BLACK,Color.BLACK),betX, betY);
+
     }
 
 }

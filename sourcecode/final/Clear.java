@@ -20,7 +20,7 @@ public class Clear extends BettingButton
     public void act() 
     {
        if(Greenfoot.mouseClicked(this))
-      {
+       {
           // get player from chain of responsibility
             BettingButtonCommand b = new ClearCommand();
             // b.setUser();//to be implemented later.

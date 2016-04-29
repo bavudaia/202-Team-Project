@@ -7,13 +7,13 @@ import java.util.List;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GameController extends Player
+public class GameController 
 {
     /**
      * Act - do whatever the GameController wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
+    protected List<String> cards;
    public GameController(){ cards = new ArrayList<String>();}
     
     public void initialize()

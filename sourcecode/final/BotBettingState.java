@@ -11,6 +11,7 @@ public class BotBettingState  implements State
    public void setBlackJackWorld(BlackJackWorld p){bjw=p;}    
    public void clear(){}
    public  void done(){
+       System.out.println("Bot Betting state done ");
     bjw.setCurrentState(bjw.getCardDistributionState());
     State s=bjw.getCardDistributionState();
     s.distribute();

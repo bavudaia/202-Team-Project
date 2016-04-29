@@ -184,6 +184,7 @@ scoreMap.put(51,10);
            user.setAssets(1000);
            
         gc = new GameController();
+        gc.initialize();
         // betting buttons
         ten = new Ten();
          addObject(ten,300,600);
@@ -225,6 +226,18 @@ scoreMap.put(51,10);
          bot2.setBettingStrategy(n);
          /* Hard */
          bot3.setBettingStrategy(f);
+         
+       user.setNextX(Constants.User.x);
+       user.setNextY(Constants.User.y);
+
+       bot1.setNextX(Constants.Bot1.x);
+       bot1.setNextY(Constants.Bot1.y);
+
+       bot2.setNextX(Constants.Bot2.x);
+       bot2.setNextY(Constants.Bot2.y);
+
+       bot3.setNextX(Constants.Bot3.x);
+       bot3.setNextY(Constants.Bot3.y);
     }
         public Hit getHitButton() {
         return hitButton;

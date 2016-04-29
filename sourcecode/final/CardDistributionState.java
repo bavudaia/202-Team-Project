@@ -17,18 +17,15 @@ public class CardDistributionState  implements State
    public void clear(){}
    public void distribute()
    {
+       System.out.println("Inside Carddiststate distribute");
        User u=bjw.getUser();
-       u.setNextX(100);
-       u.setNextY(200);
+
        Bot b1=bjw.getBot1();
-       b1.setNextX(200);
-       b1.setNextY(300);
+
        Bot b2=bjw.getBot2();
-       b2.setNextX(300);
-       b2.setNextY(400);
+
        Bot b3=bjw.getBot3();
-       b3.setNextX(400);
-       b3.setNextY(500);
+
        Dealer d=bjw.getDealer();
        u.getFirstCards();
        b1.getFirstCards();
