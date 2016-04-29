@@ -1,5 +1,6 @@
 import greenfoot.*;
 import java.util.*;
+import java.awt.Color;
 
 /*t
  * Write a description of class Player here.
@@ -18,17 +19,27 @@ public class Player extends Actor
     private int betting_amount;
     protected GameController gc;
     private int nextX, nextY;
+    private int betX, betY;
     /**
      * Constructor for objects of class Player
      */
-    public Player()
-    {
-    
+    public Player(){
+        
     }
     public  int getNextY()
     {
         return nextY;
     }
+ 
+    public void setBetY(int y)
+    {
+        betY = y;
+    }
+    public void setBetX(int x)
+    {
+        betX = x;
+    }
+
     public void setNextY(int y)
     {
         nextY = y;
@@ -134,6 +145,16 @@ public class Player extends Actor
     {
         this.betting_amount+=betValue;
         this.assets-=betValue;
+        
+        World w = getWorld();
+        if(w==null)
+        System.out.println("nyull");
+        else
+      
+        System.out.println(w.toString());
+              GreenfootImage gfi =      w.getBackground();
+       gfi.drawImage(new GreenfootImage(Integer.toString(score), 100, Color.RED, Color.WHITE),betX, betY);
+  System.out.println(score);
     }
     
     public void clearBet()
