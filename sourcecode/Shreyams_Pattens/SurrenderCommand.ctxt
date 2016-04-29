@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=SurrenderCommand
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Surrender\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=SurrenderCommand()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Surrender\r\n
+comment2.params=p
+comment2.target=SurrenderCommand(Player)
+comment3.params=
+comment3.target=void\ execute()
+comment4.params=p
+comment4.target=void\ setPlayer(Player)
+numComments=5
