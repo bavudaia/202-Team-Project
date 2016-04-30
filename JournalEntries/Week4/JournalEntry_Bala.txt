@@ -1,0 +1,9 @@
+In this project I have chosen to instill the XP value of Courage to the team.
+24,25,26 April 2016
+We discussed on developing the existing  code , focus less on patterns and more on implementation of code.
+I told everyone not to overthink anything , so that we can complete the project in time , as this is the final week.
+We had to have multiple meetings to reconcile code , so that we have the best solution from the erected solution.
+27 April
+I wanted to make sure that every individual module is working. But this did not go well as we have a lot of code to be refactored. I  encouraged everyone to change business logic if required to implement the solutions in time, so that we can have less complexity.
+28,20,30  April
+So far the work is complete , and the work remains that we have to consolidate everything again so that we have a perfect working prototype. This is going to be a reiteration and I believe this might resolve all our previous issues . I am encouraging every one to remove exising junk code, if we feel its not required.
