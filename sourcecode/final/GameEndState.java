@@ -14,5 +14,17 @@ public class GameEndState  implements State
     public void distribute()
     {
     }
+           public void hit(){
+        
+        }
+    public void stand(){
+    
+    }
+    public void doubledown(){
+    
+    }
+    public void surrender(){
+    
+    }
   
 }

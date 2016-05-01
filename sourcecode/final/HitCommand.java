@@ -14,6 +14,7 @@ public class HitCommand implements Command
      */
     public HitCommand()
     {
+        
     }
     public HitCommand(Player player){
         this.player = player;
