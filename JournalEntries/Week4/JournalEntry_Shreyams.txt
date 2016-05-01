@@ -1,0 +1,15 @@
+Journal Entry Week#4
+
+Simplicity
+
+04-24-2016, 04-25-2016, 04-27-2016
+
+This being the final week, the team has almost completed their work on the project and by looking back for the past four weeks, I feel the team has done a good job instilling the value of simplicity. In these 3 days I requested the team members to focus more on the working of the game rather than just concentration on the patterns as we were focusing on some patterns which were not working for the project. In that way we avoided doing the extra work and worked only on the main goal i.e a proper functioning game. This helped us maintain simplicity and the game was working as we expected.
+
+04-27-2016, 04-28-2016
+
+One of our team members suggested to check if every module is working. We had some issues , but as everyone had maintained simplicity throughout the four weeks, we were able to easily tackle all of the issues and fix it.
+
+04-29-2016, 04-30-2016
+
+The work on the game has almost been completed. I have requested the team to go through all of the code and try to clear out all the junk code and we are currently working on it by refactoring our work. And also we are making sure not to spend too much time on clearing our junk code in case if we are stuck. By the end of the project we hope to maintain clean and simple code, thus being able to maintain it for long term with reasonable cost.
