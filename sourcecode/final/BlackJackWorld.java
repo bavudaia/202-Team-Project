@@ -36,65 +36,76 @@ public class BlackJackWorld extends World
     private State bettingState;
     private State botBettingState;
     private State cardDistributionState;
+    private State dealerShowCardState;
+    private State userTurnState;
+    private State botTurnState;
+    private State dealerTurnState;
+    
     public static Map <String,Integer> scoreMap;
     
     static
     {
         scoreMap = new HashMap<>();
- scoreMap.put("ace_of_spades.png",1);
-scoreMap.put("2_of_spades.png",2);
-scoreMap.put("3_of_spades.png",3);
-scoreMap.put("4_of_spades.png",4);
-scoreMap.put("5_of_spades.png",5);
-scoreMap.put("6_of_spades.png",6);
-scoreMap.put("7_of_spades.png",7);
-scoreMap.put("8_of_spades.png",8);
-scoreMap.put("9_of_spades.png",9);
-scoreMap.put("10_of_spades.png",10);
-scoreMap.put("jack_of_spades.png",10);
-scoreMap.put("queen_of_spades.png",10);
-scoreMap.put("king_of_spades.png",10);
-scoreMap.put("ace_of_clubs.png",1);
-scoreMap.put("2_of_clubs.png",2);
-scoreMap.put("3_of_clubs.png",3);
-scoreMap.put("4_of_clubs.png",4);
-scoreMap.put("5_of_clubs.png",5);
-scoreMap.put("6_of_clubs.png",6);
-scoreMap.put("7_of_clubs.png",7);
-scoreMap.put("8_of_clubs.png",8);
-scoreMap.put("9_of_clubs.png",9);
-scoreMap.put("10_of_clubs.png",10);
-scoreMap.put("jack_of_clubs.png",10);
-scoreMap.put("queen_of_clubs.png",10);
-scoreMap.put("king_of_clubs.png",10);
-scoreMap.put("ace_of_diamonds.png",1);
-scoreMap.put("2_of_diamonds.png",2);
-scoreMap.put("3_of_diamonds.png",3);
-scoreMap.put("4_of_diamonds.png",4);
-scoreMap.put("5_of_diamonds.png",5);
-scoreMap.put("6_of_diamonds.png",6);
-scoreMap.put("7_of_diamonds.png",7);
-scoreMap.put("8_of_diamonds.png",8);
-scoreMap.put("9_of_diamonds.png",9);
-scoreMap.put("10_of_diamonds.png",10);
-scoreMap.put("jack_of_diamonds.png",10);
-scoreMap.put("queen_of_diamonds.png",10);
-scoreMap.put("king_of_diamonds.png",10);
-scoreMap.put("ace_of_hearts.png",1);
-scoreMap.put("2_of_hearts.png",2);
-scoreMap.put("3_of_hearts.png",3);
-scoreMap.put("4_of_hearts.png",4);
-scoreMap.put("5_of_hearts.png",5);
-scoreMap.put("6_of_hearts.png",6);
-scoreMap.put("7_of_hearts.png",7);
-scoreMap.put("8_of_hearts.png",8);
-scoreMap.put("9_of_hearts.png",9);
-scoreMap.put("10_of_hearts.png",10);
-scoreMap.put("jack_of_hearts.png",10);
-scoreMap.put("queen_of_hearts.png",10);
-scoreMap.put("king_of_hearts.png",10);
+     scoreMap.put("ace_of_spades.png",1);
+    scoreMap.put("2_of_spades.png",2);
+    scoreMap.put("3_of_spades.png",3);
+    scoreMap.put("4_of_spades.png",4);
+    scoreMap.put("5_of_spades.png",5);
+    scoreMap.put("6_of_spades.png",6);
+    scoreMap.put("7_of_spades.png",7);
+    scoreMap.put("8_of_spades.png",8);
+    scoreMap.put("9_of_spades.png",9);
+    scoreMap.put("10_of_spades.png",10);
+    scoreMap.put("jack_of_spades.png",10);
+    scoreMap.put("queen_of_spades.png",10);
+    scoreMap.put("king_of_spades.png",10);
+    scoreMap.put("ace_of_clubs.png",1);
+    scoreMap.put("2_of_clubs.png",2);
+    scoreMap.put("3_of_clubs.png",3);
+    scoreMap.put("4_of_clubs.png",4);
+    scoreMap.put("5_of_clubs.png",5);
+    scoreMap.put("6_of_clubs.png",6);
+    scoreMap.put("7_of_clubs.png",7);
+    scoreMap.put("8_of_clubs.png",8);
+    scoreMap.put("9_of_clubs.png",9);
+    scoreMap.put("10_of_clubs.png",10);
+    scoreMap.put("jack_of_clubs.png",10);
+    scoreMap.put("queen_of_clubs.png",10);
+    scoreMap.put("king_of_clubs.png",10);
+    scoreMap.put("ace_of_diamonds.png",1);
+    scoreMap.put("2_of_diamonds.png",2);
+    scoreMap.put("3_of_diamonds.png",3);
+    scoreMap.put("4_of_diamonds.png",4);
+    scoreMap.put("5_of_diamonds.png",5);
+    scoreMap.put("6_of_diamonds.png",6);
+    scoreMap.put("7_of_diamonds.png",7);
+    scoreMap.put("8_of_diamonds.png",8);
+    scoreMap.put("9_of_diamonds.png",9);
+    scoreMap.put("10_of_diamonds.png",10);
+    scoreMap.put("jack_of_diamonds.png",10);
+    scoreMap.put("queen_of_diamonds.png",10);
+    scoreMap.put("king_of_diamonds.png",10);
+    scoreMap.put("ace_of_hearts.png",1);
+    scoreMap.put("2_of_hearts.png",2);
+    scoreMap.put("3_of_hearts.png",3);
+    scoreMap.put("4_of_hearts.png",4);
+    scoreMap.put("5_of_hearts.png",5);
+    scoreMap.put("6_of_hearts.png",6);
+    scoreMap.put("7_of_hearts.png",7);
+    scoreMap.put("8_of_hearts.png",8);
+    scoreMap.put("9_of_hearts.png",9);
+    scoreMap.put("10_of_hearts.png",10);
+    scoreMap.put("jack_of_hearts.png",10);
+    scoreMap.put("queen_of_hearts.png",10);
+    scoreMap.put("king_of_hearts.png",10);
+    }
+    
+        public State getDealerShowCardState() {
+        return dealerShowCardState;
+    }
 
-
+    public void setDealerShowCardState(State dealerShowCardState) {
+        this.dealerShowCardState = dealerShowCardState;
     }
     
     public void notifyDeal()
@@ -131,9 +142,39 @@ scoreMap.put("king_of_hearts.png",10);
     {
         this.bettingState = s;
     }
+    
+    	public State getUserTurnState() {
+		return userTurnState;
+	}
+
+
+	public void setUserTurnState(State userTurnState) {
+		this.userTurnState = userTurnState;
+	}
+
+
+	public State getBotTurnState() {
+		return botTurnState;
+	}
+
+
+	public void setBotTurnState(State botTurnState) {
+		this.botTurnState = botTurnState;
+	}
+
+
+	public State getDealerTurnState() {
+		return dealerTurnState;
+	}
+
+
+	public void setDealerTurnState(State dealerTurnState) {
+		this.dealerTurnState = dealerTurnState;
+	}
+
     public State getBettingState()
     {
-        return bettingState;
+        return bettingState;    
     }
         public void setBotBettingState(State s)
     {
@@ -158,7 +199,15 @@ scoreMap.put("king_of_hearts.png",10);
                botBettingState.setBlackJackWorld(this);
                 cardDistributionState = new CardDistributionState();
                 cardDistributionState.setBlackJackWorld(this);
-    
+                dealerShowCardState = new DealerShowCardState();
+                dealerShowCardState.setBlackJackWorld(this);
+                userTurnState = new UserTurnState();
+                userTurnState.setBlackJackWorld(this);
+                botTurnState = new BotTurnState();
+                botTurnState.setBlackJackWorld(this);
+                dealerTurnState = new DealerHitState();
+                dealerTurnState.setBlackJackWorld(this);
+                
         hitButton = new Hit();
         addObject(hitButton,300,500);
         standButton = new Stand();
