@@ -1,0 +1,75 @@
+In this project I have chosen to instill the XP value of Courage to the team.
+24,25,26 April 2016
+We discussed on developing the existing  code , focus less on patterns and more on implementation of code.
+I told everyone not to overthink anything , so that we can complete the project in time , as this is the final week.
+We had to have multiple meetings to reconcile code , so that we have the best solution from the erected solution.
+27 April
+I wanted to make sure that every individual module is working. But this did not go well as we have a lot of code to be refactored. I  encouraged everyone to change business logic if required to implement the solutions in time, so that we can have less complexity.
+28,20,30  April
+So far the work is complete , and the work remains that we have to consolidate everything again so that we have a perfect working prototype. This is going to be a reiteration and I believe this might resolve all our previous issues . I am encouraging every one to remove exising junk code, if we feel its not required.24,25, April 2016
+Core Value-Communication
+We planned to double the speed as we were lagging behind a bit. We wanted to speed up the process so that we will be able to complete
+the project on time. We planned for multiple meeting this week, as we were approaching the presentation day. We discussed and finally arrived at a plan
+to complete the project on time. Another biggest challenge was integration. It seemed like we had everythingin hand, but integration was a
+huge thing which is to be done.
+
+
+26,27 April- We started integrating the individual modules and we realised that the process was simple than we thought. This really boosted the team morale
+and everyone started working more enthusiasticaly than before. We also concentrated on the UI part. We realised that UI is as important as code is
+and everyone was actively giving suggestions to improve the UI. 
+
+28,20,30 April
+
+As we started integrating the bits and pieces, we found that the code that we have is a real complex code. We generatd the class diagram with the UML
+parser that we developed and analysed it. As of now, we have a semi working prototype and we need to integrate the code to get te final working system.
+We also wanted the code to be as loosely coupled as possible and we encouraged each other to remove all the junk code pieces to be removed. As my core value is 
+communication, I encouraged everyone to talk with each other more frreely and help each other to produce better output. Week 4
+My role in this team is to follow the XP value of Eliminate Waste and instill the same value in the team.
+24 to 26 April 2016,
+Considering this was the final week, we had to speed up our work. We still had plenty of functionalities left to implement. So our emphasis was on integration of the code and finishing implementation of core business logic. Thus following the XP Value Eliminating Waste became the most important value for the team to follow if the project needs to be completed on time. I emphasized on the need to remove certain aspects of the functionalities which unnecessarily complicated the flow of the project, this was done mainly with the aim of reducing the time for the integration of modules. Since lesser the complexity, lesser the time to integrate the module. For instance, the scoring module which implements the strategy pattern refreshes the same score twice due to a faulty algorithm. I modified this flow and made it refresh only once thus eliminating waste.
+27 April 2016,
+We implemented final changes to the business logic to keep the application up and running. Once , again I made sure only the mandatory requirements were being fixed thanks to the time constraints. A communicated with my team members to remove lots of overtly complicated non-critical functionalities.
+28 and 29 April 2016,
+We believe the work is almost done with the integration of modules close to completion. I believe that by sticking to our core XP values , our team was able to complete the work on time. There are still some minor bugs left to fix, but those wouldn’t take too much time since, our project is highly modularized and making changes to one module wouldn’t affect the other. I asked my teammates to only work on modules those we felt would surely be utilized in the future which eliminated a lot of waste and contributed directly in the completion of the project.Journal Entry Week#4
+
+Simplicity
+
+04-24-2016, 04-25-2016, 04-27-2016
+
+This being the final week, the team has almost completed their work on the project and by looking back for the past four weeks, I feel the team has done a good job instilling the value of simplicity. In these 3 days I requested the team members to focus more on the working of the game rather than just concentration on the patterns as we were focusing on some patterns which were not working for the project. In that way we avoided doing the extra work and worked only on the main goal i.e a proper functioning game. This helped us maintain simplicity and the game was working as we expected.
+
+04-27-2016, 04-28-2016
+
+One of our team members suggested to check if every module is working. We had some issues , but as everyone had maintained simplicity throughout the four weeks, we were able to easily tackle all of the issues and fix it.
+
+04-29-2016, 04-30-2016
+
+The work on the game has almost been completed. I have requested the team to go through all of the code and try to clear out all the junk code and we are currently working on it by refactoring our work. And also we are making sure not to spend too much time on clearing our junk code in case if we are stuck. By the end of the project we hope to maintain clean and simple code, thus being able to maintain it for long term with reasonable cost.
+In this project I make sure we follow xp value "Feedback". Feed back can be from customers or from the system ( via unit and acceptance tests)
+
+24,25 April 2016
+We planned to integrate the individual modules that every one did. The feed back from the system was not good as the test failed while integrating.
+Team members analysed the code and gave feedback on what the things could be done inorder to solve various issue. We also checked with the initial timeline we 
+came up for the project and found out that we were lagging. So decided to hasten things up and keep it simple.
+
+26,27 April 2016
+Integrating the modules continued. Some of the logic failed after integration as they were too complex and didn't couple together properly. 
+We as a team analysed and gave feedback to reduce the complexity of the modules so that atleast the base functinality is achieved for the black jack game.
+
+28,29,30  April 2016
+Initial integration of the modules were completed to certain extent. After that each member went through the integrated module and gave feed back on what should 
+be added or improved for the next iteration. Based on the collective feedback we decided to keep things simple and get the work done in time.
+In this project I make sure we follow xp value "Respect". Respect within the team and for the work we do.
+
+24,25 April 2016
+
+This is the integration stage. we have completed many of our individual modules. So we had to respect the work done by individuals and more than that the important part here is to respect the quality and benchmarks that is required for the project. We came together and planned our next course of action and steps to complete the project successfully.
+
+26,27 April 2016
+
+Integrating the modules continued. Some of the logic failed after integration as they were too complex and didn't couple together properly. 
+At this juncture my aim was to communicate the team to complete the bare minimum for the successful working of the black jack game. I aced this task with utmost respect and hence the core value was very important here.
+
+28,29,30  April 2016
+
+After the previous work we had some positives and team became excited after seeing the initial success. I felt that this was very important for us to keep up with the same momentum so that we could get the best out of each other and thus earning the respect of our fellow comrades in the class.
