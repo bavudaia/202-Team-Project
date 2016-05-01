@@ -11,14 +11,27 @@ public class UserTurnState  implements State
    public void bet(int betVal){}        
    public void setBlackJackWorld(BlackJackWorld p){bjw=p;}    
    public void clear(){}
-   public  void done(){
-       System.out.println("Bot Betting state done ");
-    bjw.setCurrentState(bjw.getCardDistributionState());
-    State s=bjw.getCardDistributionState();
-    s.distribute();
-    }
+   public  void done(){}
     @Override
     public void distribute()
     {
+        
+    }
+    
+       public void hit(){
+           Player p = bjw.getUser();
+           p.hit();
+        }
+    public void stand(){
+        Player p = bjw.getUser();
+        p.stand();
+    }
+    public void doubledown(){
+     Player p = bjw.getUser();
+     p.doubleDown();
+    }
+    public void surrender(){
+         Player p = bjw.getUser();
+         p.surrender();
     }
 }

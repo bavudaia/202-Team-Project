@@ -35,5 +35,16 @@ public class CardDistributionState  implements State
        State s = bjw.getDealerShowCardState();
        s.done();
    }
-  
+         public void hit(){
+        
+        }
+    public void stand(){
+    
+    }
+    public void doubledown(){
+    
+    }
+    public void surrender(){
+    
+    }
 }
