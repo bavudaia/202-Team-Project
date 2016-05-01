@@ -1,0 +1,18 @@
+24,25, April 2016
+Core Value-Communication
+We planned to double the speed as we were lagging behind a bit. We wanted to speed up the process so that we will be able to complete
+the project on time. We planned for multiple meeting this week, as we were approaching the presentation day. We discussed and finally arrived at a plan
+to complete the project on time. Another biggest challenge was integration. It seemed like we had everythingin hand, but integration was a
+huge thing which is to be done.
+
+
+26,27 April- We started integrating the individual modules and we realised that the process was simple than we thought. This really boosted the team morale
+and everyone started working more enthusiasticaly than before. We also concentrated on the UI part. We realised that UI is as important as code is
+and everyone was actively giving suggestions to improve the UI. 
+
+28,20,30 April
+
+As we started integrating the bits and pieces, we found that the code that we have is a real complex code. We generatd the class diagram with the UML
+parser that we developed and analysed it. As of now, we have a semi working prototype and we need to integrate the code to get te final working system.
+We also wanted the code to be as loosely coupled as possible and we encouraged each other to remove all the junk code pieces to be removed. As my core value is 
+communication, I encouraged everyone to talk with each other more frreely and help each other to produce better output. 
