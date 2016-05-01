@@ -183,6 +183,7 @@ public class Player extends Actor
      this.cards = cards;
     }
     public void surrender(){
+         cps.doSurrender();
                 //to be 
     System.out.println("surrender");
             //to be replaced with surrender logic
@@ -190,6 +191,7 @@ public class Player extends Actor
     
     
     public void stand(){
+        cps.doStand();
             //to be 
         System.out.println("stand");
         //to be replaced with stand logic
