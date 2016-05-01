@@ -10,6 +10,7 @@ public class DealCommand implements BettingButtonCommand
    public void execute()
    {
       State s = u.getCurrentState();
+      System.out.println(u.getCurrentState().toString());
       s.done();
    }
    public void setBlackJackWorld(BlackJackWorld user)

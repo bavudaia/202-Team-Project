@@ -38,7 +38,7 @@ public class Player extends Actor
         indexes = new ArrayList<Integer>();
         vps = new ValidPlayerState(this);
         ivps = new InvalidPlayerState(this);
-        setValidPlayerState();
+        setInvalidPlayerState();
         
     }
     public void userBusted()

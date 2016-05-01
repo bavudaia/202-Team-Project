@@ -27,6 +27,7 @@ public class CardDistributionState  implements State
        Bot b3=bjw.getBot3();
 
        Dealer d=bjw.getDealer();
+       u.setValidPlayerState();
        u.getFirstCards();
        b1.getFirstCards();
        b2.getFirstCards();
