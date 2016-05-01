@@ -23,9 +23,11 @@ public class Hit extends Button
         
       if(Greenfoot.mouseClicked(this))
       {
-          Player p = new Player();
+          
+          BlackJackWorld bjw = (BlackJackWorld) getWorld();
+          Player p = bjw.getUser();
          Command c =  new HitCommand(p);
-         c.execute();
+         c.execute();   
          
         }
      }

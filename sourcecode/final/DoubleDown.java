@@ -26,7 +26,8 @@ public class DoubleDown extends Button
            if(Greenfoot.mouseClicked(this))
       {
           // get player from chain of responsibility
-         Player p = new Player();
+          BlackJackWorld bjw = (BlackJackWorld) getWorld();
+          Player p = bjw.getUser();
          //
          Command c =  new DoubleDownCommand(p);
          c.execute();

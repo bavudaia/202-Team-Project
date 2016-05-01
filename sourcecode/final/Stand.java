@@ -23,7 +23,9 @@ public class Stand extends Button
         // Add your action code here.
                   if(Greenfoot.mouseClicked(this))
       {
-          Player p = new Player();
+           BlackJackWorld bjw = (BlackJackWorld) getWorld();
+          Player p = bjw.getUser();
+
          Command c =  new StandCommand(p);
          c.execute();
          
