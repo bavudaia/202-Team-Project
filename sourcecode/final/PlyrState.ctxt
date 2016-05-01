@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=PlyrState
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ PlyrState\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=p
+comment1.target=PlyrState(Player)
+comment2.params=
+comment2.target=void\ doHit()
+comment3.params=
+comment3.target=void\ doStand()
+comment4.params=
+comment4.target=void\ doSurrender()
+comment5.params=
+comment5.target=void\ doDoubleDown()
+numComments=6

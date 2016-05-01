@@ -17,18 +17,41 @@ public class Player extends Actor
     protected int score;
     private int assets;
     private int betting_amount;
+    private Boolean isBusted = false;
+    private Boolean isSurrendered = false;
+   // private Boolean isDoubleDown = false;
     //protected GameController gc;
     protected int nextX, nextY;
     protected int betX, betY;
     protected int scoreX, scoreY;
+    PlayerState vps;
+    PlayerState ivps;
+    PlayerState cps;
     /**
      * Constructor for objects of class Player
      */
     public Player(){
         cards = new ArrayList<String>();
         indexes = new ArrayList<Integer>();
+        vps = new ValidPlayerState(this);
+        ivps = new InvalidPlayerState(this);
+        setValidPlayerState();
+        
     }
-      public int getNextY()
+    public void userBusted()
+    {
+        isBusted = true;
+    }
+    public void userSurrendered(){
+        isSurrendered = true;
+    }
+    public void  setInvalidPlayerState(){
+        cps = ivps;
+    }
+    public void setValidPlayerState(){
+        cps = vps;
+    }
+    public int getNextY()
     {
         return nextY;
     }
@@ -95,11 +118,32 @@ public class Player extends Actor
     public void setBetting_amount(int betting_amount) {
         this.betting_amount = betting_amount;
     } 
-    
+    public void addCard(){
+            GameController gc = getGameController();
+            int cardsLeft = gc.getCardSize();
+            Random r = new Random();
+            int n = r.nextInt(cardsLeft);
+            String cardImage = gc.getCard(n);
+           // System.out.println(cardImage);
+           // System.out.println("X = " + nextX +" Y = " +nextY);
+            this.cards.add(cardImage);            
+            this.indexes.add(n);
+            gc.remove(n);            
+            GreenfootImage gi = new GreenfootImage(cardImage);
+            getWorld().getBackground().drawImage(gi,nextX, nextY);
+            this.nextX+=50;
+            
+    }
+    public void updateScore(){
+         GreenfootImage black =      getWorld().getBackground();
+             /* Overlapping existing image of integer betting amount */
+            black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX, scoreY);
+            GreenfootImage gfi =      getWorld().getBackground();
+            gfi.drawImage(new GreenfootImage("Score" + Integer.toString(score), 20, Color.RED, Color.WHITE),scoreX, scoreY);
+
+    }
     public void hit(){
-        //to be 
-        System.out.println("hit");
-        //to be replaced with hit logic
+      cps.doHit();
     }
     
     public List<String> getCards(){
@@ -122,10 +166,9 @@ public class Player extends Actor
     }
     
     public void doubleDown(){
-    
-            //to be 
-        System.out.println("doubledown");
-        //to be replaced with doubledown logic
+        cps.doDoubleDown();
+           
+                //to be replaced with doubledown logic
     }
     public int getScore(){
         return score;
@@ -178,15 +221,19 @@ public class Player extends Actor
     {
         this.betting_amount+=betValue;
         this.assets-=betValue;
-        
+        drawBet();
+       
+    }
+    public void drawBet()
+    {
         World w = getWorld();
         
-         GreenfootImage black =      w.getBackground();
+        GreenfootImage black =      w.getBackground();
          /* Overlapping existing image of integer betting amount */
-         black.drawImage(new GreenfootImage(Integer.toString(100000), 20, null,null),betX, betY);
-              GreenfootImage gfi =      w.getBackground();
-       gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
-        System.out.println(score);
+        black.drawImage(new GreenfootImage(Integer.toString(100000), 20, null,null),betX, betY);
+        GreenfootImage gfi =      w.getBackground();
+        gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
+        System.out.println("test" + score);
     }
     
     public void clearBet()
