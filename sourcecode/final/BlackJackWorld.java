@@ -209,13 +209,14 @@ public class BlackJackWorld extends World
                 dealerTurnState.setBlackJackWorld(this);
                 
         hitButton = new Hit();
-        addObject(hitButton,300,500);
+        addObject(hitButton,350,700);
         standButton = new Stand();
-        addObject(standButton,400,500);
+        addObject(standButton,450,700);
         surrenderButton = new Surrender();
-        addObject(surrenderButton,500,500);
+        addObject(surrenderButton,550,700);
         doubleDownButton = new DoubleDown();
-        addObject(doubleDownButton,600,500);
+        System.out.println();
+        addObject(doubleDownButton,650,700);
         bot1 = new Bot();
         bot2 = new Bot();
         bot3 = new Bot();
@@ -247,7 +248,7 @@ public class BlackJackWorld extends World
         clear = new Clear();
          addObject(clear,700,600);
          deal = new Deal();
-         addObject(deal, 800,600);
+         addObject(deal, 800,665);
          user.setBetX(Constants.User.betX);
          user.setBetY(Constants.User.betY);
          

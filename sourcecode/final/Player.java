@@ -1,6 +1,9 @@
 import greenfoot.*;
 import java.util.*;
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.*;
+import javax.swing.*;
 
 /*t
  * Write a description of class Player here.
@@ -136,11 +139,14 @@ public class Player extends Actor
     }
     public void updateScore(){
          GreenfootImage black =      getWorld().getBackground();
+         Font font = new Font("Serif", Font.BOLD, 18);
+        // f.setSize(400,400);
+         black.setFont(font);
              /* Overlapping existing image of integer betting amount */
-            black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX, scoreY);
-            GreenfootImage gfi =      getWorld().getBackground();
-            gfi.drawImage(new GreenfootImage("Score" + Integer.toString(score), 20, Color.RED, Color.WHITE),scoreX, scoreY);
-
+            //black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX, scoreY);
+            //GreenfootImage gfi =      getWorld().getBackground();
+           // gfi.drawImage(new GreenfootImage("Score" + Integer.toString(score), 20, Color.RED, Color.WHITE),scoreX, scoreY);
+            black.drawString("Score" + Integer.toString(score),scoreX, scoreY);
     }
     public void hit(){
       cps.doHit();

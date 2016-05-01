@@ -16,7 +16,7 @@ public class Deal extends BettingButton
     public Deal()
     {
             GreenfootImage ddImage = new GreenfootImage("deal.png");
-        ddImage.scale(Constants.button_height,Constants.button_width);
+        ddImage.scale(80,80);
         setImage(ddImage);
     }
     //User u;
