@@ -146,7 +146,31 @@ public class Player extends Actor
             //black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX, scoreY);
             //GreenfootImage gfi =      getWorld().getBackground();
            // gfi.drawImage(new GreenfootImage("Score" + Integer.toString(score), 20, Color.RED, Color.WHITE),scoreX, scoreY);
-            black.drawString("Score" + Integer.toString(score),scoreX, scoreY);
+           black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX-10, scoreY - 20); 
+           black.drawString("Score : " + Integer.toString(score),scoreX, scoreY);
+    }
+    public void drawBet()
+    {
+       /* World w = getWorld();
+        
+        GreenfootImage black =      w.getBackground();
+         /* Overlapping existing image of integer betting amount */
+       /* black.drawImage(new GreenfootImage(Integer.toString(100000), 20, null,null),betX, betY);
+        GreenfootImage gfi =      w.getBackground();
+        gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
+        System.out.println("test" + score);*/
+    
+         GreenfootImage black =  getWorld().getBackground();
+         Font font = new Font("Serif", Font.BOLD, 18);
+        // f.setSize(400,400);
+         black.setFont(font);
+             /* Overlapping existing image of integer betting amount */
+            black.drawImage(new GreenfootImage("bet" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),betX-10, betY - 20);
+            //GreenfootImage gfi =      getWorld().getBackground();
+           // gfi.drawImage(new GreenfootImage("Score" + Integer.toString(score), 20, Color.RED, Color.WHITE),scoreX, scoreY);
+        //  black.drawString("Bet : " +Integer.toString(100000) ,betX, betY);  
+         black.drawString("Bet : " + Integer.toString(betting_amount),betX, betY);
+
     }
     public void hit(){
       cps.doHit();
@@ -204,12 +228,13 @@ public class Player extends Actor
             this.nextX+=50;
         }
         score= getScoreFromCards();
-        GreenfootImage black =      getWorld().getBackground();
+        updateScore();
+        /*GreenfootImage black =      getWorld().getBackground();
          /* Overlapping existing image of integer betting amount */
-        black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX, scoreY);
+       /* black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX, scoreY);
         GreenfootImage gfi =      getWorld().getBackground();
         gfi.drawImage(new GreenfootImage("Score" + Integer.toString(score), 20, Color.RED, Color.WHITE),scoreX, scoreY);
-        System.out.println(score); 
+        System.out.println(score); */
        
     }
     
@@ -230,17 +255,7 @@ public class Player extends Actor
         drawBet();
        
     }
-    public void drawBet()
-    {
-        World w = getWorld();
-        
-        GreenfootImage black =      w.getBackground();
-         /* Overlapping existing image of integer betting amount */
-        black.drawImage(new GreenfootImage(Integer.toString(100000), 20, null,null),betX, betY);
-        GreenfootImage gfi =      w.getBackground();
-        gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
-        System.out.println("test" + score);
-    }
+   
     
     public void clearBet()
     {

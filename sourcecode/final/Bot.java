@@ -33,9 +33,12 @@ public class Bot extends Player implements Observer
         public void setBotBetting_amount(int amt)
     {
         setBetting_amount(amt);   
-         World w = getWorld();
+        World w = getWorld();
         GreenfootImage gfi =      w.getBackground();
-        gfi.drawImage(new GreenfootImage(Integer.toString(getBetting_amount()), 20, Color.RED, Color.WHITE),betX, betY);
+        gfi.drawImage(new GreenfootImage("bet" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),betX-10, betY - 20);
+        gfi.drawString("Bet : " + Integer.toString(getBetting_amount()),betX, betY);
+
+       //gfi.drawImage(new GreenfootImage(Integer.toString(getBetting_amount()), 20, Color.RED, Color.WHITE),betX, betY);
  
     }
 }
