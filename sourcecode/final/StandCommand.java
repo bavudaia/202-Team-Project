@@ -7,24 +7,14 @@
 public class StandCommand implements Command 
 {
     // instance variables - replace the example below with your own
-    private Player player;
 
-    /**
-     * Constructor for objects of class StandCommand
-     */
-    public StandCommand()
-    {
-    }
-    public StandCommand(Player p){
-        player = p;
-    }
-    
+    private BlackJackWorld bjw;
     public void execute(){
-        player.stand();
+        State s = bjw.getCurrentState();
+        s.stand();
     }
-
-      public void setPlayer(Player p)
+    public void setBlackJackWorld(BlackJackWorld p)
     {
-        player = p;
+        bjw = p;
     }
 }

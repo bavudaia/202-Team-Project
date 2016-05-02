@@ -7,24 +7,17 @@
 public class HitCommand implements Command 
 {
     // instance variables - replace the example below with your own
-    private Player player;
 
-    /**
-     * Constructor for objects of class HitCommand
-     */
-    public HitCommand()
-    {
-        
-    }
-    public HitCommand(Player player){
-        this.player = player;
-    }
-    
+
+
+    private BlackJackWorld bjw;
     public void execute(){
-        player.hit();
+        State s = bjw.getCurrentState();
+        System.out.println(s.toString());
+        s.hit();
     }
-    public void setPlayer(Player p)
+    public void setBlackJackWorld(BlackJackWorld p)
     {
-        player = p;
+        bjw = p;
     }
 }

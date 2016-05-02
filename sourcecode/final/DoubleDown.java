@@ -27,12 +27,12 @@ public class DoubleDown extends Button
       {
           // get player from chain of responsibility
           BlackJackWorld bjw = (BlackJackWorld) getWorld();
-          Player p = bjw.getUser();
+          
          //
           AbstractFactory abf = new AbstractFactory();
           CommandFactory cf = abf.getCommandFactory();
           Command c = cf.getCommand("DoubleDown");
-         c.setPlayer(p);
+         c.setBlackJackWorld(bjw);
          c.execute();
         }
     }    

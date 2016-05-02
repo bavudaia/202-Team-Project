@@ -6,34 +6,14 @@
  */
 public class DoubleDownCommand implements Command 
 {
-    // instance variables - replace the example below with your own
-    private Player player;
-
-    /**
-     * Constructor for objects of class DoubleDownCommand
-     */
-    public DoubleDownCommand()
-    {
-    }
-    
-    public DoubleDownCommand(Player p)
-    {
-        player = p;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    
+ 
+    private BlackJackWorld bjw;
     public void execute(){
-     player.doubleDown();
+        State s = bjw.getCurrentState();
+        s.hit();
     }
-    
-    public void setPlayer(Player p){
-      player = p;
+    public void setBlackJackWorld(BlackJackWorld p)
+    {
+        bjw = p;
     }
-
 }

@@ -7,21 +7,14 @@
 public class SurrenderCommand implements Command 
 {
     // instance variables - replace the example below with your own
-    private Player player;
-    /**
-     * Constructor for objects of class Surrender
-     */
-    public SurrenderCommand()
-    {
-    }
-    public SurrenderCommand(Player p){
-      player = p;
-    }
+    
+    private BlackJackWorld bjw;
     public void execute(){
-        player.surrender();
+        State s = bjw.getCurrentState();
+        s.surrender();
     }
-        public void setPlayer(Player p)
+    public void setBlackJackWorld(BlackJackWorld p)
     {
-        player = p;
+        bjw = p;
     }
 }

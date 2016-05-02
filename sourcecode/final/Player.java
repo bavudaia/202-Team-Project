@@ -30,6 +30,7 @@ public class Player extends Actor
     PlayerState vps;
     PlayerState ivps;
     PlayerState cps;
+    protected Strategy strategy;
     /**
      * Constructor for objects of class Player
      */
@@ -98,6 +99,15 @@ public class Player extends Actor
     public void setNextX(int x)
     {
         nextX = x;
+    }
+    
+    public Strategy getStrategy()
+    {
+        return strategy;
+    }
+    public void setStrategy(Strategy s)
+    {
+        strategy = s;
     }
     
     public GameController getGameController()
@@ -172,9 +182,7 @@ public class Player extends Actor
          black.drawString("Bet : " + Integer.toString(betting_amount),betX, betY);
 
     }
-    public void hit(){
-      cps.doHit();
-    }
+   
     
     public List<String> getCards(){
       return cards;
@@ -182,26 +190,33 @@ public class Player extends Actor
     public void setCards(List<String> cards){
      this.cards = cards;
     }
+    
+     public void hit(){
+      cps.doHit();
+    }
     public void surrender(){
          cps.doSurrender();
                 //to be 
-    System.out.println("surrender");
+         System.out.println("surrender");
             //to be replaced with surrender logic
-    }
-    
+    }    
     
     public void stand(){
         cps.doStand();
             //to be 
         System.out.println("stand");
         //to be replaced with stand logic
+        BlackJackWorld bjw = (BlackJackWorld) getWorld();
+        bjw.setCurrentState(bjw.getBotTurnState());
     }
     
     public void doubleDown(){
         cps.doDoubleDown();
-           
+        BlackJackWorld bjw = (BlackJackWorld) getWorld();
+        bjw.setCurrentState(bjw.getBotTurnState());        
                 //to be replaced with doubledown logic
     }
+    
     public int getScore(){
         return score;
     }
@@ -255,7 +270,6 @@ public class Player extends Actor
         this.betting_amount+=betValue;
         this.assets-=betValue;
         drawBet();
-       
     }
    
     

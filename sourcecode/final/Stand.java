@@ -28,7 +28,7 @@ public class Stand extends Button
           AbstractFactory abf = new AbstractFactory();
           CommandFactory cf = abf.getCommandFactory();
           Command c = cf.getCommand("Stand");
-         c.setPlayer(p);
+          c.setBlackJackWorld(bjw);
          c.execute();
         }
         

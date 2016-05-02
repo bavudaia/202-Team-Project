@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=MediumStrategyHandler
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MediumStrategyHandler\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=p
+comment1.target=void\ handle(Player)
+comment2.params=sh
+comment2.target=void\ setStrategyHandler(StrategyHandler)
+numComments=3

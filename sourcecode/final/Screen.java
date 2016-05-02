@@ -24,11 +24,6 @@ public class Screen implements Observer
        {
            System.out.println("Bot Turn State");
        }
-       
-       else if(s instanceof DealerShowCardState)
-       {
-           System.out.println("Dealer show card State");
-       }
    }
    
    public void setBlackJackWorld(BlackJackWorld bjw)

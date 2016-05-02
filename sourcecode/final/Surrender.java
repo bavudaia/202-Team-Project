@@ -29,8 +29,8 @@ public class Surrender extends Button
                   AbstractFactory abf = new AbstractFactory();
           CommandFactory cf = abf.getCommandFactory();
           Command c = cf.getCommand("Surrender");
-         c.setPlayer(p);
-         c.execute();
+          c.setBlackJackWorld(bjw);
+          c.execute();
          
         }
     }    

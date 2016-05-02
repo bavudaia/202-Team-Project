@@ -7,5 +7,5 @@
 public interface Command  
 {
     void execute();
-    void setPlayer(Player p);
+    void setBlackJackWorld(BlackJackWorld p);
 }

@@ -37,7 +37,6 @@ public class BlackJackWorld extends World implements Subject
     private State bettingState;
     private State botBettingState;
     private State cardDistributionState;
-    private State dealerShowCardState;
     private State userTurnState;
     private State botTurnState;
     private State dealerTurnState;
@@ -101,9 +100,6 @@ public class BlackJackWorld extends World implements Subject
     scoreMap.put("king_of_hearts.png",10);
     }
     
-        public State getDealerShowCardState() {
-        return dealerShowCardState;
-    }
 
     public void notifyObservers()
     {
@@ -120,9 +116,7 @@ public class BlackJackWorld extends World implements Subject
     {
         screenList.remove(o);
     }
-    public void setDealerShowCardState(State dealerShowCardState) {
-        this.dealerShowCardState = dealerShowCardState;
-    }
+
     
     public void notifyDeal()
     {
@@ -222,8 +216,6 @@ public class BlackJackWorld extends World implements Subject
                botBettingState.setBlackJackWorld(this);
                 cardDistributionState = new CardDistributionState();
                 cardDistributionState.setBlackJackWorld(this);
-                dealerShowCardState = new DealerShowCardState();
-                dealerShowCardState.setBlackJackWorld(this);
                 userTurnState = new UserTurnState();
                 userTurnState.setBlackJackWorld(this);
                 botTurnState = new BotTurnState();
@@ -287,22 +279,29 @@ public class BlackJackWorld extends World implements Subject
          
          dealer.setNextX(Constants.Dealer.x);
          dealer.setNextY(Constants.Dealer.y);
-         //to be removed 
-         //bot1.getFirstCards();;
+         
+         Strategy e = new Easy();
+         Strategy n = new Medium();
+         Strategy h = new Hard();
+         
+         bot1.setStrategy(e);
+         bot2.setStrategy(n);
+         bot3.setStrategy(h);         
          /* setting the betting strategy*/
-         BettingStrategy e = new Extravagant();
-          BettingStrategy n = new Normal();
-           BettingStrategy f = new Frugal();
+         BettingStrategy eb = new Extravagant();
+          BettingStrategy nb = new Normal();
+           BettingStrategy fb = new Frugal();
            
-           e.setBot(bot1);
-           n.setBot(bot2);
-           f.setBot(bot3);
+           eb.setBot(bot1);
+           nb.setBot(bot2);
+           fb.setBot(bot3);
+           
          /*Easy*/
-         bot1.setBettingStrategy(e);
+         bot1.setBettingStrategy(eb);
          /* med*/
-         bot2.setBettingStrategy(n);
+         bot2.setBettingStrategy(nb);
          /* Hard */
-         bot3.setBettingStrategy(f);
+         bot3.setBettingStrategy(fb);
          
        user.setNextX(Constants.User.x);
        user.setNextY(Constants.User.y);

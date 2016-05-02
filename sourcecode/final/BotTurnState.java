@@ -11,14 +11,27 @@ public class BotTurnState  implements State
    public void setBlackJackWorld(BlackJackWorld p){bjw=p;}    
    public void clear(){}
    public  void done(){
+       Player bot1 = bjw.getBot1();
+       Player bot2 = bjw.getBot2();
+       Player bot3 = bjw.getBot3();
+       
+       StrategyHandler she = new EasyStrategyHandler();
+       StrategyHandler shm = new MediumStrategyHandler();
+       StrategyHandler shh = new HardStrategyHandler();
+        shm.setStrategyHandler(shh);
+       she.setStrategyHandler(shm);
       
+       she.handle(bot1);
+       she.handle(bot2);
+       she.handle(bot3);
     }
     @Override
     public void distribute()
     {
     }
+    
            public void hit(){
-        
+               
         }
     public void stand(){
     
