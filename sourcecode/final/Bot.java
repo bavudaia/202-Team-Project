@@ -6,7 +6,7 @@ import java.awt.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Bot extends Player implements Observer
+public class Bot extends Player 
 {
     /**
      * Act - do whatever the Bot wants to do. This method is called whenever
@@ -20,11 +20,8 @@ public class Bot extends Player implements Observer
     public void setBettingStrategy(BettingStrategy bs){
        this.bs=bs;
     }
-    @Override
-    public void update()
-    {
-        
-    }
+    
+
     public void notifyUserDeal()
     {
         int betAmt = bs.getBettingAmount();

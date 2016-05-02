@@ -6,6 +6,6 @@
  */
 public interface Observer  
 {
-    void update();    
-    
+    public void update();    
+    public void setBlackJackWorld(BlackJackWorld b);
 }

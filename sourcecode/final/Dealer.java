@@ -7,7 +7,7 @@ import java.awt.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Dealer extends Player implements Observer
+public class Dealer extends Player 
 {
     /**
      * Act - do whatever the Dealer wants to do. This method is called whenever
@@ -51,10 +51,7 @@ public class Dealer extends Player implements Observer
         System.out.println("scoreX :" + scoreX + "scoreY :"+ scoreY);
         System.out.println(score); 
     }
-    public void update()
-    {
-        
-    }
+   
     public void act() 
     {
         // Add your action code here.

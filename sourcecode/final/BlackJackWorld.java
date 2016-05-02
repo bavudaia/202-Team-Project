@@ -6,13 +6,14 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BlackJackWorld extends World
+public class BlackJackWorld extends World implements Subject
 {
 
     /**
      * Constructor for objects of class BlackJackWorld.
      * 
      */
+    private List<Observer> screenList;
     Hit hitButton;
     Stand standButton;
     Surrender surrenderButton;
@@ -104,6 +105,21 @@ public class BlackJackWorld extends World
         return dealerShowCardState;
     }
 
+    public void notifyObservers()
+    {
+        for(Observer o:screenList)
+        o.update();
+    }
+    
+    public void addObserver(Observer o)
+    {
+        screenList.add(o);
+    }
+    
+    public void removeObserver(Observer o)
+    {
+        screenList.remove(o);
+    }
     public void setDealerShowCardState(State dealerShowCardState) {
         this.dealerShowCardState = dealerShowCardState;
     }
@@ -133,6 +149,7 @@ public class BlackJackWorld extends World
        public void setCurrentState(State s)
     {
         this.currentState = s;
+        notifyObservers();
     }
     public State getCurrentState()
     {
@@ -143,34 +160,34 @@ public class BlackJackWorld extends World
         this.bettingState = s;
     }
     
-    	public State getUserTurnState() {
-		return userTurnState;
-	}
+        public State getUserTurnState() {
+        return userTurnState;
+    }
 
 
-	public void setUserTurnState(State userTurnState) {
-		this.userTurnState = userTurnState;
-	}
+    public void setUserTurnState(State userTurnState) {
+        this.userTurnState = userTurnState;
+    }
 
 
-	public State getBotTurnState() {
-		return botTurnState;
-	}
+    public State getBotTurnState() {
+        return botTurnState;
+    }
 
 
-	public void setBotTurnState(State botTurnState) {
-		this.botTurnState = botTurnState;
-	}
+    public void setBotTurnState(State botTurnState) {
+        this.botTurnState = botTurnState;
+    }
 
 
-	public State getDealerTurnState() {
-		return dealerTurnState;
-	}
+    public State getDealerTurnState() {
+        return dealerTurnState;
+    }
 
 
-	public void setDealerTurnState(State dealerTurnState) {
-		this.dealerTurnState = dealerTurnState;
-	}
+    public void setDealerTurnState(State dealerTurnState) {
+        this.dealerTurnState = dealerTurnState;
+    }
 
     public State getBettingState()
     {
@@ -187,8 +204,14 @@ public class BlackJackWorld extends World
 
     public BlackJackWorld()
     {    
+        
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 768, 1); 
+        screenList=new ArrayList<>();
+        Observer sc  = new Screen();
+        sc.setBlackJackWorld(this);
+        addObserver(sc);
+        
         getBackground().drawImage(new GreenfootImage("black.png"), 0, 0);
         
         /* State initia;lizayion */
@@ -253,7 +276,7 @@ public class BlackJackWorld extends World
          user.setBetY(Constants.User.betY);
          
          /* initial state is betting state */
-         currentState = bettingState;
+          setCurrentState(bettingState);
          
          bot1.setBetX(Constants.Bot1.betX);
          bot1.setBetY(Constants.Bot1.betY);
