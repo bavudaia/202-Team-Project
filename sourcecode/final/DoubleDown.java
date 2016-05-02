@@ -29,9 +29,11 @@ public class DoubleDown extends Button
           BlackJackWorld bjw = (BlackJackWorld) getWorld();
           Player p = bjw.getUser();
          //
-         Command c =  new DoubleDownCommand(p);
+          AbstractFactory abf = new AbstractFactory();
+          CommandFactory cf = abf.getCommandFactory();
+          Command c = cf.getCommand("DoubleDown");
+         c.setPlayer(p);
          c.execute();
-         
         }
     }    
 }

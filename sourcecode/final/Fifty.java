@@ -22,7 +22,9 @@ public class Fifty extends BettingButton
        if(Greenfoot.mouseClicked(this))
       {
           // get player from chain of responsibility
-            BettingButtonCommand b = new FiftyCommand();
+                               AbstractFactory abf = new AbstractFactory();
+          BettingCommandFactory cf = abf.getBettingCommandFactory();
+          BettingButtonCommand b = cf.getBettingCommand("Fifty");
             // b.setUser();//to be implemented later.
             b.setBlackJackWorld((BlackJackWorld)getWorld());
             b.execute();

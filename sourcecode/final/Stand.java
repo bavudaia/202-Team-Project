@@ -25,10 +25,11 @@ public class Stand extends Button
       {
            BlackJackWorld bjw = (BlackJackWorld) getWorld();
           Player p = bjw.getUser();
-
-         Command c =  new StandCommand(p);
+          AbstractFactory abf = new AbstractFactory();
+          CommandFactory cf = abf.getCommandFactory();
+          Command c = cf.getCommand("Stand");
+         c.setPlayer(p);
          c.execute();
-         
         }
         
     }    

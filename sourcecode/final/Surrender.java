@@ -26,7 +26,10 @@ public class Surrender extends Button
                     BlackJackWorld bjw = (BlackJackWorld) getWorld();
           Player p = bjw.getUser();
 
-         Command c =  new SurrenderCommand(p);
+                  AbstractFactory abf = new AbstractFactory();
+          CommandFactory cf = abf.getCommandFactory();
+          Command c = cf.getCommand("Surrender");
+         c.setPlayer(p);
          c.execute();
          
         }

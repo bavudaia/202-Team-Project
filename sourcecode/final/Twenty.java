@@ -22,13 +22,16 @@ public class Twenty extends BettingButton
     {
        if(Greenfoot.mouseClicked(this))
       {
+                    AbstractFactory abf = new AbstractFactory();
+          BettingCommandFactory cf = abf.getBettingCommandFactory();
+          BettingButtonCommand b = cf.getBettingCommand("Twenty");
+           
           // get player from chain of responsibility
-            BettingButtonCommand b = new TwentyCommand();
+        
            // b.setUser();//to be implemented later.
            //System.out.println(getWorld().toString());
            b.setBlackJackWorld((BlackJackWorld)getWorld()); 
            b.execute();
-            
         }
     }  
     
