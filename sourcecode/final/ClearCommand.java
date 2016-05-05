@@ -12,6 +12,7 @@ public class ClearCommand implements BettingButtonCommand
    public void execute()
    {
        State s = u.getCurrentState();
+       System.out.println("clear state " + u.getCurrentState());
        s.clear();
    }
    public void setBlackJackWorld(BlackJackWorld user)
