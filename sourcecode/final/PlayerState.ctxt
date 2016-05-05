@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=void\ doSurrender()
 comment4.params=
 comment4.target=void\ doDoubleDown()
-numComments=5
+comment5.params=bjw
+comment5.target=void\ setBlackJackWorld(BlackJackWorld)
+numComments=6

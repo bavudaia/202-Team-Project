@@ -2,4 +2,6 @@
 comment0.target=Easy
 comment1.params=
 comment1.target=void\ execute()
-numComments=2
+comment2.params=b
+comment2.target=void\ setBot(Bot)
+numComments=3
