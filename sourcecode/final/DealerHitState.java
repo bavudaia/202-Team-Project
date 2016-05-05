@@ -12,7 +12,7 @@ public class DealerHitState  implements State
    public void clear(){}
    public  void done(){
        Player p = bjw.getDealer();
-       
+       p.hit();
        //State s = bjw.getDealer
     }
     @Override

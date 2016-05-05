@@ -6,7 +6,7 @@
  */
 public interface PlayerState  
 {
-    public void doHit();
+    public void doHit(BlackJackWorld bjw);
     public void doStand();
     public void doSurrender();
     public void doDoubleDown();

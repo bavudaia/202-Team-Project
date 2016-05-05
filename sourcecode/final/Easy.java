@@ -10,10 +10,12 @@ public class Easy  implements Strategy
     //Dealer dealer;
     Bot bot ;
     public void execute(){
+        System.out.println("Strategy : Easy");
         int flag = 0;
         for(;;)
         {
-        Random rand = new Random();
+            System.out.println("Inside for loop Strategy : Easy");
+           Random rand = new Random();
             
         int  n = rand.nextInt(4) + 1;
         switch(n){

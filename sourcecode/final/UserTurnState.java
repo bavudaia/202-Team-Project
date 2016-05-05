@@ -17,7 +17,6 @@ public class UserTurnState  implements State
     {
         
     }
-    
        public void hit(){
            Player p = bjw.getUser();
            p.hit();

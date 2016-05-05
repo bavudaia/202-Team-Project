@@ -14,35 +14,36 @@ public class ValidPlayerState extends PlyrState
     {
         bjw = b;
     }
-    public void doHit()
+    public void doHit(BlackJackWorld bjw)
     {
         p.addCard();
         p.score= p.getScoreFromCards();
         if(p.score == 21)
         {
              p.updateScore();
-           p.setInvalidPlayerState(); 
-           
+             p.setInvalidPlayerState();
+                   //BlackJackWorld bjw = (BlackJackWorld) getWorld();
+             bjw.setCurrentState(bjw.getBotTurnState());
+             bjw.getCurrentState().done();
         }
         else if(p.score > 21){
             p.userBusted();
             p.updateScore();
             p.setInvalidPlayerState();
+                 // BlackJackWorld bjw = (BlackJackWorld) getWorld();
             bjw.setCurrentState(bjw.getBotTurnState());
             bjw.getCurrentState().done();
         }
             //isBusted = true;
             //System.out.println(score);
         p.updateScore();
-
     }
     public void doStand()
     {
         p.setInvalidPlayerState();
     }
     public void doSurrender()
-    {
-        
+    { 
         p.setInvalidPlayerState();
         p.userSurrendered();
     }

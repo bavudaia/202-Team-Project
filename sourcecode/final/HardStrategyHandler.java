@@ -12,6 +12,7 @@ public class HardStrategyHandler  implements StrategyHandler
         Strategy s = p.getStrategy();
         if(s instanceof Hard)
         {
+                        System.out.println("Chain of responsibility : Hard Strategy");
             s.execute();
         }
         else

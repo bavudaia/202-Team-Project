@@ -39,6 +39,10 @@ public class Player extends Actor
         indexes = new ArrayList<Integer>();
         BlackJackWorld bjw = (BlackJackWorld)getWorld();
         vps = new ValidPlayerState(this);
+        if(bjw == null)
+            System.out.println("bjw is null");
+            else
+             System.out.println("bjw is not null");
         vps.setBlackJackWorld(bjw);
         ivps = new InvalidPlayerState(this);
         ivps.setBlackJackWorld(bjw);
@@ -137,6 +141,7 @@ public class Player extends Actor
     public void addCard(){
             GameController gc = getGameController();
             int cardsLeft = gc.getCardSize();
+            System.out.println(cardsLeft);
             Random r = new Random();
             int n = r.nextInt(cardsLeft);
             String cardImage = gc.getCard(n);
@@ -195,7 +200,9 @@ public class Player extends Actor
     }
     
      public void hit(){
-      cps.doHit();
+        BlackJackWorld bjw = (BlackJackWorld)getWorld(); 
+      cps.doHit(bjw);
+
     }
     public void surrender(){
          cps.doSurrender();

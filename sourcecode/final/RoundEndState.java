@@ -4,27 +4,18 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class RoundEndState  
+public class RoundEndState  implements State
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class RoundEndState
-     */
-    public RoundEndState()
-    {
+       public void bet(int betVal){}
+   public void setBlackJackWorld(BlackJackWorld p){}
+    public void done(){
+    
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    public void clear(){}
+    public void distribute(){}
+   
+    public void hit(){}
+    public void stand(){}
+    public void doubledown(){}
+    public void surrender(){}
 }

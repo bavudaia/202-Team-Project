@@ -12,6 +12,7 @@ public class MediumStrategyHandler  implements StrategyHandler
         Strategy s = p.getStrategy();
         if(s instanceof Medium)
         {
+                        System.out.println("Chain of responsibility : Medium Strategy");
             s.execute();
         }
         else

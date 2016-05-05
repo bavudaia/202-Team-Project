@@ -13,6 +13,9 @@ public class Bot extends Player
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private BettingStrategy bs;
+    public Bot(){
+      super();
+    }
     public void act() 
     {
         // Add your action code here.
@@ -37,5 +40,75 @@ public class Bot extends Player
 
        //gfi.drawImage(new GreenfootImage(Integer.toString(getBetting_amount()), 20, Color.RED, Color.WHITE),betX, betY);
  
+    }
+   
+         public void hit(){
+             System.out.println("Inside bot.hit()");
+            //if(cps instanceof ValidPlayerState)
+            //{
+              addCard();
+              score= getScoreFromCards();
+            if(score == 21)
+            {
+                 updateScore();
+                 setInvalidPlayerState(); 
+            }
+            else if(score > 21){
+                userBusted();
+                updateScore();
+                setInvalidPlayerState();
+          //  setCurrentState(bjw.getBotTurnState());
+          //  getCurrentState().done();
+        }
+            //isBusted = true;
+            //System.out.println(score);
+        updateScore();
+    //}
+
+    }
+    public void surrender(){
+                     System.out.println("Inside bot.surrender()");
+      //  if(cps instanceof ValidPlayerState)
+        //{
+                setInvalidPlayerState();
+                userSurrendered();
+          //  }
+                //BlackJackWorld bjw = (BlackJackWorld) getWorld();
+      //  bjw.setCurrentState(bjw.getBotTurnState());
+       // bjw.getCurrentState().done();
+                //to be 
+         //System.out.println("surrender");
+            //to be replaced with surrender logic
+    }    
+    
+    public void stand(){
+                     System.out.println("Inside bot.stand()");
+           //if(cps instanceof ValidPlayerState)
+        //{
+                setInvalidPlayerState();
+               
+          //  }
+    }
+    
+    public void doubleDown(){
+                     System.out.println("Inside bot.doubledow()");
+         //if(cps instanceof ValidPlayerState)
+         //{
+             addCard();
+        score= getScoreFromCards();
+        setInvalidPlayerState();
+            //isBusted = true;
+            //System.out.println(score);
+        int assets = getAssets();
+        int betting_amount = getBetting_amount();
+        betting_amount *= 2;
+        setBetting_amount(betting_amount);
+        setAssets(assets);
+        assets = assets - betting_amount;
+         updateScore();
+        drawBet();
+        System.out.println("doub down --");       
+                
+           // }
     }
 }

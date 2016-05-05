@@ -19,11 +19,9 @@ public class Hit extends Button
         setImage(hitImage);
     }
     public void act() 
-    {
-        
+    {    
       if(Greenfoot.mouseClicked(this))
       {
-          
           BlackJackWorld bjw = (BlackJackWorld) getWorld();
           Player p = bjw.getUser();
           AbstractFactory abf = new AbstractFactory();

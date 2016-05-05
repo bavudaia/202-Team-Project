@@ -25,12 +25,11 @@ public class Deal extends BettingButton
         // Add your action code here.
         if(Greenfoot.mouseClicked(this))
         {
-                                AbstractFactory abf = new AbstractFactory();
+          AbstractFactory abf = new AbstractFactory();
           BettingCommandFactory cf = abf.getBettingCommandFactory();
           BettingButtonCommand b = cf.getBettingCommand("Deal");
-            b.setBlackJackWorld((BlackJackWorld)getWorld());
-            b.execute();
-          
+          b.setBlackJackWorld((BlackJackWorld)getWorld());
+          b.execute();         
         }
     }    
 }

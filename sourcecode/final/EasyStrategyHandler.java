@@ -12,6 +12,7 @@ public class EasyStrategyHandler  implements StrategyHandler
         Strategy s = p.getStrategy();
         if(s instanceof Easy)
         {
+            System.out.println("Chain of responsibility : Easy Strategy");
             s.execute();
         }
         else

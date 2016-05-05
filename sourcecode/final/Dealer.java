@@ -13,7 +13,7 @@ public class Dealer extends Player
      * Act - do whatever the Dealer wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
+    protected int softval = 14;
     public Dealer()
     {
         
@@ -62,8 +62,18 @@ public class Dealer extends Player
         //do nothing
     }
     
+    
     public void clearBet()
     {
         //do nothing
+    }
+    
+    public void hit()
+    {
+        while(score<=14)
+        {
+            addCard();
+            score = getScoreFromCards();
+        }
     }
 }

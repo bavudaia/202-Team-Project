@@ -7,7 +7,8 @@
 public class Hard  implements Strategy
 {
     Bot bot ;
-    public void execute(){        
+    public void execute(){    
+        System.out.println("Strategy : Hard");
         if(bot.getScore()<=10){
             bot.doubleDown();
         }

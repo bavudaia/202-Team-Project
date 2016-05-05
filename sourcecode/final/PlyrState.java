@@ -10,7 +10,7 @@ public class PlyrState implements PlayerState
     public PlyrState(Player p){
         this.p = p;
     }
-    public void doHit()
+    public void doHit(BlackJackWorld bjw)
     {
     }
     public void doStand()

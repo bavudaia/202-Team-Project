@@ -8,7 +8,8 @@ public class Medium  implements Strategy
 {
     //Dealer dealer;
     Bot bot ;
-    public void execute(){     
+    public void execute(){ 
+        System.out.println("Strategy : Medium");
         while(bot.getScore()<=12){
             bot.hit();
         }

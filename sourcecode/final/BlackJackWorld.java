@@ -39,7 +39,7 @@ public class BlackJackWorld extends World implements Subject
     private State cardDistributionState;
     private State userTurnState;
     private State botTurnState;
-    private State dealerTurnState;
+    private State dealerHitState;
     
     public static Map <String,Integer> scoreMap;
     
@@ -126,6 +126,7 @@ public class BlackJackWorld extends World implements Subject
             bot3.notifyUserDeal();
         //}
     }
+    
     public State getCardDistributionState()
     {
         return cardDistributionState;
@@ -174,13 +175,13 @@ public class BlackJackWorld extends World implements Subject
     }
 
 
-    public State getDealerTurnState() {
-        return dealerTurnState;
+    public State getDealerHitState() {
+        return dealerHitState;
     }
 
 
-    public void setDealerTurnState(State dealerTurnState) {
-        this.dealerTurnState = dealerTurnState;
+    public void setDealerHitState(State dealerHitState) {
+        this.dealerHitState = dealerHitState;
     }
 
     public State getBettingState()
@@ -220,8 +221,8 @@ public class BlackJackWorld extends World implements Subject
                 userTurnState.setBlackJackWorld(this);
                 botTurnState = new BotTurnState();
                 botTurnState.setBlackJackWorld(this);
-                dealerTurnState = new DealerHitState();
-                dealerTurnState.setBlackJackWorld(this);
+                dealerHitState = new DealerHitState();
+                dealerHitState.setBlackJackWorld(this);
                 
         hitButton = new Hit();
         addObject(hitButton,350,700);
@@ -344,8 +345,7 @@ public class BlackJackWorld extends World implements Subject
     public Stand getStandButton() {
         return standButton;
     }
-
-
+    
     public void setStandButton(Stand standButton) {
         this.standButton = standButton;
     }
