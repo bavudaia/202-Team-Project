@@ -28,10 +28,15 @@ public class Screen2
         max_score =  checkMaxScore(score[3],max_score);
         score[4] = p[4].getScore();
         max_score =  checkMaxScore(score[3],max_score);
-
+        
         for(int i = 0 ; i < 5 ; i++){
             if(score[i] == max_score){
+                int betAmount = 0;
                 winners.add(p[i]);
+                int assets = p[i].getAssets();
+                betAmount = p[i].getBetting_amount();
+                assets = assets + betAmount * 2;
+                 p[i].setAssets(assets);
                 //p[i].setScore(
             }
             if(score[i] > 21){
