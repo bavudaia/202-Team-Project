@@ -10,9 +10,9 @@ public class MediumStrategyHandler  implements StrategyHandler
     public void handle(Player p)
     {
         Strategy s = p.getStrategy();
-        if(s instanceof Hard)
+        if(s instanceof Medium)
         {
-            
+            s.execute();
         }
         else
         {

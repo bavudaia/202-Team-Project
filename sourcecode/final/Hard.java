@@ -19,4 +19,8 @@ public class Hard  implements Strategy
         }
         
     }
+    
+        public void setBot(Bot b){
+        bot = b;
+    }
 }

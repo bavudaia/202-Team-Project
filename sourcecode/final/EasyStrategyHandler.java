@@ -12,7 +12,7 @@ public class EasyStrategyHandler  implements StrategyHandler
         Strategy s = p.getStrategy();
         if(s instanceof Easy)
         {
-            
+            s.execute();
         }
         else
         {

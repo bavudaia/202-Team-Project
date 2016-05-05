@@ -10,4 +10,5 @@ public interface PlayerState
     public void doStand();
     public void doSurrender();
     public void doDoubleDown();
+     public void setBlackJackWorld(BlackJackWorld bjw);
 }

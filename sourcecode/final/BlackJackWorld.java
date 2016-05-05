@@ -283,6 +283,9 @@ public class BlackJackWorld extends World implements Subject
          Strategy e = new Easy();
          Strategy n = new Medium();
          Strategy h = new Hard();
+         e.setBot(bot1);
+         n.setBot(bot2);
+         h.setBot(bot3);
          
          bot1.setStrategy(e);
          bot2.setStrategy(n);

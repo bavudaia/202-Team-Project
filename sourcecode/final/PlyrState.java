@@ -22,4 +22,6 @@ public class PlyrState implements PlayerState
     public void doDoubleDown()
     {
     }
+        public void setBlackJackWorld(BlackJackWorld bjw){}
+
 }

@@ -12,7 +12,7 @@ public class HardStrategyHandler  implements StrategyHandler
         Strategy s = p.getStrategy();
         if(s instanceof Hard)
         {
-            
+            s.execute();
         }
         else
         {

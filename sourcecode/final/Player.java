@@ -37,8 +37,11 @@ public class Player extends Actor
     public Player(){
         cards = new ArrayList<String>();
         indexes = new ArrayList<Integer>();
+        BlackJackWorld bjw = (BlackJackWorld)getWorld();
         vps = new ValidPlayerState(this);
+        vps.setBlackJackWorld(bjw);
         ivps = new InvalidPlayerState(this);
+        ivps.setBlackJackWorld(bjw);
         setInvalidPlayerState();
         
     }
@@ -196,6 +199,9 @@ public class Player extends Actor
     }
     public void surrender(){
          cps.doSurrender();
+         BlackJackWorld bjw = (BlackJackWorld) getWorld();
+        bjw.setCurrentState(bjw.getBotTurnState());
+        bjw.getCurrentState().done();
                 //to be 
          System.out.println("surrender");
             //to be replaced with surrender logic
@@ -203,11 +209,13 @@ public class Player extends Actor
     
     public void stand(){
         cps.doStand();
+        
             //to be 
         System.out.println("stand");
         //to be replaced with stand logic
         BlackJackWorld bjw = (BlackJackWorld) getWorld();
         bjw.setCurrentState(bjw.getBotTurnState());
+        bjw.getCurrentState().done();
     }
     
     public void doubleDown(){
@@ -283,7 +291,7 @@ public class Player extends Actor
          gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);*/
          GreenfootImage black =      w.getBackground();
          /* Overlapping existing image of integer betting amount */
-         black.drawImage(new GreenfootImage(Integer.toString(100000), 40, Color.BLACK,Color.BLACK),betX  , betY - 20);
+         black.drawImage(new GreenfootImage(Integer.toString(100000), 20, Color.BLACK,Color.BLACK),betX, betY);
 
     }
 

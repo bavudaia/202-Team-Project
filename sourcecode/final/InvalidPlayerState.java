@@ -6,6 +6,7 @@
  */
 public class InvalidPlayerState extends PlyrState  
 {
+    BlackJackWorld bjw;
     public InvalidPlayerState(Player p){
         super(p);
     }
@@ -20,5 +21,10 @@ public class InvalidPlayerState extends PlyrState
     }
     public void doDoubleDown()
     {
+    }
+    
+    public void setBlackJackWorld(BlackJackWorld bjw)
+    {
+        this.bjw = bjw;
     }
 }

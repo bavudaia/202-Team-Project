@@ -7,7 +7,7 @@
 import java.util.Random;
 public class Easy  implements Strategy
 {
-    Dealer dealer;
+    //Dealer dealer;
     Bot bot ;
     public void execute(){
         int flag = 0;
@@ -42,5 +42,9 @@ public class Easy  implements Strategy
           break;
         }
         
+    }
+    
+    public void setBot(Bot b){
+        bot = b;
     }
 }
