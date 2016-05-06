@@ -12,9 +12,15 @@ public class RoundEndState  implements State
     bjw = p;
     }
     public void done(){
-       System.out.println("Round end state");
-       DecideWinner dw = new DecideWinner(bjw);
-       dw.update();
+       try{
+           System.out.println("Round end state");
+           Thread.sleep(1000);
+           DecideWinner dw = new DecideWinner(bjw);
+           dw.update();
+        }
+        catch(Exception e){
+            System.out.println(e.toString());
+        }
         
     }
     public void clear(){}
