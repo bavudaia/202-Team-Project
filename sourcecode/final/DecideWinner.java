@@ -51,8 +51,12 @@ public class DecideWinner
 
                 losers.add(p[i]);
             }
-            else if(score[i] > score[4]){
+            else /*if(score[i] > score[4])*/{
                  System.out.println("Winner : " + p[i].getName());
+                   int assets = p[i].getAssets();
+               int betAmount = p[i].getBetting_amount();
+               assets = assets + 2 * betAmount;
+               p[i].setAssets(assets);
                 winners.add(p[i]);
             }
         }

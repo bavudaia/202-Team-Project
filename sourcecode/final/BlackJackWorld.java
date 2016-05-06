@@ -236,6 +236,9 @@ public class BlackJackWorld extends World implements Subject
         drawUserName("Bot2", 50,160);
         getBackground().drawImage(userImage, 510, 100);
         drawUserName("Bot3", 530,200);
+        userImage.scale(60,60);
+        getBackground().drawImage(userImage, 330, 250);
+        drawUserName("Dealer", 335,325);
         /* State initia;lizayion */
         
         bettingState = new BettingState();

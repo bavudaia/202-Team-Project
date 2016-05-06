@@ -121,6 +121,7 @@ public class Player extends Actor
     public void setAssetX(int x)
     {
         assetX = x;
+        drawAsset();
     }
     public void setAssetY(int y)
     {

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Register
+comment1.params=
+comment1.target=Register()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ SignIn\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=userName\ password\ conformPassword
+comment2.target=Register(TextBox,\ TextBox,\ TextBox)
+comment3.params=
+comment3.target=void\ act()
+numComments=4
