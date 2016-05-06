@@ -18,6 +18,8 @@ public interface Constants
         public static int y = 400;
         public static int scoreX = betX + 100;
         public static int scoreY = betY;
+        public static int assetX = 215; 
+        public static int assetY= 525;
     }
     static class Bot1
     {    
@@ -28,7 +30,8 @@ public interface Constants
         public static int y = 200;
         public static int scoreX = betX-100;
         public static int scoreY = betY;
-        
+        public static int assetX = 525; 
+        public static int assetY= 525;
     }
         static class Bot2
     {
@@ -39,8 +42,10 @@ public interface Constants
         public static int y = 400;
         public static int scoreX = betX + 100 ;
         public static int scoreY = betY;
+         public static int assetX = 45; 
+        public static int assetY= 55;
     }
-        static class Bot3
+    static class Bot3
     {
         public static String name = "Bot3";
         public static int betX = 700;
@@ -49,6 +54,8 @@ public interface Constants
         public static int y = 100;
         public static int scoreX = betX-100;
         public static int scoreY = betY;
+        public static int assetX = 525; 
+        public static int assetY= 225;
     }
     
     static class Dealer
@@ -59,4 +66,5 @@ public interface Constants
                 public static int scoreX = x+20 ;
         public static int scoreY = y - 10;
     }
+
 }

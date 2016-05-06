@@ -29,6 +29,7 @@ public class Player extends Actor
     protected int nextX, nextY;
     protected int betX, betY;
     protected int scoreX, scoreY;
+    protected int assetX, assetY;
     PlayerState vps;
     PlayerState ivps;
     PlayerState cps;
@@ -117,7 +118,14 @@ public class Player extends Actor
     {
         nextX = x;
     }
-    
+    public void setAssetX(int x)
+    {
+        assetX = x;
+    }
+    public void setAssetY(int y)
+    {
+        assetY = y;
+    }
     public Strategy getStrategy()
     {
         return strategy;
@@ -165,6 +173,7 @@ public class Player extends Actor
             this.nextX+=20;
             
     }
+   
     public void updateScore(){
          GreenfootImage black =      getWorld().getBackground();
          Font font = new Font("Serif", Font.BOLD, 18);
@@ -201,6 +210,29 @@ public class Player extends Actor
 
     }
    
+    public void drawAsset()
+    {
+       /* World w = getWorld();
+        
+        GreenfootImage black =      w.getBackground();
+         /* Overlapping existing image of integer betting amount */
+       /* black.drawImage(new GreenfootImage(Integer.toString(100000), 20, null,null),betX, betY);
+        GreenfootImage gfi =      w.getBackground();
+        gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
+        System.out.println("test" + score);*/
+    
+         GreenfootImage black =  getWorld().getBackground();
+         Font font = new Font("Serif", Font.BOLD, 18);
+        // f.setSize(400,400);
+         black.setFont(font);
+             /* Overlapping existing image of integer betting amount */
+         black.drawImage(new GreenfootImage("bet" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),assetX-10, assetY - 20);
+            //GreenfootImage gfi =      getWorld().getBackground();
+           // gfi.drawImage(new GreenfootImage("Score" + Integer.toString(score), 20, Color.RED, Color.WHITE),scoreX, scoreY);
+        //  black.drawString("Bet : " +Integer.toString(100000) ,betX, betY);  
+         black.drawString("$" + Integer.toString(assets),assetX, assetY);
+
+    }
     
     public List<String> getCards(){
       return cards;
@@ -298,6 +330,7 @@ public class Player extends Actor
         this.betting_amount+=betValue;
         this.assets-=betValue;
         drawBet();
+        drawAsset();
     }
    
     

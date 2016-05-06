@@ -1,5 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.*;
+import javax.swing.*;
 /**
  * Write a description of class BlackJackWorld here.
  * 
@@ -219,24 +223,36 @@ public class BlackJackWorld extends World implements Subject
         addObserver(sc);
         
         getBackground().drawImage(new GreenfootImage("black.png"), 0, 0);
-        
+         
+        //getBackground().drawImage(new GreenfootImage("user.png"), 100, 100);
+        GreenfootImage userImage = new GreenfootImage("user.png");
+
+        userImage.scale(80,80);
+        getBackground().drawImage(userImage, 200, 400);
+        drawUserName("User", 220,500);
+        getBackground().drawImage(userImage, 510, 400);
+        drawUserName("Bot1", 530,500);
+        getBackground().drawImage(userImage, 30, 60); 
+        drawUserName("Bot2", 50,160);
+        getBackground().drawImage(userImage, 510, 100);
+        drawUserName("Bot3", 530,200);
         /* State initia;lizayion */
         
-             bettingState = new BettingState();
-             bettingState.setBlackJackWorld(this);
-               botBettingState = new BotBettingState();
-               botBettingState.setBlackJackWorld(this);
-                cardDistributionState = new CardDistributionState();
-                cardDistributionState.setBlackJackWorld(this);
-                userTurnState = new UserTurnState();
-                userTurnState.setBlackJackWorld(this);
-                botTurnState = new BotTurnState();
-                botTurnState.setBlackJackWorld(this);
-                dealerHitState = new DealerHitState();
-                dealerHitState.setBlackJackWorld(this);
-                roundEndState = new RoundEndState();
-                roundEndState.setBlackJackWorld(this);
-                
+        bettingState = new BettingState();
+        bettingState.setBlackJackWorld(this);
+        botBettingState = new BotBettingState();
+        botBettingState.setBlackJackWorld(this);
+        cardDistributionState = new CardDistributionState();
+        cardDistributionState.setBlackJackWorld(this);
+        userTurnState = new UserTurnState();
+        userTurnState.setBlackJackWorld(this);
+        botTurnState = new BotTurnState();
+        botTurnState.setBlackJackWorld(this);
+        dealerHitState = new DealerHitState();
+        dealerHitState.setBlackJackWorld(this);
+        roundEndState = new RoundEndState();
+        roundEndState.setBlackJackWorld(this);
+        
         hitButton = new Hit();
         addObject(hitButton,350,700);
         standButton = new Stand();
@@ -300,6 +316,19 @@ public class BlackJackWorld extends World implements Subject
          dealer.setNextX(Constants.Dealer.x);
          dealer.setNextY(Constants.Dealer.y);
          
+         user.setAssetX(Constants.User.assetX);
+         user.setAssetY(Constants.User.assetY);
+         
+         bot1.setAssetX(Constants.Bot1.assetX);
+         bot1.setAssetY(Constants.Bot1.assetY);
+         
+         bot2.setAssetX(Constants.Bot2.assetX);
+         bot2.setAssetY(Constants.Bot2.assetY);
+         
+         bot3.setAssetX(Constants.Bot3.assetX);
+         bot3.setAssetY(Constants.Bot3.assetY);
+         
+         
          Strategy e = new Easy();
          Strategy n = new Medium();
          Strategy h = new Hard();
@@ -352,6 +381,11 @@ public class BlackJackWorld extends World implements Subject
        
        dealer.setScoreX(Constants.Dealer.scoreX);
        dealer.setScoreY(Constants.Dealer.scoreY);
+      
+       user.drawAsset();
+       bot1.drawAsset();
+       bot2.drawAsset();
+       bot3.drawAsset();
 
     }
         public Hit getHitButton() {
@@ -499,7 +533,13 @@ public class BlackJackWorld extends World implements Subject
         this.clear = clear;
     }
 
-
+    public void drawUserName(String s , int x , int y){
+         GreenfootImage black = getBackground();
+         Font font = new Font("Serif", Font.BOLD, 18);
+         black.setFont(font);
+         //black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX-10, scoreY - 20); 
+         black.drawString(s,x, y);
+    }
 
 
 
