@@ -56,7 +56,7 @@ public interface Constants
         public static String name = "Dealer";
         public static int x = 300;
         public static int y = 100;
-                public static int scoreX = x-50 ;
-        public static int scoreY = y;
+                public static int scoreX = x+20 ;
+        public static int scoreY = y - 10;
     }
 }

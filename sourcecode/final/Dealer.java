@@ -17,9 +17,9 @@ public class Dealer extends Player
     public Dealer()
     {
         
-            GreenfootImage ddImage = new GreenfootImage("50.png");
-        ddImage.scale(Constants.button_height,Constants.button_width);
-        setImage(ddImage);
+        //    GreenfootImage ddImage = new GreenfootImage("50.png");
+        //ddImage.scale(Constants.button_height,Constants.button_width);
+        //setImage(ddImage);
     }
     @Override
     public void getFirstCards()
@@ -38,17 +38,18 @@ public class Dealer extends Player
             gc.remove(n);
             GreenfootImage gi = new GreenfootImage(cardImage);
             getWorld().getBackground().drawImage(gi,nextX, nextY);
-            this.nextX+=50;
+            this.nextX+=20;
             
         }
         
         score= getScoreFromCards();
         GreenfootImage black =      getWorld().getBackground();
          /* Overlapping existing image of integer betting amount */
-        black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX, scoreY);
-        GreenfootImage gfi =      getWorld().getBackground();
-        gfi.drawImage(new GreenfootImage("Score" + Integer.toString(score), 20, Color.RED, Color.WHITE),scoreX, scoreY);
-        System.out.println("scoreX :" + scoreX + "scoreY :"+ scoreY);
+       // black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX, scoreY);
+       // GreenfootImage gfi =      getWorld().getBackground();
+       // gfi.drawImage(new GreenfootImage("Score" + Integer.toString(score), 20, Color.RED, Color.WHITE),scoreX, scoreY);
+        updateScore();
+       System.out.println("Delaer scoreX :" + scoreX + "scoreY :"+ scoreY);
         System.out.println(score); 
     }
    
@@ -75,5 +76,6 @@ public class Dealer extends Player
             addCard();
             score = getScoreFromCards();
         }
+        updateScore();
     }
 }

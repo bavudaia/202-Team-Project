@@ -34,7 +34,7 @@ public class CardDistributionState  implements State
        b2.getFirstCards();
        b3.getFirstCards();
        d.getFirstCards();
-       Thread.sleep(3000);
+     //  Thread.sleep(3000);
 
     }
     catch(Exception e){

@@ -40,6 +40,7 @@ public class BlackJackWorld extends World implements Subject
     private State userTurnState;
     private State botTurnState;
     private State dealerHitState;
+    private State roundEndState;
     
     public static Map <String,Integer> scoreMap;
     
@@ -173,6 +174,16 @@ public class BlackJackWorld extends World implements Subject
     public void setBotTurnState(State botTurnState) {
         this.botTurnState = botTurnState;
     }
+    
+    public State getRoundEndState() {
+        return roundEndState;
+    }
+
+
+    public void setRoundEndState(State botTurnState) {
+        this.roundEndState = botTurnState;
+    }
+
 
 
     public State getDealerHitState() {
@@ -223,6 +234,8 @@ public class BlackJackWorld extends World implements Subject
                 botTurnState.setBlackJackWorld(this);
                 dealerHitState = new DealerHitState();
                 dealerHitState.setBlackJackWorld(this);
+                roundEndState = new RoundEndState();
+                roundEndState.setBlackJackWorld(this);
                 
         hitButton = new Hit();
         addObject(hitButton,350,700);
@@ -234,13 +247,19 @@ public class BlackJackWorld extends World implements Subject
         System.out.println();
         addObject(doubleDownButton,650,700);
         bot1 = new Bot();
+        bot1.setName("Bot1");
         bot2 = new Bot();
+        bot2.setName("Bot2");
         bot3 = new Bot();
+        bot3.setName("Bot3");
         dealer = new Dealer();
+        dealer.setName("Dealer");
         user = new User();
+        user.setName("user");
          addObject(user,-100,-100);
           addObject(bot1,-100,-100);
-           addObject(bot2,-100,-100); addObject(bot3,-100,-100);
+           addObject(bot2,-100,-100); 
+           addObject(bot3,-100,-100);
            addObject(dealer,-100,-100);
            
            /* set assets of players */
@@ -330,6 +349,9 @@ public class BlackJackWorld extends World implements Subject
 
        bot3.setScoreX(Constants.Bot3.scoreX);
        bot3.setScoreY(Constants.Bot3.scoreY);
+       
+       dealer.setScoreX(Constants.Dealer.scoreX);
+       dealer.setScoreY(Constants.Dealer.scoreY);
 
     }
         public Hit getHitButton() {

@@ -49,6 +49,7 @@ public class ValidPlayerState extends PlyrState
     }
     public void doDoubleDown()
     {
+        System.out.println("doDoubleDown --");
         p.addCard();
         p.score= p.getScoreFromCards();
         p.setInvalidPlayerState();

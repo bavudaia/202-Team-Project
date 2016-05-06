@@ -10,7 +10,8 @@ public class DoubleDownCommand implements Command
     private BlackJackWorld bjw;
     public void execute(){
         State s = bjw.getCurrentState();
-        s.hit();
+        System.out.println(s);
+        s.doubledown();
     }
     public void setBlackJackWorld(BlackJackWorld p)
     {

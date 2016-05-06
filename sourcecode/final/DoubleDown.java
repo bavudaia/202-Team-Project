@@ -32,8 +32,8 @@ public class DoubleDown extends Button
           AbstractFactory abf = new AbstractFactory();
           CommandFactory cf = abf.getCommandFactory();
           Command c = cf.getCommand("DoubleDown");
-         c.setBlackJackWorld(bjw);
-         c.execute();
+          c.setBlackJackWorld(bjw);
+          c.execute();
         }
     }    
 }

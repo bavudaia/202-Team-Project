@@ -22,6 +22,8 @@ public class Player extends Actor
     private int betting_amount;
     private Boolean isBusted = false;
     private Boolean isSurrendered = false;
+    private String name = "";
+    
    // private Boolean isDoubleDown = false;
     //protected GameController gc;
     protected int nextX, nextY;
@@ -41,13 +43,21 @@ public class Player extends Actor
         vps = new ValidPlayerState(this);
         if(bjw == null)
             System.out.println("bjw is null");
-            else
-             System.out.println("bjw is not null");
+        else
+            System.out.println("bjw is not null");
         vps.setBlackJackWorld(bjw);
         ivps = new InvalidPlayerState(this);
         ivps.setBlackJackWorld(bjw);
         setInvalidPlayerState();
         
+    }
+    public void setName(String s)
+    {
+        name = s;
+    }
+    public String getName()
+    {
+        return name;
     }
     public void userBusted()
     {
@@ -152,7 +162,7 @@ public class Player extends Actor
             gc.remove(n);            
             GreenfootImage gi = new GreenfootImage(cardImage);
             getWorld().getBackground().drawImage(gi,nextX, nextY);
-            this.nextX+=50;
+            this.nextX+=20;
             
     }
     public void updateScore(){
@@ -200,11 +210,13 @@ public class Player extends Actor
     }
     
      public void hit(){
+         System.out.println("hit");
         BlackJackWorld bjw = (BlackJackWorld)getWorld(); 
       cps.doHit(bjw);
 
     }
     public void surrender(){
+        
          cps.doSurrender();
          BlackJackWorld bjw = (BlackJackWorld) getWorld();
         bjw.setCurrentState(bjw.getBotTurnState());
@@ -226,6 +238,7 @@ public class Player extends Actor
     }
     
     public void doubleDown(){
+        System.out.println("doubleDown*****************");
         cps.doDoubleDown();
         BlackJackWorld bjw = (BlackJackWorld) getWorld();
         bjw.setCurrentState(bjw.getBotTurnState());        
@@ -257,7 +270,7 @@ public class Player extends Actor
             gc.remove(n);            
             GreenfootImage gi = new GreenfootImage(cardImage);
             getWorld().getBackground().drawImage(gi,nextX, nextY);
-            this.nextX+=50;
+            this.nextX+=20;
         }
         score= getScoreFromCards();
         updateScore();
