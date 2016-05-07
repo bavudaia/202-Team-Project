@@ -246,16 +246,16 @@ public class BlackJackWorld extends World implements Subject
 
         userImage.scale(80,80);
         getBackground().drawImage(userImage, 200, 400);
-        drawUserName("User", 220,500);
+        drawUserName("User", Constants.User.nameX,Constants.User.nameY);
         getBackground().drawImage(userImage, 510, 400);
-        drawUserName("Bot1", 530,500);
+        drawUserName("Bot2", Constants.Bot2.nameX,Constants.Bot2.nameY);
         getBackground().drawImage(userImage, 30, 60); 
-        drawUserName("Bot2", 50,160);
+        drawUserName("Bot1", Constants.Bot1.nameX,Constants.Bot1.nameY);
         getBackground().drawImage(userImage, 510, 100);
-        drawUserName("Bot3", 530,200);
+        drawUserName("Bot3", Constants.Bot3.nameX,Constants.Bot3.nameY);
         userImage.scale(60,60);
-        getBackground().drawImage(userImage, 330, 250);
-        drawUserName("Dealer", 335,325);
+        getBackground().drawImage(userImage, 330,250 );
+        drawUserName("Dealer", Constants.Dealer.nameX,Constants.Dealer.nameY);
         /* State initia;lizayion */
         
         bettingState = new BettingState();

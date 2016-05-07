@@ -18,8 +18,8 @@ public class Player extends Actor
     protected List<String> cards;
     protected List<Integer> indexes;
     protected int score;
-    private int assets;
-    private int betting_amount;
+    protected int assets;
+    protected int betting_amount;
     private Boolean isBusted = false;
     private Boolean isSurrendered = false;
     private String name = "";
@@ -426,7 +426,7 @@ public class Player extends Actor
          gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);*/
          GreenfootImage black =      w.getBackground();
          /* Overlapping existing image of integer betting amount */
-         black.drawImage(new GreenfootImage(Integer.toString(100000), 20, Color.BLACK,Color.BLACK),betX, betY);
+         black.drawImage(new GreenfootImage(Integer.toString(1000000000), 20, Color.BLACK,Color.BLACK),betX  , betY - 20);
 
     }
 

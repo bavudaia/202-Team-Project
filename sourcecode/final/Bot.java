@@ -28,6 +28,7 @@ public class Bot extends Player
     public void notifyUserDeal()
     {
         int betAmt = bs.getBettingAmount();
+         this.assets -=betAmt;
         setBotBetting_amount(betAmt);
     }
         public void setBotBetting_amount(int amt)

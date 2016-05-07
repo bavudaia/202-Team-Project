@@ -21,6 +21,8 @@ public class Easy  implements Strategy
         switch(n){
             case 1:{
                 bot.hit();
+                if(bot.getScoreFromCards()>=21)
+                    flag = 1;
                 break;
             }
             case 2:{

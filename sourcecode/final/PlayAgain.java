@@ -18,6 +18,10 @@ public class PlayAgain extends Button
         {
             Greenfoot.setWorld(bjw);
             bjw.startMusic();
+			bjw.getUser().drawAsset();
+            bjw.getBot1().drawAsset();
+            bjw.getBot2().drawAsset();
+            bjw.getBot3().drawAsset();
         }
     }
 }
