@@ -24,9 +24,25 @@ public class Dealer extends Player
     @Override
     public void getFirstCards()
     {
-         for(int i=0;i<1;i++)
+        for(int i=0;i<1;i++)
         {
+            tempX = 900;
+            tempY = 300;
+        
+            FlipCard fc = new FlipCard();
+            BlackJackWorld bjc = (BlackJackWorld)getWorld();
+            bjc.addObject(fc,900,300);
+            double angle = directionToTurnTo(900, 300, nextX, nextY);
             
+            for(int j =0 ; true ; j++)
+            {
+                move(angle,15.0,fc);
+                Greenfoot.delay(1);
+                if(nextX > tempX - 30)
+                    break;
+                //turn(-180);
+            }
+            bjc.removeObject(fc);
             GameController gc = getGameController();
             int cardsLeft = gc.getCardSize();
             Random r = new Random();

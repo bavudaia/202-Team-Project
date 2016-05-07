@@ -30,6 +30,8 @@ public class Player extends Actor
     protected int betX, betY;
     protected int scoreX, scoreY;
     protected int assetX, assetY;
+    protected int tempX; 
+    protected int tempY;
     PlayerState vps;
     PlayerState ivps;
     PlayerState cps;
@@ -158,6 +160,26 @@ public class Player extends Actor
         this.betting_amount = betting_amount;
     } 
     public void addCard(){
+            
+            tempX = 900;
+            tempY = 300;
+        
+            FlipCard fc = new FlipCard();
+            BlackJackWorld bjc = (BlackJackWorld)getWorld();
+            bjc.addObject(fc,900,300);
+            double angle = directionToTurnTo(900, 300, nextX, nextY);
+            
+            for(int j =0 ; true ; j++)
+            {
+                move(angle,15.0,fc);
+                Greenfoot.delay(1);
+                if(nextX > tempX - 30)
+                    break;
+                //turn(-180);
+            }
+            bjc.removeObject(fc);
+          
+       
             GameController gc = getGameController();
             int cardsLeft = gc.getCardSize();
             System.out.println(cardsLeft);
@@ -197,7 +219,7 @@ public class Player extends Actor
         GreenfootImage gfi =      w.getBackground();
         gfi.drawImage(new GreenfootImage(Integer.toString(betting_amount), 20, Color.RED, Color.WHITE),betX, betY);
         System.out.println("test" + score);*/
-    
+         
          GreenfootImage black =  getWorld().getBackground();
          Font font = new Font("Serif", Font.BOLD, 18);
         // f.setSize(400,400);
@@ -275,6 +297,8 @@ public class Player extends Actor
         cps.doDoubleDown();
         BlackJackWorld bjw = (BlackJackWorld) getWorld();
         bjw.setCurrentState(bjw.getBotTurnState());        
+        bjw.getCurrentState().done();
+        
                 //to be replaced with doubledown logic
     }
     
@@ -285,13 +309,35 @@ public class Player extends Actor
     public void setScore(int score){
         this.score = score;
     }
-    
+    public void move(double angle, double speed,Actor fc) {
+        angle = Math.toRadians(angle);
+        tempX = tempX -  (int)(Math.cos(angle) * speed);
+        tempY = tempY - (int)(Math.sin(angle) * speed);
+        fc.setLocation(tempX, tempY);
+    }
     public void getFirstCards()
     {
+        
         GameController gc = getGameController();
         for(int i=0;i<2;i++)
         {
+            tempX = 900;
+            tempY = 300;
+        
+            FlipCard fc = new FlipCard();
+            BlackJackWorld bjc = (BlackJackWorld)getWorld();
+            bjc.addObject(fc,900,300);
+            double angle = directionToTurnTo(900, 300, nextX, nextY);
             
+            for(int j =0 ; true ; j++)
+            {
+                move(angle,15.0,fc);
+                Greenfoot.delay(1);
+                if(nextX > tempX - 30)
+                    break;
+                //turn(-180);
+            }
+            bjc.removeObject(fc);
             int cardsLeft = gc.getCardSize();
             Random r = new Random();
             int n = r.nextInt(cardsLeft);
@@ -315,6 +361,41 @@ public class Player extends Actor
         System.out.println(score); */
        
     }
+    public double directionToTurnTo(double x, double y,double x1,double y1) {
+        return direction(x - x1, y - y1);
+    }
+    
+    public double direction(double deltaX, double deltaY) {
+        double direction;
+        if(deltaX == 0 && deltaY == 0) {
+            direction = 0;
+        }
+        else if(deltaX == 0 && deltaY < 0) {
+            direction = -90;
+        }
+        else if(deltaX == 0 && deltaY > 0) {
+            direction = 90;
+        }
+        else if(deltaX > 0 && deltaY == 0) {
+            direction = 0;
+        }
+        else if(deltaX < 0 && deltaY == 0) {
+            direction = 180;
+        }
+        else {
+            
+            int w = (int) Math.toDegrees(Math.atan((double) deltaY / (double) deltaX));
+            if(deltaX > 0) {
+                direction = w;
+            }
+            else {
+                direction = 180 + w;
+            }
+            System.out.println("inside else" + direction);
+        }
+        return direction;
+    }
+
     
     public int getScoreFromCards()
     {

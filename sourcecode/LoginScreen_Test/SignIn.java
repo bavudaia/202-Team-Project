@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import org.json.JSONObject;
 
-import com.mongodb.MongoClient;
+/*import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import com.mongodb.client.FindIterable;
 import com.mongodb.Block;
-
+*/
 /**
  * Write a description of class SignIn here.
  * 
@@ -18,8 +18,8 @@ public class SignIn extends Button
     Login myLogin;
     TextBox username;
     TextBox password;
-    MongoClient mongoClient;
-    MongoDatabase db;
+  /*  MongoClient mongoClient;
+    MongoDatabase db;*/
     String userPassword = "";
     /**
      * Act - do whatever the SignIn wants to do. This method is called whenever
@@ -27,8 +27,8 @@ public class SignIn extends Button
      */
     public SignIn()
     {
-        mongoClient = new MongoClient();
-        db = mongoClient.getDatabase("LoginDetails");
+       /* mongoClient = new MongoClient();
+        db = mongoClient.getDatabase("LoginDetails");*/
 
         myLogin = new AuthenticationProxy();
     }

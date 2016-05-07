@@ -25,7 +25,7 @@ public class BotTurnState  implements State
        she.handle(bot2);
        she.handle(bot3);
        try{
-       Thread.sleep(3000);
+    //   Thread.sleep(3000);
     }
     catch(Exception e){ System.out.println(e.getMessage()); }
        State s = bjw.getDealerHitState();

@@ -50,8 +50,8 @@ public class BlackJackWorld extends World implements Subject
     
     static
     {
-        scoreMap = new HashMap<>();
-     scoreMap.put("ace_of_spades.png",1);
+    scoreMap = new HashMap<>();
+    scoreMap.put("ace_of_spades.png",1);
     scoreMap.put("2_of_spades.png",2);
     scoreMap.put("3_of_spades.png",3);
     scoreMap.put("4_of_spades.png",4);
@@ -265,6 +265,7 @@ public class BlackJackWorld extends World implements Subject
         doubleDownButton = new DoubleDown();
         System.out.println();
         addObject(doubleDownButton,650,700);
+        addObject(new FlipCard(),900,300);
         bot1 = new Bot();
         bot1.setName("Bot1");
         bot2 = new Bot();

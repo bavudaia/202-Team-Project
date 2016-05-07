@@ -1,12 +1,12 @@
 
  import greenfoot.*; 
- import org.json.JSONObject;
+ /*import org.json.JSONObject;
 
  import com.mongodb.MongoClient;
  import com.mongodb.client.MongoDatabase;
  import org.bson.Document;
  import com.mongodb.client.FindIterable;
- import com.mongodb.Block;
+ import com.mongodb.Block;*/
  /* Write a description of class AuthenticationProxy here.
  * 
  * @author (your name) 
@@ -16,8 +16,8 @@ public class PasswordProxy implements AuthenticationProxy
 {
     // instance variables - replace the example below with your own
     private int x;
-    MongoClient mongoClient;
-    MongoDatabase db;
+    /*MongoClient mongoClient;
+    MongoDatabase db;*/
     String userPassword = "";
     /**
      * Constructor for objects of class AuthenticationProxy

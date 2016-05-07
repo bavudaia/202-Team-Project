@@ -1,20 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import org.json.JSONObject;
+/*import org.json.JSONObject;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import com.mongodb.client.FindIterable;
 import com.mongodb.Block;
-
+*/
 public class Register extends Button
 {
     AuthenticationProxy myLogin;
     TextBox username;
     TextBox password;
     TextBox confirmPassword;
-    MongoClient mongoClient;
-    MongoDatabase db;
+  /*  MongoClient mongoClient;
+    MongoDatabase db;*/
     String userPassword = "";
     /**
      * Act - do whatever the SignIn wants to do. This method is called whenever
