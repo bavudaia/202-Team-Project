@@ -18,6 +18,8 @@ public class BlackJackWorld extends World implements Subject
      * 
      */
     private List<Observer> screenList;
+    public  GreenfootSound backgroudmusic = new GreenfootSound("WastedYears.mp3");
+    public  GreenfootSound clickSound = new GreenfootSound("click.mp3");
     Hit hitButton;
     Stand standButton;
     Surrender surrenderButton;
@@ -36,6 +38,8 @@ public class BlackJackWorld extends World implements Subject
     Hundred hundred;
     Clear clear;
     Deal deal;
+    
+    static int background ;
     /* States */
     private State currentState;
     private State bettingState;
@@ -141,6 +145,10 @@ public class BlackJackWorld extends World implements Subject
     {
            this.cardDistributionState=s;
     }
+    public void stopMusic()
+    {
+        backgroudmusic.stop();
+    }
     
     public User getUser()
     {
@@ -211,20 +219,29 @@ public class BlackJackWorld extends World implements Subject
     {
         return botBettingState;
     }
-
+    
     public BlackJackWorld()
     {    
         
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 768, 1); 
+       startMusic();
+       // backgroudmusic.stop();
         screenList=new ArrayList<>();
         Observer sc  = new Screen();
         sc.setBlackJackWorld(this);
         addObserver(sc);
-        
-        getBackground().drawImage(new GreenfootImage("black.png"), 0, 0);
-         
-        //getBackground().drawImage(new GreenfootImage("user.png"), 100, 100);
+        Random rand = new Random();
+        //int  num = rand.nextInt(4) + 1;
+        /*int num =  BlackJackWorld.background;
+        if(num == 1)
+            getBackground().drawImage(new GreenfootImage("blue.png"), 0, 0);
+        else if(num==2)
+            getBackground().drawImage(new GreenfootImage("brown.png"), 0, 0);
+        else*/
+            getBackground().drawImage(new GreenfootImage("black.png"), 0, 0);
+            //getBackground().drawImage(new GreenfootImage("user.png"), 100, 100);
+         BlackJackWorld.background =  (BlackJackWorld.background + 1) % 4;
         GreenfootImage userImage = new GreenfootImage("user.png");
 
         userImage.scale(80,80);
@@ -395,7 +412,11 @@ public class BlackJackWorld extends World implements Subject
         public Hit getHitButton() {
         return hitButton;
     }
-
+    public void startMusic()
+    {
+        backgroudmusic.setVolume(20);
+         backgroudmusic.playLoop();
+    }
 
     public void setHitButton(Hit hitButton) {
         this.hitButton = hitButton;
@@ -445,7 +466,11 @@ public class BlackJackWorld extends World implements Subject
         return bot2;
     }
 
-
+    public void playClickSound()
+    {
+        //clickSound.setVolume(5);
+        clickSound.play();
+    }
     public void setBot2(Bot bot2) {
         this.bot2 = bot2;
     }

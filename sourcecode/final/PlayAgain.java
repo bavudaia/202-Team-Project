@@ -17,6 +17,7 @@ public class PlayAgain extends Button
         if (Greenfoot.mouseClicked(this)) 
         {
             Greenfoot.setWorld(bjw);
+            bjw.startMusic();
         }
     }
 }

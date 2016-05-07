@@ -65,6 +65,7 @@ public class DecideWinner
             System.out.println("Winner : " + p[4].getName());
             winners.add(p[4]);
         }
+        bjw.stopMusic();
          Result result = new Result(winners, losers , busted , bjw);
          Greenfoot.setWorld(result);
             /* if(score[i] == max_score || score[4] > 21 && i != 4) {

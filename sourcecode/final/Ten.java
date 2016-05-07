@@ -18,6 +18,8 @@ public class Ten extends BettingButton
               if(Greenfoot.mouseClicked(this))
       {
           // get player from chain of responsibility
+          BlackJackWorld bjw = (BlackJackWorld)getWorld();
+          bjw.playClickSound(); 
                                 AbstractFactory abf = new AbstractFactory();
           BettingCommandFactory cf = abf.getBettingCommandFactory();
           BettingButtonCommand b = cf.getBettingCommand("Ten");

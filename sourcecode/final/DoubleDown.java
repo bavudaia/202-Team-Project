@@ -27,7 +27,7 @@ public class DoubleDown extends Button
       {
           // get player from chain of responsibility
           BlackJackWorld bjw = (BlackJackWorld) getWorld();
-          
+          bjw.playClickSound();
          //
           AbstractFactory abf = new AbstractFactory();
           CommandFactory cf = abf.getCommandFactory();

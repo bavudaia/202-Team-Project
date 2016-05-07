@@ -22,7 +22,9 @@ public class Clear extends BettingButton
        if(Greenfoot.mouseClicked(this))
        {
           // get player from chain of responsibility
-                               AbstractFactory abf = new AbstractFactory();
+          BlackJackWorld bjw = (BlackJackWorld)getWorld();
+          bjw.playClickSound(); 
+          AbstractFactory abf = new AbstractFactory();
           BettingCommandFactory cf = abf.getBettingCommandFactory();
           BettingButtonCommand b = cf.getBettingCommand("Clear");
             // b.setUser();//to be implemented later.

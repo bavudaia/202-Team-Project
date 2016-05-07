@@ -194,7 +194,7 @@ public class Player extends Actor
             GreenfootImage gi = new GreenfootImage(cardImage);
             getWorld().getBackground().drawImage(gi,nextX, nextY);
             this.nextX+=20;
-            
+            Greenfoot.delay(5);
     }
    
     public void updateScore(){

@@ -29,7 +29,9 @@ public class Deal extends BettingButton
           BettingCommandFactory cf = abf.getBettingCommandFactory();
           BettingButtonCommand b = cf.getBettingCommand("Deal");
           b.setBlackJackWorld((BlackJackWorld)getWorld());
-          b.execute();         
+          b.execute();       
+           BlackJackWorld bjw = (BlackJackWorld)getWorld();
+          bjw.playClickSound(); 
         }
     }    
 }

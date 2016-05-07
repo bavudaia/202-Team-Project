@@ -24,6 +24,7 @@ public class Hit extends Button
       {
           BlackJackWorld bjw = (BlackJackWorld) getWorld();
           Player p = bjw.getUser();
+          bjw.playClickSound();
           AbstractFactory abf = new AbstractFactory();
           CommandFactory cf = abf.getCommandFactory();
           Command c = cf.getCommand("Hit");

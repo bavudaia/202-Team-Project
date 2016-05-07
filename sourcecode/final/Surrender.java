@@ -24,6 +24,7 @@ public class Surrender extends Button
            if(Greenfoot.mouseClicked(this))
       {
                     BlackJackWorld bjw = (BlackJackWorld) getWorld();
+                    bjw.playClickSound();
           Player p = bjw.getUser();
 
                   AbstractFactory abf = new AbstractFactory();

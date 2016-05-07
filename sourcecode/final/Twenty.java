@@ -22,7 +22,9 @@ public class Twenty extends BettingButton
     {
        if(Greenfoot.mouseClicked(this))
       {
-                    AbstractFactory abf = new AbstractFactory();
+          BlackJackWorld bjw = (BlackJackWorld)getWorld();
+          bjw.playClickSound();
+          AbstractFactory abf = new AbstractFactory();
           BettingCommandFactory cf = abf.getBettingCommandFactory();
           BettingButtonCommand b = cf.getBettingCommand("Twenty");
            
@@ -30,7 +32,7 @@ public class Twenty extends BettingButton
         
            // b.setUser();//to be implemented later.
            //System.out.println(getWorld().toString());
-           b.setBlackJackWorld((BlackJackWorld)getWorld()); 
+           b.setBlackJackWorld(bjw); 
            b.execute();
         }
     }  
