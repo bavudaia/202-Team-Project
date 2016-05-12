@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=PlayerState
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ PlayerState\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=bjw
+comment1.target=void\ doHit(BlackJackWorld)
+comment2.params=
+comment2.target=void\ doStand()
+comment3.params=
+comment3.target=void\ doSurrender()
+comment4.params=
+comment4.target=void\ doDoubleDown()
+comment5.params=bjw
+comment5.target=void\ setBlackJackWorld(BlackJackWorld)
+numComments=6

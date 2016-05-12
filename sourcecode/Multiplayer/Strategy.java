@@ -1,0 +1,12 @@
+/**
+ * Write a description of class Strategy here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public interface Strategy  
+{
+    // instance variables - replace the example below with your own
+    public void execute();
+    public void setBot(Bot b);
+}

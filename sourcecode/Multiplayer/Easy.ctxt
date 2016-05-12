@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Easy
+comment1.params=
+comment1.target=void\ execute()
+comment2.params=b
+comment2.target=void\ setBot(Bot)
+numComments=3

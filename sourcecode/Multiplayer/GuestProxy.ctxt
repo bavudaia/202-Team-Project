@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=GuestProxy
+comment1.params=
+comment1.target=GuestProxy()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ GuestProxy\r\n
+comment2.params=Username\ Password\ w
+comment2.target=void\ authenticateLogin(java.lang.String,\ java.lang.String,\ greenfoot.World)
+numComments=3

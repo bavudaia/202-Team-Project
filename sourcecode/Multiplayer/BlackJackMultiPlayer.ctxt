@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=BlackJackMultiPlayer
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ BlackJackMultiPlayer\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=BlackJackMultiPlayer()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ BlackJackMultiPlayer.\r\n\ \r\n
+comment2.params=s\ x\ y
+comment2.target=void\ drawUserName(java.lang.String,\ int,\ int)
+comment3.params=topicName\ messageContent
+comment3.target=void\ sendMessage(java.lang.String,\ java.lang.String)
+numComments=4

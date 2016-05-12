@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ValidPlayerState
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ValidPlayerState\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=p
+comment1.target=ValidPlayerState(Player)
+comment2.params=b
+comment2.target=void\ setBlackJackWorld(BlackJackWorld)
+comment3.params=bjw
+comment3.target=void\ doHit(BlackJackWorld)
+comment4.params=
+comment4.target=void\ doStand()
+comment5.params=
+comment5.target=void\ doSurrender()
+comment6.params=
+comment6.target=void\ doDoubleDown()
+numComments=7
