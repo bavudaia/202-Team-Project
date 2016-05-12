@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=MultiPlayerState
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MultiPlayerState\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=p
+comment1.target=MultiPlayerState(MultiPlayer)
+comment2.params=bjw
+comment2.target=void\ doHit(BlackJackMultiPlayer)
+comment3.params=
+comment3.target=void\ doStand()
+comment4.params=
+comment4.target=void\ doSurrender()
+comment5.params=
+comment5.target=void\ doDoubleDown()
+comment6.params=bjw
+comment6.target=void\ setBlackJackWorld(BlackJackMultiPlayer)
+numComments=7

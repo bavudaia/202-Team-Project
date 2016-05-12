@@ -17,15 +17,26 @@ public class Ten extends BettingButton
         // Add your action code here.
               if(Greenfoot.mouseClicked(this))
       {
-          // get player from chain of responsibility
-          BlackJackWorld bjw = (BlackJackWorld)getWorld();
-          bjw.playClickSound(); 
-                                AbstractFactory abf = new AbstractFactory();
-          BettingCommandFactory cf = abf.getBettingCommandFactory();
-          BettingButtonCommand b = cf.getBettingCommand("Ten");
+          World w  = getWorld();
+          if(w instanceof BlackJackWorld)
+          {
+            BlackJackWorld bjw = (BlackJackWorld)getWorld();
+            bjw.playClickSound(); 
+            AbstractFactory abf = new AbstractFactory();
+            BettingCommandFactory cf = abf.getBettingCommandFactory();
+            BettingButtonCommand b = cf.getBettingCommand("Ten");
             // b.setUser();//to be implemented later.
              b.setBlackJackWorld((BlackJackWorld)getWorld());
-            b.execute();
+             b.execute();
+          }
+          else
+          {
+              BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
+              MultiPlayer mp = bjw.getMP();
+              mp.addBet(10);
+          }
+          // get player from chain of responsibility
+          
         }
     }
     public Ten(){

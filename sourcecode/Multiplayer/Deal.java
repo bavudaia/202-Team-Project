@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class Deal here.
  * 
@@ -40,9 +40,23 @@ public class Deal extends BettingButton
           }
           else
           {
+              
               BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
-              bjw.sendMessage("/greenfoot/buttonclick", "DealButtonClick");
-        
+              MultiPlayer mp = bjw.getMP();
+              
+              mp.getFirstCards();
+              String dealResult = "";
+              String playerId = mp.getName()==null?"null":mp.getName();
+              String command  = "Deal";
+              String betAmt = String.valueOf(mp.getBetting_amount());
+              String asset = String.valueOf(mp.getAssets());
+              String score = String.valueOf(mp.getScore());
+              List<String> l = mp.getCards();
+              String card1 = l.get(0);
+              String card2 = l.get(1);
+              dealResult = playerId + "," + command + "," +  betAmt +"," +  asset +"," +  score +"," +  card1 +"," +  card2;
+              bjw.sendMessage("/greenfoot/player", dealResult);
+              
           }
         }
     }    

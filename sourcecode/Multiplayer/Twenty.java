@@ -20,21 +20,26 @@ public class Twenty extends BettingButton
     }
     public void act() 
     {
-       if(Greenfoot.mouseClicked(this))
+      if(Greenfoot.mouseClicked(this))
       {
-          BlackJackWorld bjw = (BlackJackWorld)getWorld();
-          bjw.playClickSound();
-          AbstractFactory abf = new AbstractFactory();
-          BettingCommandFactory cf = abf.getBettingCommandFactory();
-          BettingButtonCommand b = cf.getBettingCommand("Twenty");
-           
-          // get player from chain of responsibility
-        
-           // b.setUser();//to be implemented later.
-           //System.out.println(getWorld().toString());
-           b.setBlackJackWorld(bjw); 
-           b.execute();
-        }
+           World w = getWorld();
+          if(w instanceof BlackJackWorld)
+          {
+              BlackJackWorld bjw = (BlackJackWorld)getWorld();
+              bjw.playClickSound();
+              AbstractFactory abf = new AbstractFactory();
+              BettingCommandFactory cf = abf.getBettingCommandFactory();
+              BettingButtonCommand b = cf.getBettingCommand("Twenty");
+              b.setBlackJackWorld(bjw); 
+              b.execute();
+          }
+          else
+          {
+              BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
+              MultiPlayer mp = bjw.getMP();
+              mp.addBet(20);
+          }
+      }
     }  
     
     

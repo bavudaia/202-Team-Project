@@ -21,15 +21,26 @@ public class Hundred extends BettingButton
     {
         if(Greenfoot.mouseClicked(this))
       {
+            World w = getWorld();
+          if(w instanceof BlackJackWorld)
+          {
+               BlackJackWorld bjw = (BlackJackWorld)getWorld();
+              bjw.playClickSound();  
+              AbstractFactory abf = new AbstractFactory();
+              BettingCommandFactory cf = abf.getBettingCommandFactory();
+              BettingButtonCommand b = cf.getBettingCommand("Hundred");
+                // b.setUser();//to be implemented later.
+              b.setBlackJackWorld((BlackJackWorld)getWorld());
+              b.execute();
+          }
+          else
+          {
+              BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
+              MultiPlayer mp = bjw.getMP();
+              mp.addBet(100);
+          }
           // get player from chain of responsibility
-          BlackJackWorld bjw = (BlackJackWorld)getWorld();
-          bjw.playClickSound();  
-          AbstractFactory abf = new AbstractFactory();
-          BettingCommandFactory cf = abf.getBettingCommandFactory();
-          BettingButtonCommand b = cf.getBettingCommand("Hundred");
-            // b.setUser();//to be implemented later.
-          b.setBlackJackWorld((BlackJackWorld)getWorld());
-          b.execute();
+       
             
         }
     }    

@@ -7,6 +7,7 @@
 public class TwentyCommand  implements BettingButtonCommand 
 {
    BlackJackWorld u;
+   
    public void execute()
    {
        State s = u.getCurrentState();
