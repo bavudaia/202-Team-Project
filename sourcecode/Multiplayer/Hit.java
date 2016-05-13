@@ -48,7 +48,7 @@ public class Hit extends Button
               
               String score = String.valueOf(mp.getScore());
               String data = player+","+cmd+"," + cardName + "," + score;
-              bjw.sendMessage(data , "/greenfoot/player");
+              bjw.sendMessage( "/greenfoot/player",data);
             
           }
         }

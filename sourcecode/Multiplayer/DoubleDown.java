@@ -53,7 +53,7 @@ public class DoubleDown extends Button
               String bet = String.valueOf(mp.getBetting_amount());
               String data = player+","+cmd+"," + cardName + "," + score
               +"," + bet;
-              bjw.sendMessage(data , "/greenfoot/player");
+              bjw.sendMessage( "/greenfoot/player" , data );
 
         }
     }    
