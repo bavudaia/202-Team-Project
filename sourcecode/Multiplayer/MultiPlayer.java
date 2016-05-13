@@ -74,7 +74,7 @@ public class MultiPlayer extends Actor
     public void  setInvalidMultiPlayerState(){
         String dataToSend = getName()+",Turnend";
         BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();   
-        bjw.sendCommand(dataToSend,"/greenfoot/player");
+        bjw.sendMessage(dataToSend,"/greenfoot/player");
         cps = ivps;
     }
      public void  setInvalidMultiPlayerState(boolean sendMessage){
