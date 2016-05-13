@@ -16,6 +16,18 @@ public class Quit extends Button
     {
         if (Greenfoot.mouseClicked(this)) 
         {
+            World w = getWorld();
+            if(w instanceof BlackJackMultiPlayer)
+            {
+                BlackJackMultiPlayer bjm = (BlackJackMultiPlayer) w;
+                try{
+                bjm.client.disconnect();
+                bjm.client.close();
+            }
+            catch(Exception e){
+                System.out.println(e);
+            }
+            }
             Greenfoot.stop();
         }
     }    

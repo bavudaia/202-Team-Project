@@ -88,7 +88,7 @@ public class MultiPlayer extends Actor
         scoreX = x;
     }
     
-    public int getScoreX()
+    public int getScoreX()  
     {
         return scoreX;
     }
@@ -147,6 +147,38 @@ public class MultiPlayer extends Actor
     public void setBetting_amount(int betting_amount) {
         this.betting_amount = betting_amount;
     } 
+    public void addRemoteCard(String card, int score)
+    {
+        	tempX = 900;
+        	tempY = 300;
+
+    	FlipCard fc = new FlipCard();
+    	BlackJackMultiPlayer bjc = (BlackJackMultiPlayer)getWorld();
+    	bjc.addObject(fc,900,300);
+    	double angle = directionToTurnTo(900, 300, nextX, nextY);
+    	
+    	for(int j =0 ; true ; j++)
+    	{
+    		move(angle,15.0,fc);
+    		Greenfoot.delay(1);
+    		if(nextX > tempX - 30)
+    			break;
+    		//turn(-180);
+    	}
+    	bjc.removeObject(fc);
+      
+    
+    	GameController gc = getGameController();
+    	String cardImage = card;
+    	this.cards.add(cardImage);            
+    	gc.remove(cardImage);            
+    	GreenfootImage gi = new GreenfootImage(cardImage);
+    	getWorld().getBackground().drawImage(gi,nextX, nextY);
+    	this.nextX+=20;
+    	Greenfoot.delay(5);
+    	this.score = score;
+    	updateScore();
+    }
     public void addCard(){
             
             tempX = 900;
@@ -302,6 +334,52 @@ public class MultiPlayer extends Actor
         tempX = tempX -  (int)(Math.cos(angle) * speed);
         tempY = tempY - (int)(Math.sin(angle) * speed);
         fc.setLocation(tempX, tempY);
+    }
+    public void getRemoteFirstCards(String card1, String card2,int score , int bet)
+    {
+       System.out.println("getRemoteFirstCards++");
+          System.out.println("getRemoteFirstCards " + card1 + " " + card2 + " " + score + " " + bet);
+   addBet(bet);
+     System.out.println("[2]");
+    GameController gc = getGameController();
+       System.out.println("[3]");
+    String[] cardImages = new String[2];
+    cardImages[0] = card1;
+    cardImages[1] = card2;
+       System.out.println("[4]");
+    System.out.println("getRemoteFirstCards " + card1 + " " + card2 + " " + score + " " + bet);
+    //int n = index1;
+    for(int i=0;i<2;i++)
+    {
+        tempX = 900;
+        tempY = 300;
+    
+        FlipCard fc = new FlipCard();
+        BlackJackMultiPlayer bjc = (BlackJackMultiPlayer)getWorld();
+        bjc.addObject(fc,900,300);
+        double angle = directionToTurnTo(900, 300, nextX, nextY);
+        
+        for(int j =0 ; true ; j++)
+        {
+            move(angle,15.0,fc);
+            Greenfoot.delay(1);
+            if(nextX > tempX - 30)
+                break;
+            //turn(-180);
+        }
+        bjc.removeObject(fc);
+        
+        String cardImage = cardImages[i];
+        this.cards.add(cardImage);
+        gc.remove(cardImage);            
+        GreenfootImage gi = new GreenfootImage(cardImage);
+        getWorld().getBackground().drawImage(gi,nextX, nextY);
+        this.nextX+=20;
+      //  n = index2;
+    }
+        this.score= score;
+        updateScore(); 
+        
     }
     public void getFirstCards()
     {

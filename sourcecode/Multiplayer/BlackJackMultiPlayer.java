@@ -19,14 +19,14 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BlackJackMultiPlayer extends World
-{
-     
+public class BlackJackMultiPlayer extends World implements MqttCallback
+{     
     Hit hitButton;
     Stand standButton;
     Surrender surrenderButton;
     DoubleDown doubleDownButton;
     
+    public MqttClient client;
     Ten ten;
     Twenty twenty;
     Fifty fifty;
@@ -101,8 +101,6 @@ public class BlackJackMultiPlayer extends World
     scoreMap.put("jack_of_hearts.png",10);
     scoreMap.put("queen_of_hearts.png",10);
     scoreMap.put("king_of_hearts.png",10);
-    
-
        
     }
     public GameController getGc() {
@@ -149,6 +147,9 @@ public class BlackJackMultiPlayer extends World
         m = new MultiPlayer();
         addObject(m, -200,-200);
         
+        other = new MultiPlayer();
+        addObject(other, -200,-200);
+        
         hitButton = new Hit();
         addObject(hitButton,350,700);
         standButton = new Stand();
@@ -183,6 +184,29 @@ public class BlackJackMultiPlayer extends World
          m.setScoreY(Constants.User.scoreY);
          m.setAssets(10000);
          m.setName("Player1");
+         
+         other.setBetX(Constants.Bot3.betX);
+         other.setBetY(Constants.Bot3.betY);
+         other.setNextX(Constants.Bot3.x);
+         other.setNextY(Constants.Bot3.y);
+         other.setScoreX(Constants.Bot3.scoreX);
+         other.setScoreY(Constants.Bot3.scoreY);
+         other.setAssets(10000);
+         other.setName("Player2");
+          
+         addObject(new Quit(), 110, 420);
+        
+    }
+    public void startMqttCallback()
+    {
+         try{
+          client = new MqttClient(MosquittoBrokerUrl, "Sending");
+            client.connect();
+            client.setCallback(this);   
+            client.subscribe("/greenfoot/player");
+           }catch(Exception ex){
+               System.out.println(ex.toString());
+           }
         
     }
        public void drawUserName(String s , int x , int y){
@@ -192,6 +216,48 @@ public class BlackJackMultiPlayer extends World
          //black.drawImage(new GreenfootImage("Score" + Integer.toString(100000) , 20, Color.BLACK,Color.BLACK),scoreX-10, scoreY - 20); 
          black.drawString(s,x, y);
     }
+    
+        @Override
+    public void connectionLost(Throwable cause) {
+        
+
+    }
+    public void messageArrived(String topic, MqttMessage message)
+            throws Exception {  
+      try {
+          System.out.println(message.toString());
+          String messageReceived[] = message.toString().split(",");
+          String playerId = messageReceived[0];
+          String command  = messageReceived[1];
+          if(!playerId.equals(m.getName()))
+          {
+              if(command.equals("Deal") ){
+                  String betAmt = messageReceived[2];
+                  String asset = messageReceived[3];
+                  String score = messageReceived[4];
+                  //List<String> l = messageReceived[5];
+                  String card1 = messageReceived[5];
+                  String card2 = messageReceived[6];
+                  other.getRemoteFirstCards(card1, card2,Integer.parseInt(score), Integer.parseInt(betAmt));
+                  //m.getFirstCards();
+            }
+            if(command.equals("Addcard") ){
+                 String card = messageReceived[2];
+                 String score = messageReceived[3];
+                 other.addRemoteCard(card, Integer.parseInt(score));
+                 //m.getFirstCards();
+            }
+          }    
+      }
+      catch(Exception ex)
+      {
+          System.out.println(ex.toString());
+      }
+    }
+    @Override
+    public void deliveryComplete(IMqttDeliveryToken token) {
+        
+    }           
     public void sendMessage(String topicName , String messageContent)
     {
             String topic        = topicName;

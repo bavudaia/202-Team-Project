@@ -72,13 +72,25 @@ cards.add("queen_of_hearts.png");
 cards.add("king_of_hearts.png");
 
     }
-    
+    public void remove(String card)
+    {
+        int i = 0;
+        for(String s:cards){
+            if(s.equals(card))
+            {
+               cards.remove(i);
+               break;
+            }
+            i++;
+        }
+    }
     public void remove(int index)
     {
         
         if(index>= cards.size() || index <0)
           throw new ArrayIndexOutOfBoundsException();
         cards.remove(index);
+        
     }
     
     public String getCard(int index)
@@ -87,7 +99,11 @@ cards.add("king_of_hearts.png");
           throw new ArrayIndexOutOfBoundsException();
         return cards.get(index);
     }
-    
+    public Integer getCard(String card)
+    {
+        return 0;
+             //cards.get
+    }
     public int getCardSize()
     {
         return cards.size();

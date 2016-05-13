@@ -32,6 +32,7 @@ public class Ten extends BettingButton
           else
           {
               BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
+              bjw.startMqttCallback();
               MultiPlayer mp = bjw.getMP();
               mp.addBet(10);
           }
