@@ -123,9 +123,9 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
         this.other = m;
     }
      public MultiPlayer getOther() {
-        return Other;
+        return other;
     }
-    public void setDealer(MultiPlayer dealer) {
+    public void setDealer(MultiDealer dealer) {
         this.dealer = dealer;
     }
     public MultiPlayer getDealer() {
