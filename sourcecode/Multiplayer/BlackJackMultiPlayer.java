@@ -132,6 +132,7 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
         
         
         m = new MultiPlayer();
+        
         addObject(m, -200,-200);
         
         other = new MultiPlayer();
@@ -170,7 +171,7 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
          m.setScoreX(Constants.User.scoreX);
          m.setScoreY(Constants.User.scoreY);
          m.setAssets(10000);
-         m.setName("Player2");
+         m.setName("Player1");
          
          other.setBetX(Constants.Bot3.betX);
          other.setBetY(Constants.Bot3.betY);
@@ -179,7 +180,7 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
          other.setScoreX(Constants.Bot3.scoreX);
          other.setScoreY(Constants.Bot3.scoreY);
          other.setAssets(10000);
-         other.setName("Player1");
+         other.setName("Player2");
          
          GreenfootImage userImage = new GreenfootImage("user.png");
         userImage.scale(80,80);
@@ -202,14 +203,14 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
     public void startMqttCallback()
     {
          try{
-          client = new MqttClient(MosquittoBrokerUrl, "Sending");
+          client = new MqttClient(MosquittoBrokerUrl, "Player1");
             client.connect();
             client.setCallback(this);   
             client.subscribe("/greenfoot/player");
-           }catch(Exception ex){
+           }
+           catch(Exception ex){
                System.out.println(ex.toString());
            }
-        
     }
        public void drawUserName(String s , int x , int y){
          GreenfootImage black = getBackground();
@@ -248,6 +249,16 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
                  String score = messageReceived[3];
                  other.addRemoteCard(card, Integer.parseInt(score));
                  //m.getFirstCards();
+            }
+             if(command.equals("Turnend") ){
+                 
+            }
+             if(command.equals("Doubledown") ){
+                                  String card = messageReceived[2];
+                 String score = messageReceived[3];
+                 other.addRemoteCard(card, Integer.parseInt(score));
+                 String bet = messageReceived[4];
+                 other.drawBet(Integer.parseInt(bet));
             }
           }    
       }

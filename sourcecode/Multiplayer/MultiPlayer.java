@@ -39,6 +39,12 @@ public class MultiPlayer extends Actor
     /**
      * Constructor for objects of class MultiPlayer
      */
+    
+    public MultiPlayerState getCps()
+    
+    {
+        return cps;
+    }
     public MultiPlayer(){
         cards = new ArrayList<String>();
         indexes = new ArrayList<Integer>();
@@ -48,7 +54,7 @@ public class MultiPlayer extends Actor
         vps.setBlackJackWorld(bjw);
         ivps = new InvalidMultiPlayerState(this);
         ivps.setBlackJackWorld(bjw);
-        setInvalidMultiPlayerState();    
+        setInvalidMultiPlayerState(false);    
     }
     public void setName(String s)
     {
@@ -66,6 +72,12 @@ public class MultiPlayer extends Actor
         isSurrendered = true;
     }
     public void  setInvalidMultiPlayerState(){
+        String dataToSend = getName()+",Turnend";
+        BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();   
+        bjw.sendCommand(dataToSend,"/greenfoot/player");
+        cps = ivps;
+    }
+     public void  setInvalidMultiPlayerState(boolean sendMessage){
         cps = ivps;
     }
     public void setValidMultiPlayerState(){

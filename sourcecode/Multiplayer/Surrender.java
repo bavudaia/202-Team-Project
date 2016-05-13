@@ -23,6 +23,9 @@ public class Surrender extends Button
         // Add your action code here.
            if(Greenfoot.mouseClicked(this))
       {
+                              World w = getWorld();
+          if(w instanceof BlackJackWorld)
+          {
                     BlackJackWorld bjw = (BlackJackWorld) getWorld();
                     bjw.playClickSound();
           Player p = bjw.getUser();
@@ -32,7 +35,16 @@ public class Surrender extends Button
           Command c = cf.getCommand("Surrender");
           c.setBlackJackWorld(bjw);
           c.execute();
-         
+        }
+                else
+        {
+            BlackJackMultiPlayer bjw = (BlackJackMultiPlayer) getWorld();
+            MultiPlayer mp = bjw.getMP();
+                           if(mp.getCps()  instanceof InvalidMultiPlayerState)
+                return;
+            mp.surrender();
+        }
+        
         }
     }    
 }

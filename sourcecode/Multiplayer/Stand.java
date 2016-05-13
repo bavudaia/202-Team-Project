@@ -23,6 +23,9 @@ public class Stand extends Button
         // Add your action code here.
                   if(Greenfoot.mouseClicked(this))
       {
+                    World w = getWorld();
+          if(w instanceof BlackJackWorld)
+          {
            BlackJackWorld bjw = (BlackJackWorld) getWorld();
           Player p = bjw.getUser();
           bjw.playClickSound();
@@ -31,6 +34,16 @@ public class Stand extends Button
           Command c = cf.getCommand("Stand");
           c.setBlackJackWorld(bjw);
          c.execute();
+        }
+        else
+        {
+            
+            BlackJackMultiPlayer bjw = (BlackJackMultiPlayer) getWorld();
+            MultiPlayer mp = bjw.getMP();
+              if(mp.getCps()  instanceof InvalidMultiPlayerState)
+                return;
+            mp.stand();
+        }
         }
         
     }    

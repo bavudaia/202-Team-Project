@@ -8,7 +8,7 @@ public class MultiPlayerState
 {
     MultiPlayer p;
      public MultiPlayerState(MultiPlayer p){
-        p = this.p;
+       this.p = p;
     }
       public void doHit(BlackJackMultiPlayer bjw){}
     public void doStand(){}

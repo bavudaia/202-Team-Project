@@ -22,14 +22,35 @@ public class Hit extends Button
     {    
       if(Greenfoot.mouseClicked(this))
       {
-          BlackJackWorld bjw = (BlackJackWorld) getWorld();
-          Player p = bjw.getUser();
-          bjw.playClickSound();
-          AbstractFactory abf = new AbstractFactory();
-          CommandFactory cf = abf.getCommandFactory();
-          Command c = cf.getCommand("Hit");
-          c.setBlackJackWorld(bjw);
-          c.execute();
+          World w = getWorld();
+          if(w instanceof BlackJackWorld)
+          {
+              BlackJackWorld bjw = (BlackJackWorld) getWorld();
+              Player p = bjw.getUser();
+              bjw.playClickSound();
+              AbstractFactory abf = new AbstractFactory();
+              CommandFactory cf = abf.getCommandFactory();
+              Command c = cf.getCommand("Hit");
+              c.setBlackJackWorld(bjw);
+              c.execute();
+          }
+        else
+        {
+           
+              BlackJackMultiPlayer bjw = (BlackJackMultiPlayer) getWorld();
+              MultiPlayer mp = bjw.getMP();
+               if(mp.getCps()  instanceof InvalidMultiPlayerState)
+                return;
+              mp.hit();
+              String player = mp.getName();
+              String cmd= "Addcard";
+              String cardName = mp.getCards().get(mp.getCards().size()-1);
+              
+              String score = String.valueOf(mp.getScore());
+              String data = player+","+cmd+"," + cardName + "," + score;
+              bjw.sendMessage(data , "/greenfoot/player");
+            
+          }
         }
      }
 }

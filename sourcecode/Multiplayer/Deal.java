@@ -56,7 +56,7 @@ public class Deal extends BettingButton
               String card2 = l.get(1);
               dealResult = playerId + "," + command + "," +  betAmt +"," +  asset +"," +  score +"," +  card1 +"," +  card2;
               bjw.sendMessage("/greenfoot/player", dealResult);
-              
+              mp.setValidMultiPlayerState();
           }
         }
     }    
