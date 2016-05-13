@@ -35,8 +35,13 @@ public class Twenty extends BettingButton
           }
           else
           {
+              
               BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
               MultiPlayer mp = bjw.getMP();
+              if(!(mp.getCps()  instanceof DealingState))
+                return;
+              
+              
               mp.addBet(20);
           }
       }

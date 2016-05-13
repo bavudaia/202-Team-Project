@@ -35,7 +35,8 @@ public class MultiPlayer extends Actor
     MultiPlayerState vps;
     MultiPlayerState ivps;
     MultiPlayerState cps;
-    
+    MultiPlayerState ds;
+    MultiPlayerState dealerState;
     /**
      * Constructor for objects of class MultiPlayer
      */
@@ -50,11 +51,13 @@ public class MultiPlayer extends Actor
         indexes = new ArrayList<Integer>();
         BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
         vps = new ValidMultiPlayerState(this);
-      
+        ds = new DealingState(this);
         vps.setBlackJackWorld(bjw);
         ivps = new InvalidMultiPlayerState(this);
+        dealerState = new DealerState(this);
         ivps.setBlackJackWorld(bjw);
-        setInvalidMultiPlayerState(false);    
+        setDealingState();
+        //setInvalidMultiPlayerState(false);    
     }
     public void setName(String s)
     {
@@ -70,6 +73,12 @@ public class MultiPlayer extends Actor
     }
     public void userSurrendered(){
         isSurrendered = true;
+    }
+    public void setDealingState(){
+        cps = ds;
+    }
+    public void setDealerState(){
+        cps = dealerState;
     }
     public void  setInvalidMultiPlayerState(){
         String dataToSend = getName()+",Turnend";
@@ -161,35 +170,35 @@ public class MultiPlayer extends Actor
     } 
     public void addRemoteCard(String card, int score)
     {
-        	tempX = 900;
-        	tempY = 300;
+            tempX = 900;
+            tempY = 300;
 
-    	FlipCard fc = new FlipCard();
-    	BlackJackMultiPlayer bjc = (BlackJackMultiPlayer)getWorld();
-    	bjc.addObject(fc,900,300);
-    	double angle = directionToTurnTo(900, 300, nextX, nextY);
-    	
-    	for(int j =0 ; true ; j++)
-    	{
-    		move(angle,15.0,fc);
-    		Greenfoot.delay(1);
-    		if(nextX > tempX - 30)
-    			break;
-    		//turn(-180);
-    	}
-    	bjc.removeObject(fc);
+        FlipCard fc = new FlipCard();
+        BlackJackMultiPlayer bjc = (BlackJackMultiPlayer)getWorld();
+        bjc.addObject(fc,900,300);
+        double angle = directionToTurnTo(900, 300, nextX, nextY);
+        
+        for(int j =0 ; true ; j++)
+        {
+            move(angle,15.0,fc);
+            Greenfoot.delay(1);
+            if(nextX > tempX - 30)
+                break;
+            //turn(-180);
+        }
+        bjc.removeObject(fc);
       
     
-    	GameController gc = getGameController();
-    	String cardImage = card;
-    	this.cards.add(cardImage);            
-    	gc.remove(cardImage);            
-    	GreenfootImage gi = new GreenfootImage(cardImage);
-    	getWorld().getBackground().drawImage(gi,nextX, nextY);
-    	this.nextX+=20;
-    	Greenfoot.delay(5);
-    	this.score = score;
-    	updateScore();
+        GameController gc = getGameController();
+        String cardImage = card;
+        this.cards.add(cardImage);            
+        gc.remove(cardImage);            
+        GreenfootImage gi = new GreenfootImage(cardImage);
+        getWorld().getBackground().drawImage(gi,nextX, nextY);
+        this.nextX+=20;
+        Greenfoot.delay(5);
+        this.score = score;
+        updateScore();
     }
     public void addCard(){
             

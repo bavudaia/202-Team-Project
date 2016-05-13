@@ -43,7 +43,8 @@ public class Deal extends BettingButton
               
               BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
               MultiPlayer mp = bjw.getMP();
-              
+              if(!(mp.getCps()  instanceof DealingState))
+                return;
               mp.getFirstCards();
               String dealResult = "";
               String playerId = mp.getName()==null?"null":mp.getName();
@@ -56,7 +57,23 @@ public class Deal extends BettingButton
               String card2 = l.get(1);
               dealResult = playerId + "," + command + "," +  betAmt +"," +  asset +"," +  score +"," +  card1 +"," +  card2;
               bjw.sendMessage("/greenfoot/player", dealResult);
-              mp.setValidMultiPlayerState();
+              mp.setDealerState();
+              if(bjw.getOther().getCps() instanceof DealerState)
+              {
+                  
+                  //execute the dealer code
+                  mp.setValidMultiPlayerState();
+                  bjw.getOther().setValidMultiPlayerState();
+                  
+                  String player = mp.getName();
+                  String cmd = "DealerUpdate";
+                  int dealerscore = bjw.getDealer().getScore();
+                  String card = bjw.getDealer().getCards().get(bjw.getDealer().getCards().size()-1);
+                  
+                  String message = player+","+cmd+","+card+","+dealerscore;
+                  bjw.sendMessage("/greenfoot/player", message);
+              }
+              //
           }
         }
     }    

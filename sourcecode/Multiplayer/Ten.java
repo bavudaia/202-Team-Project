@@ -34,6 +34,8 @@ public class Ten extends BettingButton
               BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
               bjw.startMqttCallback();
               MultiPlayer mp = bjw.getMP();
+              if(!(mp.getCps()  instanceof DealingState))
+                return;
               mp.addBet(10);
           }
           // get player from chain of responsibility

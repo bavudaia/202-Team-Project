@@ -36,6 +36,7 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
     
     MultiPlayer m ;
     MultiPlayer other;
+    MultiDealer dealer;
     GameController gc;
     
     static int background ;
@@ -118,7 +119,18 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
     public MultiPlayer getMP() {
         return m;
     }
-
+    public void setOther(MultiPlayer m) {
+        this.other = m;
+    }
+     public MultiPlayer getOther() {
+        return Other;
+    }
+    public void setDealer(MultiPlayer dealer) {
+        this.dealer = dealer;
+    }
+    public MultiPlayer getDealer() {
+        return dealer;
+    }
     /**
      * Constructor for objects of class BlackJackMultiPlayer.
      * 
@@ -127,16 +139,16 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 768, 1);
-        getBackground().drawImage(new GreenfootImage("black.png"), 0, 0);
-        
-        
-        
+        getBackground().drawImage(new GreenfootImage("black.png"), 0, 0);     
         m = new MultiPlayer();
         
         addObject(m, -200,-200);
         
         other = new MultiPlayer();
         addObject(other, -200,-200);
+        
+        dealer = new MultiDealer();
+        addObject(dealer,-200,-200);
         
         hitButton = new Hit();
         addObject(hitButton,350,700);
@@ -181,6 +193,14 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
          other.setScoreY(Constants.Bot3.scoreY);
          other.setAssets(10000);
          other.setName("Player1");
+         
+          
+         dealer.setNextX(Constants.Dealer.x);
+         dealer.setNextY(Constants.Dealer.y);
+         dealer.setScoreX(Constants.Dealer.scoreX);
+         dealer.setScoreY(Constants.Dealer.scoreY);
+         dealer.setAssets(10000);
+         dealer.setName("Dealer");
          
          GreenfootImage userImage = new GreenfootImage("user.png");
         userImage.scale(80,80);
@@ -248,6 +268,7 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
                  String card = messageReceived[2];
                  String score = messageReceived[3];
                  other.addRemoteCard(card, Integer.parseInt(score));
+                 other.setDealerState();
                  //m.getFirstCards();
             }
              if(command.equals("Turnend") ){
@@ -260,6 +281,14 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
                  String bet = messageReceived[4];
                  other.setBetting_amount(Integer.parseInt(bet));
                  other.drawBet();
+            }
+            if(command.equals("DealerUpdate"))
+            {
+                 String card = messageReceived[2];
+                 String score = messageReceived[3];
+                 dealer.addRemoteCard(card, Integer.parseInt(score));
+                 m.setValidMultiPlayerState();
+                 other.setValidMultiPlayerState();
             }
           }    
       }

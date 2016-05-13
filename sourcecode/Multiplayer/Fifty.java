@@ -38,6 +38,8 @@ public class Fifty extends BettingButton
           {
                           BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
               MultiPlayer mp = bjw.getMP();
+              if(!(mp.getCps()  instanceof DealingState))
+                return;
               mp.addBet(50);
           }
         

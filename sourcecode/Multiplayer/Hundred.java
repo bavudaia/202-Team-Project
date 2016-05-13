@@ -37,6 +37,8 @@ public class Hundred extends BettingButton
           {
               BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
               MultiPlayer mp = bjw.getMP();
+              if(!(mp.getCps()  instanceof DealingState))
+                return;
               mp.addBet(100);
           }
           // get player from chain of responsibility

@@ -46,7 +46,7 @@ public class DoubleDown extends Button
                 return;
             mp.doubleDown();
                           String player = mp.getName();
-              String cmd= "Addcard";
+              String cmd= "Doubledown";
               String cardName = mp.getCards().get(mp.getCards().size()-1);
               
               String score = String.valueOf(mp.getScore());
