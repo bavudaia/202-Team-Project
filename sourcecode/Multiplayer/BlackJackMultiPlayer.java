@@ -129,20 +129,7 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
         super(1024, 768, 1);
         getBackground().drawImage(new GreenfootImage("black.png"), 0, 0);
         
-        GreenfootImage userImage = new GreenfootImage("user.png");
-        userImage.scale(80,80);
-        getBackground().drawImage(userImage, 510, 400);
-        drawUserName("Player1", 520,400);
-        userImage = new GreenfootImage("user1.png");
-        userImage.scale(80,80);
-        getBackground().drawImage(userImage, 510, 100);
-        drawUserName("Player2", 520,100);
-        userImage = new GreenfootImage("user2.png");
-        userImage.scale(80,80);
-        getBackground().drawImage(userImage, 30, 250); 
-        drawUserName("Dealer", 50,250);
-        userImage = new GreenfootImage("user3.png");
-        userImage.scale(80,80);
+        
         
         m = new MultiPlayer();
         addObject(m, -200,-200);
@@ -183,7 +170,7 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
          m.setScoreX(Constants.User.scoreX);
          m.setScoreY(Constants.User.scoreY);
          m.setAssets(10000);
-         m.setName("Player1");
+         m.setName("Player2");
          
          other.setBetX(Constants.Bot3.betX);
          other.setBetY(Constants.Bot3.betY);
@@ -192,7 +179,22 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
          other.setScoreX(Constants.Bot3.scoreX);
          other.setScoreY(Constants.Bot3.scoreY);
          other.setAssets(10000);
-         other.setName("Player2");
+         other.setName("Player1");
+         
+         GreenfootImage userImage = new GreenfootImage("user.png");
+        userImage.scale(80,80);
+        getBackground().drawImage(userImage, 510, 400);
+        drawUserName(m.getName(), 520,400);
+        userImage = new GreenfootImage("user1.png");
+        userImage.scale(80,80);
+        getBackground().drawImage(userImage, 510, 100);
+        drawUserName(other.getName(), 520,100);
+        userImage = new GreenfootImage("user2.png");
+        userImage.scale(80,80);
+        getBackground().drawImage(userImage, 30, 250); 
+        drawUserName("Dealer", 50,250);
+        userImage = new GreenfootImage("user3.png");
+        userImage.scale(80,80);
           
          addObject(new Quit(), 110, 420);
         
