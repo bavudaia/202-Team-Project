@@ -195,9 +195,9 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
          other.setScoreY(Constants.Bot3.scoreY);
          other.setAssets(10000);
          if(playerId==1)
-         other.setName("Player1");
-         else
          other.setName("Player2");
+         else
+         other.setName("Player1");
           
          dealer.setNextX(Constants.Dealer.x);
          dealer.setNextY(Constants.Dealer.y);
