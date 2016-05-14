@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=DeHitState
+comment1.params=p
+comment1.target=DeHitState(MultiPlayer)
+comment2.params=bjw
+comment2.target=void\ doHit(BlackJackMultiPlayer)
+comment3.params=
+comment3.target=void\ doStand()
+comment4.params=
+comment4.target=void\ doSurrender()
+comment5.params=
+comment5.target=void\ doDoubleDown()
+comment6.params=bjw
+comment6.target=void\ setBlackJackWorld(BlackJackMultiPlayer)
+numComments=7

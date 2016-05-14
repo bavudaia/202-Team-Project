@@ -37,6 +37,7 @@ public class MultiPlayer extends Actor
     MultiPlayerState cps;
     MultiPlayerState ds;
     MultiPlayerState dealerState;
+    MultiPlayerState dehitState;
     /**
      * Constructor for objects of class MultiPlayer
      */
@@ -52,6 +53,7 @@ public class MultiPlayer extends Actor
         BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();
         vps = new ValidMultiPlayerState(this);
         ds = new DealingState(this);
+        dehitState = new DeHitState(this);
         vps.setBlackJackWorld(bjw);
         ivps = new InvalidMultiPlayerState(this);
         dealerState = new DealerState(this);
@@ -80,11 +82,50 @@ public class MultiPlayer extends Actor
     public void setDealerState(){
         cps = dealerState;
     }
+    public void setDealerHitState(){
+        cps = dehitState;
+    }
+  
     public void  setInvalidMultiPlayerState(){
         String dataToSend = getName()+",Turnend";
         BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();   
         bjw.sendMessage("/greenfoot/player",dataToSend);
         cps = ivps;
+        /*
+        if(bjw.getOther().getCps() instanceof InvalidMultiPlayerState)
+        {
+            //calculate result
+            bjw.getDealer().hit();
+            Greenfoot.delay(3);
+            DecideRemoteWinner drm = new DecideRemoteWinner(bjw);
+            drm.update();
+            //send gameend message
+            String player = this.getName();
+            String cmd = "roundend";
+            bjw.sendMessage("/greenfoot/player",player+","+cmd);
+            //world change
+        }
+        */
+    }
+    public void decideWinner()
+    {
+        BlackJackMultiPlayer bjw = (BlackJackMultiPlayer)getWorld();  
+        System.out.println("decideWinner++");
+         if(bjw.getOther().getCps() instanceof InvalidMultiPlayerState)
+        {
+            //calculate result
+            bjw.getDealer().hit();
+            Greenfoot.delay(3);
+            DecideRemoteWinner drm = new DecideRemoteWinner(bjw);
+            drm.update();
+            //send gameend message
+            String player = this.getName();
+            String cmd = "roundend";
+            System.out.println(player+","+cmd);
+            bjw.sendMessage("/greenfoot/player",player+","+cmd);
+            //world change
+        }
+          System.out.println("decideWinner--");
     }
      public void  setInvalidMultiPlayerState(boolean sendMessage){
         cps = ivps;

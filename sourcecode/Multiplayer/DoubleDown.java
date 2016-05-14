@@ -54,6 +54,8 @@ public class DoubleDown extends Button
               String data = player+","+cmd+"," + cardName + "," + score
               +"," + bet;
               bjw.sendMessage( "/greenfoot/player" , data );
+               if(mp.getCps()  instanceof InvalidMultiPlayerState)
+                mp.decideWinner();
 
         }
     }    

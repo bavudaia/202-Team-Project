@@ -13,6 +13,7 @@ import javax.swing.*;
 public class Result extends World
 {
     BlackJackWorld bjw;
+    BlackJackMultiPlayer bjm;
     /**
      * Constructor for objects of class Result.
      * 
@@ -68,6 +69,50 @@ public class Result extends World
         bjwNew.getBot2().setAssets(bjw.getBot2().getAssets());
         bjwNew.getBot3().setAssets(bjw.getBot3().getAssets());
         bjwNew.stopMusic();
+        addObject(new PlayAgain(bjwNew), 250, 320);
+        addObject(new Quit(), 410, 320);
+    }
+    public Result(ArrayList<MultiPlayer> winners, ArrayList<MultiPlayer> losers , ArrayList<MultiPlayer> busted , BlackJackMultiPlayer bjw)
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(600, 400, 1); 
+        this.bjm = bjw;
+        getBackground().drawImage(new GreenfootImage("black.png"), 0, 0);
+        Font font1 = new Font("Serif", Font.BOLD, 28);
+        Font font = new Font("Serif", Font.ITALIC, 20);
+        GreenfootImage black = getBackground();
+        black.setFont(font1); 
+        
+         black.drawString("Game Results",260 , 90);
+         black.drawString("____________",260 , 96);
+          black.setFont(font);
+        int i = 140;
+        for(MultiPlayer p : winners){
+            String s = p.getName() + " has won";
+            getBackground().drawImage(new GreenfootImage("rsz_rsz_user.png"), 260, i-15);
+            black.drawString(s,300 , i);
+            //addObject(new Label(200, 37, "Password",false), 200, 239);
+            //setImage( image );
+            i+=30;
+
+        }
+        for(MultiPlayer p : losers){
+            String s = p.getName() + " has lost";
+            getBackground().drawImage(new GreenfootImage("rsz_rsz_user.png"), 260, i-15);
+           
+            black.drawString(s,300 , i);
+            i+=30;
+        }
+        for(MultiPlayer p : busted){
+             String s = p.getName() + " is busted";
+            getBackground().drawImage(new GreenfootImage("rsz_rsz_user.png"), 260, i-15);
+            black.drawString(s,300 , i);
+            i+=30;
+        }
+        BlackJackMultiPlayer bjwNew = new BlackJackMultiPlayer();
+        bjwNew.getMP().setAssets(bjm.getMP().getAssets());
+        bjwNew.getOther().setAssets(bjm.getOther().getAssets());
+
         addObject(new PlayAgain(bjwNew), 250, 320);
         addObject(new Quit(), 410, 320);
     }

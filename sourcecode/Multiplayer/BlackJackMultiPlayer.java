@@ -263,16 +263,17 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
                   String card2 = messageReceived[6];
                   other.getRemoteFirstCards(card1, card2,Integer.parseInt(score), Integer.parseInt(betAmt));
                   //m.getFirstCards();
+                  other.setDealerState();
             }
             if(command.equals("Addcard") ){
                  String card = messageReceived[2];
                  String score = messageReceived[3];
                  other.addRemoteCard(card, Integer.parseInt(score));
-                 other.setDealerState();
+                 
                  //m.getFirstCards();
             }
              if(command.equals("Turnend") ){
-                 
+                 other.setInvalidMultiPlayerState(false);
             }
              if(command.equals("Doubledown") ){
                                   String card = messageReceived[2];
@@ -289,6 +290,21 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
                  dealer.addRemoteCard(card, Integer.parseInt(score));
                  m.setValidMultiPlayerState();
                  other.setValidMultiPlayerState();
+            }
+            
+            if(command.equals("DealerAddCard") ){
+                 String card = messageReceived[2];
+                 String score = messageReceived[3];
+                 dealer.addRemoteCard(card, Integer.parseInt(score));
+                 
+                 //m.getFirstCards();
+            }
+           // DealerAddCard
+             if(command.equals("roundend") ){
+                  DecideRemoteWinner drm = new DecideRemoteWinner(this);
+                  drm.update();
+                  
+                 //m.getFirstCards();
             }
           }    
       }

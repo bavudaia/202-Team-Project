@@ -43,6 +43,8 @@ public class Stand extends Button
               if(mp.getCps()  instanceof InvalidMultiPlayerState)
                 return;
             mp.stand();
+             if(mp.getCps()  instanceof InvalidMultiPlayerState)
+                mp.decideWinner();
         }
         }
         

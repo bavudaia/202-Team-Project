@@ -58,13 +58,15 @@ public class Deal extends BettingButton
               dealResult = playerId + "," + command + "," +  betAmt +"," +  asset +"," +  score +"," +  card1 +"," +  card2;
               bjw.sendMessage("/greenfoot/player", dealResult);
               mp.setDealerState();
+              System.out.println("++");
               if(bjw.getOther().getCps() instanceof DealerState)
               {
-                  
+                  System.out.println("inside if");
                   //execute the dealer code
                   mp.setValidMultiPlayerState();
                   bjw.getOther().setValidMultiPlayerState();
-                  
+                  MultiDealer dealer = (MultiDealer)bjw.getDealer();
+                  dealer.getFirstCards();
                   String player = mp.getName();
                   String cmd = "DealerUpdate";
                   int dealerscore = bjw.getDealer().getScore();
@@ -73,6 +75,7 @@ public class Deal extends BettingButton
                   String message = player+","+cmd+","+card+","+dealerscore;
                   bjw.sendMessage("/greenfoot/player", message);
               }
+              System.out.println("--");
               //
           }
         }

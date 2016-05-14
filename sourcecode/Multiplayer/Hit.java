@@ -49,6 +49,10 @@ public class Hit extends Button
               String score = String.valueOf(mp.getScore());
               String data = player+","+cmd+"," + cardName + "," + score;
               bjw.sendMessage( "/greenfoot/player",data);
+              
+              if(mp.getCps()  instanceof InvalidMultiPlayerState)
+                mp.decideWinner();
+              
             
           }
         }

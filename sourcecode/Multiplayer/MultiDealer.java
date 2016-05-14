@@ -21,7 +21,7 @@ public class MultiDealer extends MultiPlayer
         tempY = 300;
     
         FlipCard fc = new FlipCard();
-        BlackJackWorld bjc = (BlackJackWorld)getWorld();
+        BlackJackMultiPlayer bjc = (BlackJackMultiPlayer)getWorld();
         bjc.addObject(fc,900,300);
         double angle = directionToTurnTo(900, 300, nextX, nextY);
         
@@ -56,10 +56,20 @@ public class MultiDealer extends MultiPlayer
   }
     public void hit()
     {
+         BlackJackMultiPlayer bjc = (BlackJackMultiPlayer)getWorld();
         while(score<=14)
         {
             addCard();
+            
+            String player = bjc.getMP().getName();
+            String cmd= "DealerAddCard";
             score = getScoreFromCards();
+            String cardName = this.getCards().get(this.getCards().size()-1);
+              
+              
+              String data = player+","+cmd+"," + cardName + "," + score;
+              bjc.sendMessage( "/greenfoot/player",data);
+            
         }
         updateScore();
     }

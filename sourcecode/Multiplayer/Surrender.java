@@ -43,6 +43,8 @@ public class Surrender extends Button
                            if(mp.getCps()  instanceof InvalidMultiPlayerState)
                 return;
             mp.surrender();
+             if(mp.getCps()  instanceof InvalidMultiPlayerState)
+                mp.decideWinner();
         }
         
         }
