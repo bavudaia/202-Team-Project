@@ -109,7 +109,7 @@ public class Result extends World
             black.drawString(s,300 , i);
             i+=30;
         }
-        BlackJackMultiPlayer bjwNew = new BlackJackMultiPlayer();
+        BlackJackMultiPlayer bjwNew = new BlackJackMultiPlayer(bjm.playerId);
         bjwNew.getMP().setAssets(bjm.getMP().getAssets());
         bjwNew.getOther().setAssets(bjm.getOther().getAssets());
 

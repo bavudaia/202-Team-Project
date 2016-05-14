@@ -11,7 +11,7 @@ public class BlackJackTable extends Actor
    
     public void act() 
     {
-        GreenfootImage ddImage = new GreenfootImage("black_room.jpg");
+        GreenfootImage ddImage = new GreenfootImage("black.png");
         ddImage.scale(100,100);
         setImage(ddImage);
     }    

@@ -38,7 +38,7 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
     MultiPlayer other;
     MultiDealer dealer;
     GameController gc;
-    
+    public int playerId;
     static int background ;
     
     private static Map<Integer,String> cardMap = new HashMap<>();
@@ -135,10 +135,12 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
      * Constructor for objects of class BlackJackMultiPlayer.
      * 
      */
-    public BlackJackMultiPlayer()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+    
+    public BlackJackMultiPlayer(int id)
+    {
         super(1024, 768, 1);
+        playerId = id;
+              
         getBackground().drawImage(new GreenfootImage("black.png"), 0, 0);     
         m = new MultiPlayer();
         
@@ -175,7 +177,7 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
          addObject(clear,700,600);
          deal = new Deal();
          addObject(deal, 800,665);
-   
+         
          m.setBetX(Constants.User.betX);
          m.setBetY(Constants.User.betY);
          m.setNextX(Constants.User.x);
@@ -183,7 +185,7 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
          m.setScoreX(Constants.User.scoreX);
          m.setScoreY(Constants.User.scoreY);
          m.setAssets(10000);
-         m.setName("Player2");
+         m.setName("Player"+playerId);
          
          other.setBetX(Constants.Bot3.betX);
          other.setBetY(Constants.Bot3.betY);
@@ -192,8 +194,10 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
          other.setScoreX(Constants.Bot3.scoreX);
          other.setScoreY(Constants.Bot3.scoreY);
          other.setAssets(10000);
+         if(playerId==1)
          other.setName("Player1");
-         
+         else
+         other.setName("Player2");
           
          dealer.setNextX(Constants.Dealer.x);
          dealer.setNextY(Constants.Dealer.y);
@@ -218,8 +222,8 @@ public class BlackJackMultiPlayer extends World implements MqttCallback
         userImage.scale(80,80);
           
          addObject(new Quit(), 110, 420);
-        
     }
+
     public void startMqttCallback()
     {
          try{
